@@ -1,0 +1,147 @@
+{
+  "schema": 1,
+  "started_at": "2026-10-04T13:38:01.610673+00:00",
+  "status": "completed",
+  "split": "dev",
+  "planned_samples": 1,
+  "exports_checked": true,
+  "matching_policy": "One-to-one predicted/truth event matching by type and >=50% truth-box intersection on any truth frame. Separate per-frame recall and independent >=99.5% black-mask coverage detect partial duration/box failures.",
+  "data_limitations": "Self-authored English synthetic recordings; fixed layouts; high-contrast 23-28px text; 720p10fps lossless encoded video with repeated static frames. Throughput is not representative of changing/lossy real recordings. No market validation is implied.",
+  "heldout_policy": "Templates split before inference. This evaluator does not optimize thresholds or modify models. Report misses, do not tune on held-out results.",
+  "source_sha256": {
+    "app/__init__.py": "32dcb40b4b8c5bc4164494d9b2aa480b1dce1a062ea35665ca2afdd40a05b12a",
+    "app/detectors.py": "1f4b32d58f9a51cd7e5b2bd7c1754f7585c7d840ac943eddf186965de3701d43",
+    "app/main.py": "2e660f52c91f8ebf83beb7e2b9d30af52ef60eaf311b1d3b6e4f4409f29f33c8",
+    "app/media.py": "f1379c1ebff2000cb37cb561a6f7dc4c704a595c59b02a192d1955092053ad68",
+    "app/ocr.py": "35281d6a8d8ea228a3b14604d307b5ae440d4e0bd456fbffc96e1f69f83995e4",
+    "app/paths.py": "870cb9a0bf87ac60a1f67700b18fd695bdf14a4524711139e38d7536ef9ce8df",
+    "app/pipeline.py": "80b60db70483b5eea97c1703141ef7b7ccd0c3f6e5990709575fb0ec1ce6f8cc"
+  },
+  "samples": [
+    {
+      "id": "dev_001",
+      "split": "dev",
+      "template": "customer_dashboard",
+      "scenario": "email_flash",
+      "source_sha256": "a94c9168f71dcc503176de5c36c36b3a64cfb1f7c46ca1cdda3052b7a9388a1c",
+      "analysis_wall_seconds": 10.7159,
+      "runtime_metrics": {
+        "frames_scanned": 40,
+        "unique_frames_ocr": 2,
+        "exact_cache_hits": 38,
+        "analysis_seconds": 10.703,
+        "ocr_seconds": 10.363,
+        "processing_fps": 3.74,
+        "findings_count": 1,
+        "audio_checked": false,
+        "all_frames_decoded": true
+      },
+      "detection": {
+        "expected_events": 1,
+        "detected_events": 1,
+        "missed_events": [],
+        "predicted_events": 1,
+        "false_positive_events": 0,
+        "false_positive_ids": [],
+        "event_recall": 1.0,
+        "expected_sensitive_frame_occurrences": 2,
+        "detected_sensitive_frame_occurrences": 2,
+        "sensitive_frame_recall": 1.0,
+        "matches": [
+          {
+            "truth_event": "dev_001_0",
+            "prediction_event": "e0001",
+            "matching_frames": 2
+          }
+        ]
+      },
+      "export_wall_seconds": 51.6028,
+      "mask_coverage": {
+        "solid_mask_color": "RGB(0,0,0)",
+        "codec_tolerance_per_channel": 16,
+        "required_black_fraction": 0.995,
+        "output_frames": 40,
+        "expected_frames": 40,
+        "frame_count_matches": true,
+        "checked_sensitive_frame_occurrences": 2,
+        "fully_masked_frame_occurrences": 2,
+        "fully_masked_events": 1,
+        "expected_events": 1,
+        "minimum_black_fraction": 1.0,
+        "mean_black_fraction": 1.0,
+        "uncovered_occurrences": []
+      },
+      "output_sha256": "a9f75d8b213c65e9b17314f6373b9e81c52cd52a8731fba857a95b9796c240ce",
+      "application_verification": {
+        "schema_version": 1,
+        "backend": "CPU · ONNX Runtime",
+        "model": "RapidOCR / bundled PaddleOCR models",
+        "hardware_verified": false,
+        "media": {
+          "media_type": "video",
+          "width": 1280,
+          "height": 720,
+          "fps": 10.0,
+          "duration": 4.0,
+          "frame_count": 40
+        },
+        "analysis": {
+          "frames_scanned": 40,
+          "unique_frames_ocr": 2,
+          "exact_cache_hits": 38,
+          "analysis_seconds": 10.703,
+          "ocr_seconds": 10.363,
+          "processing_fps": 3.74,
+          "findings_count": 1,
+          "audio_checked": false,
+          "all_frames_decoded": true
+        },
+        "decisions": [
+          {
+            "event_id": "e0001",
+            "type": "email",
+            "start": 1.0,
+            "end": 1.2,
+            "action": "redact"
+          }
+        ],
+        "manual_mask_count": 0,
+        "masked_frames": 2,
+        "audio_removed": true,
+        "audio_checked": false,
+        "export_seconds": 51.595,
+        "rescan": {
+          "status": "passed",
+          "findings_count": 0,
+          "message": "No supported text patterns detected in output; not a guarantee of privacy."
+        },
+        "limitations": [
+          "Supported visible text patterns only; names, faces and arbitrary confidential content may be missed.",
+          "Output rescan uses the same OCR and rules and is not an independent privacy guarantee.",
+          "OCR accuracy depends on font, size, contrast, compression and language."
+        ]
+      }
+    }
+  ],
+  "summary": {
+    "completed_samples": 1,
+    "failed_samples": 0,
+    "expected_events": 1,
+    "detected_events": 1,
+    "event_recall": 1.0,
+    "false_positive_events": 0,
+    "negative_samples": 0,
+    "negative_samples_with_false_positives": 0,
+    "sensitive_frame_recall": 1.0,
+    "checked_sensitive_frame_occurrences": 2,
+    "fully_masked_frame_occurrences": 2,
+    "full_mask_frame_fraction": 1.0,
+    "fully_masked_events": 1,
+    "mask_checked_events": 1,
+    "all_export_frame_counts_match": true,
+    "analysis_wall_seconds": 10.7159,
+    "export_wall_seconds": 51.6028
+  },
+  "updated_at": "2026-10-04T13:39:04.172680+00:00",
+  "finished_at": "2026-10-04T13:39:04.172680+00:00"
+}

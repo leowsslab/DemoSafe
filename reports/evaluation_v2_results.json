@@ -1,0 +1,799 @@
+{
+  "schema": 2,
+  "reports": {
+    "dev": {
+      "status": "completed",
+      "path": "benchmark_robustness_v2_dev.json",
+      "summary": {
+        "completed_samples": 12,
+        "failed_samples": 0,
+        "expected_events": 24,
+        "detected_events": 20,
+        "event_recall": 0.8333333333333334,
+        "false_positive_events": 0,
+        "negative_samples": 6,
+        "negative_samples_with_false_positives": 0,
+        "sensitive_frame_recall": 0.7053571428571429,
+        "checked_sensitive_frame_occurrences": 336,
+        "fully_masked_frame_occurrences": 237,
+        "full_mask_frame_fraction": 0.7053571428571429,
+        "fully_masked_events": 18,
+        "mask_checked_events": 24,
+        "all_export_frame_counts_match": true,
+        "analysis_wall_seconds": 974.4021,
+        "export_wall_seconds": 932.3011,
+        "by_condition": {
+          "A": {
+            "completed_samples": 4,
+            "failed_samples": 0,
+            "expected_events": 8,
+            "detected_events": 6,
+            "event_recall": 0.75,
+            "false_positive_events": 0,
+            "negative_samples": 2,
+            "negative_samples_with_false_positives": 0,
+            "sensitive_frame_recall": 0.5089285714285714,
+            "checked_sensitive_frame_occurrences": 112,
+            "fully_masked_frame_occurrences": 57,
+            "full_mask_frame_fraction": 0.5089285714285714,
+            "fully_masked_events": 5,
+            "mask_checked_events": 8,
+            "all_export_frame_counts_match": true,
+            "analysis_wall_seconds": 205.4031,
+            "export_wall_seconds": 168.692
+          },
+          "B": {
+            "completed_samples": 4,
+            "failed_samples": 0,
+            "expected_events": 8,
+            "detected_events": 7,
+            "event_recall": 0.875,
+            "false_positive_events": 0,
+            "negative_samples": 2,
+            "negative_samples_with_false_positives": 0,
+            "sensitive_frame_recall": 0.8660714285714286,
+            "checked_sensitive_frame_occurrences": 112,
+            "fully_masked_frame_occurrences": 97,
+            "full_mask_frame_fraction": 0.8660714285714286,
+            "fully_masked_events": 7,
+            "mask_checked_events": 8,
+            "all_export_frame_counts_match": true,
+            "analysis_wall_seconds": 230.9501,
+            "export_wall_seconds": 212.3739
+          },
+          "C": {
+            "completed_samples": 4,
+            "failed_samples": 0,
+            "expected_events": 8,
+            "detected_events": 7,
+            "event_recall": 0.875,
+            "false_positive_events": 0,
+            "negative_samples": 2,
+            "negative_samples_with_false_positives": 0,
+            "sensitive_frame_recall": 0.7410714285714286,
+            "checked_sensitive_frame_occurrences": 112,
+            "fully_masked_frame_occurrences": 83,
+            "full_mask_frame_fraction": 0.7410714285714286,
+            "fully_masked_events": 6,
+            "mask_checked_events": 8,
+            "all_export_frame_counts_match": true,
+            "analysis_wall_seconds": 538.0489,
+            "export_wall_seconds": 551.2352000000001
+          }
+        },
+        "by_layout": {
+          "helpdesk": {
+            "completed_samples": 6,
+            "failed_samples": 0,
+            "expected_events": 12,
+            "detected_events": 11,
+            "event_recall": 0.9166666666666666,
+            "false_positive_events": 0,
+            "negative_samples": 3,
+            "negative_samples_with_false_positives": 0,
+            "sensitive_frame_recall": 0.6785714285714286,
+            "checked_sensitive_frame_occurrences": 168,
+            "fully_masked_frame_occurrences": 114,
+            "full_mask_frame_fraction": 0.6785714285714286,
+            "fully_masked_events": 9,
+            "mask_checked_events": 12,
+            "all_export_frame_counts_match": true,
+            "analysis_wall_seconds": 480.8923,
+            "export_wall_seconds": 455.5325
+          },
+          "terminal": {
+            "completed_samples": 6,
+            "failed_samples": 0,
+            "expected_events": 12,
+            "detected_events": 9,
+            "event_recall": 0.75,
+            "false_positive_events": 0,
+            "negative_samples": 3,
+            "negative_samples_with_false_positives": 0,
+            "sensitive_frame_recall": 0.7321428571428571,
+            "checked_sensitive_frame_occurrences": 168,
+            "fully_masked_frame_occurrences": 123,
+            "full_mask_frame_fraction": 0.7321428571428571,
+            "fully_masked_events": 9,
+            "mask_checked_events": 12,
+            "all_export_frame_counts_match": true,
+            "analysis_wall_seconds": 493.5098,
+            "export_wall_seconds": 476.7686
+          }
+        },
+        "all_original_hashes_unchanged": true,
+        "selected_mask_geometry": {
+          "checked_frame_regions": 237,
+          "fully_masked_frame_regions": 237,
+          "meaning": "Selected detection boxes only; independent annotation coverage above still counts missed/partial detections."
+        },
+        "ablation_1hz": {
+          "phases": [
+            {
+              "phase_frames": 0,
+              "expected_events": 24,
+              "detected_events": 13,
+              "event_recall": 0.5416666666666666,
+              "eligible_ocr_calls": 92
+            },
+            {
+              "phase_frames": 1,
+              "expected_events": 24,
+              "detected_events": 7,
+              "event_recall": 0.2916666666666667,
+              "eligible_ocr_calls": 92
+            },
+            {
+              "phase_frames": 2,
+              "expected_events": 24,
+              "detected_events": 7,
+              "event_recall": 0.2916666666666667,
+              "eligible_ocr_calls": 94
+            },
+            {
+              "phase_frames": 3,
+              "expected_events": 24,
+              "detected_events": 13,
+              "event_recall": 0.5416666666666666,
+              "eligible_ocr_calls": 95
+            },
+            {
+              "phase_frames": 4,
+              "expected_events": 24,
+              "detected_events": 13,
+              "event_recall": 0.5416666666666666,
+              "eligible_ocr_calls": 92
+            },
+            {
+              "phase_frames": 5,
+              "expected_events": 24,
+              "detected_events": 12,
+              "event_recall": 0.5,
+              "eligible_ocr_calls": 90
+            },
+            {
+              "phase_frames": 6,
+              "expected_events": 24,
+              "detected_events": 6,
+              "event_recall": 0.25,
+              "eligible_ocr_calls": 89
+            },
+            {
+              "phase_frames": 7,
+              "expected_events": 24,
+              "detected_events": 6,
+              "event_recall": 0.25,
+              "eligible_ocr_calls": 90
+            },
+            {
+              "phase_frames": 8,
+              "expected_events": 24,
+              "detected_events": 12,
+              "event_recall": 0.5,
+              "eligible_ocr_calls": 91
+            },
+            {
+              "phase_frames": 9,
+              "expected_events": 24,
+              "detected_events": 12,
+              "event_recall": 0.5,
+              "eligible_ocr_calls": 94
+            },
+            {
+              "phase_frames": 10,
+              "expected_events": 24,
+              "detected_events": 12,
+              "event_recall": 0.5,
+              "eligible_ocr_calls": 85
+            },
+            {
+              "phase_frames": 11,
+              "expected_events": 24,
+              "detected_events": 12,
+              "event_recall": 0.5,
+              "eligible_ocr_calls": 90
+            },
+            {
+              "phase_frames": 12,
+              "expected_events": 24,
+              "detected_events": 12,
+              "event_recall": 0.5,
+              "eligible_ocr_calls": 94
+            },
+            {
+              "phase_frames": 13,
+              "expected_events": 24,
+              "detected_events": 13,
+              "event_recall": 0.5416666666666666,
+              "eligible_ocr_calls": 95
+            },
+            {
+              "phase_frames": 14,
+              "expected_events": 24,
+              "detected_events": 12,
+              "event_recall": 0.5,
+              "eligible_ocr_calls": 91
+            }
+          ],
+          "phase_recall_mean": 0.45,
+          "phase_recall_min": 0.25,
+          "phase_recall_max": 0.5416666666666666,
+          "all_frame_eligible_ocr_calls": 841,
+          "claim_limit": "Sampling replay and eligible-call counts only. No human-efficiency or wall-time speedup claim."
+        }
+      },
+      "evidence_integrity": {
+        "headline_ready": true,
+        "meaning": "Ready means complete, consistent measurements and correctly applied chosen masks. It does not mean high detection accuracy or complete privacy protection.",
+        "planned_clips": 12,
+        "detection_scored_clips": 12,
+        "fully_evaluated_clips": 12,
+        "planned_truth_regions": 336,
+        "independently_scored_truth_regions": 336,
+        "unscored_truth_regions": 0,
+        "unscored_policy": "A clip with a mismatched/missing coverage denominator contributes none of its planned regions to scored; no denominator substitution across clips.",
+        "selected_geometry_not_applicable_clips": 6,
+        "duplicate_ids": [],
+        "unexpected_ids": [],
+        "missing_ids": [],
+        "split_mismatches": [],
+        "processing_errors": [],
+        "unknown_checks": [],
+        "frame_count_failures": [],
+        "selected_geometry_failures": [],
+        "source_preservation_failures": [],
+        "denominator_failures": [],
+        "phase_replay_failures": [],
+        "manifest_matches": true,
+        "inference_core_matches_current": true,
+        "inference_core_unchanged_during_run": true
+      },
+      "headline_ready": true,
+      "failures": [
+        {
+          "id": "v2_dev_helpdesk_A_positive",
+          "error": null,
+          "missed_events": [
+            {
+              "id": "custom",
+              "type": "custom",
+              "exposure_seconds": 1.0
+            }
+          ],
+          "false_positive_events": 0,
+          "uncovered_frame_regions": 40,
+          "rescan_status": "findings",
+          "independent_frame_count_matches": true,
+          "selected_frame_count_matches": true,
+          "selected_geometry_present": true,
+          "selected_geometry_complete": true,
+          "original_unchanged": true
+        },
+        {
+          "id": "v2_dev_helpdesk_C_positive",
+          "error": null,
+          "missed_events": [],
+          "false_positive_events": 0,
+          "uncovered_frame_regions": 14,
+          "rescan_status": "findings",
+          "independent_frame_count_matches": true,
+          "selected_frame_count_matches": true,
+          "selected_geometry_present": true,
+          "selected_geometry_complete": true,
+          "original_unchanged": true
+        },
+        {
+          "id": "v2_dev_terminal_A_positive",
+          "error": null,
+          "missed_events": [
+            {
+              "id": "custom",
+              "type": "custom",
+              "exposure_seconds": 1.0
+            }
+          ],
+          "false_positive_events": 0,
+          "uncovered_frame_regions": 15,
+          "rescan_status": "passed",
+          "independent_frame_count_matches": true,
+          "selected_frame_count_matches": true,
+          "selected_geometry_present": true,
+          "selected_geometry_complete": true,
+          "original_unchanged": true
+        },
+        {
+          "id": "v2_dev_terminal_B_positive",
+          "error": null,
+          "missed_events": [
+            {
+              "id": "custom",
+              "type": "custom",
+              "exposure_seconds": 1.0
+            }
+          ],
+          "false_positive_events": 0,
+          "uncovered_frame_regions": 15,
+          "rescan_status": "passed",
+          "independent_frame_count_matches": true,
+          "selected_frame_count_matches": true,
+          "selected_geometry_present": true,
+          "selected_geometry_complete": true,
+          "original_unchanged": true
+        },
+        {
+          "id": "v2_dev_terminal_C_positive",
+          "error": null,
+          "missed_events": [
+            {
+              "id": "custom",
+              "type": "custom",
+              "exposure_seconds": 1.0
+            }
+          ],
+          "false_positive_events": 0,
+          "uncovered_frame_regions": 15,
+          "rescan_status": "passed",
+          "independent_frame_count_matches": true,
+          "selected_frame_count_matches": true,
+          "selected_geometry_present": true,
+          "selected_geometry_complete": true,
+          "original_unchanged": true
+        }
+      ],
+      "manifest_sha256": "8baac199eac64651b2525a50b3bd9bab9455f8a59ee6071b9d40848e867dfe93",
+      "inference_core_sha256": {
+        "app/media.py": "7bd5cda21359d34fc27c71c61dd4d8004c6b7ffd66d4db1f766f3223fdfbf3be",
+        "app/ocr.py": "10f6c57f6167fa8f5eafe02ddfd13f4cd266b93c88e99458c27ee0f470f01554",
+        "app/detectors.py": "e43bc2e630aff8656daf61094938da44a073f378d8eeccfe9fc8dd6d6d040a27",
+        "app/pipeline.py": "6d475539566818fd6185167755bda5d528cde8c838b06650575dc13ab72b9221"
+      },
+      "inference_core_unchanged": true,
+      "freeze_note": ""
+    },
+    "heldout": {
+      "status": "completed",
+      "path": "benchmark_robustness_v2_heldout.json",
+      "summary": {
+        "completed_samples": 12,
+        "failed_samples": 0,
+        "expected_events": 24,
+        "detected_events": 18,
+        "event_recall": 0.75,
+        "false_positive_events": 0,
+        "negative_samples": 6,
+        "negative_samples_with_false_positives": 0,
+        "sensitive_frame_recall": 0.6875,
+        "checked_sensitive_frame_occurrences": 336,
+        "fully_masked_frame_occurrences": 231,
+        "full_mask_frame_fraction": 0.6875,
+        "fully_masked_events": 18,
+        "mask_checked_events": 24,
+        "all_export_frame_counts_match": true,
+        "analysis_wall_seconds": 1070.7347,
+        "export_wall_seconds": 1075.0892,
+        "by_condition": {
+          "A": {
+            "completed_samples": 4,
+            "failed_samples": 0,
+            "expected_events": 8,
+            "detected_events": 6,
+            "event_recall": 0.75,
+            "false_positive_events": 0,
+            "negative_samples": 2,
+            "negative_samples_with_false_positives": 0,
+            "sensitive_frame_recall": 0.7321428571428571,
+            "checked_sensitive_frame_occurrences": 112,
+            "fully_masked_frame_occurrences": 82,
+            "full_mask_frame_fraction": 0.7321428571428571,
+            "fully_masked_events": 6,
+            "mask_checked_events": 8,
+            "all_export_frame_counts_match": true,
+            "analysis_wall_seconds": 235.6365,
+            "export_wall_seconds": 200.3
+          },
+          "B": {
+            "completed_samples": 4,
+            "failed_samples": 0,
+            "expected_events": 8,
+            "detected_events": 7,
+            "event_recall": 0.875,
+            "false_positive_events": 0,
+            "negative_samples": 2,
+            "negative_samples_with_false_positives": 0,
+            "sensitive_frame_recall": 0.8660714285714286,
+            "checked_sensitive_frame_occurrences": 112,
+            "fully_masked_frame_occurrences": 97,
+            "full_mask_frame_fraction": 0.8660714285714286,
+            "fully_masked_events": 7,
+            "mask_checked_events": 8,
+            "all_export_frame_counts_match": true,
+            "analysis_wall_seconds": 301.0548,
+            "export_wall_seconds": 239.3689
+          },
+          "C": {
+            "completed_samples": 4,
+            "failed_samples": 0,
+            "expected_events": 8,
+            "detected_events": 5,
+            "event_recall": 0.625,
+            "false_positive_events": 0,
+            "negative_samples": 2,
+            "negative_samples_with_false_positives": 0,
+            "sensitive_frame_recall": 0.4642857142857143,
+            "checked_sensitive_frame_occurrences": 112,
+            "fully_masked_frame_occurrences": 52,
+            "full_mask_frame_fraction": 0.4642857142857143,
+            "fully_masked_events": 5,
+            "mask_checked_events": 8,
+            "all_export_frame_counts_match": true,
+            "analysis_wall_seconds": 534.0434,
+            "export_wall_seconds": 635.4203
+          }
+        },
+        "by_layout": {
+          "crm": {
+            "completed_samples": 6,
+            "failed_samples": 0,
+            "expected_events": 12,
+            "detected_events": 9,
+            "event_recall": 0.75,
+            "false_positive_events": 0,
+            "negative_samples": 3,
+            "negative_samples_with_false_positives": 0,
+            "sensitive_frame_recall": 0.7321428571428571,
+            "checked_sensitive_frame_occurrences": 168,
+            "fully_masked_frame_occurrences": 123,
+            "full_mask_frame_fraction": 0.7321428571428571,
+            "fully_masked_events": 9,
+            "mask_checked_events": 12,
+            "all_export_frame_counts_match": true,
+            "analysis_wall_seconds": 369.1922,
+            "export_wall_seconds": 384.2058
+          },
+          "spreadsheet": {
+            "completed_samples": 6,
+            "failed_samples": 0,
+            "expected_events": 12,
+            "detected_events": 9,
+            "event_recall": 0.75,
+            "false_positive_events": 0,
+            "negative_samples": 3,
+            "negative_samples_with_false_positives": 0,
+            "sensitive_frame_recall": 0.6428571428571429,
+            "checked_sensitive_frame_occurrences": 168,
+            "fully_masked_frame_occurrences": 108,
+            "full_mask_frame_fraction": 0.6428571428571429,
+            "fully_masked_events": 9,
+            "mask_checked_events": 12,
+            "all_export_frame_counts_match": true,
+            "analysis_wall_seconds": 701.5425,
+            "export_wall_seconds": 690.8833999999999
+          }
+        },
+        "all_original_hashes_unchanged": true,
+        "selected_mask_geometry": {
+          "checked_frame_regions": 231,
+          "fully_masked_frame_regions": 231,
+          "meaning": "Selected detection boxes only; independent annotation coverage above still counts missed/partial detections."
+        },
+        "ablation_1hz": {
+          "phases": [
+            {
+              "phase_frames": 0,
+              "expected_events": 24,
+              "detected_events": 12,
+              "event_recall": 0.5,
+              "eligible_ocr_calls": 92
+            },
+            {
+              "phase_frames": 1,
+              "expected_events": 24,
+              "detected_events": 6,
+              "event_recall": 0.25,
+              "eligible_ocr_calls": 92
+            },
+            {
+              "phase_frames": 2,
+              "expected_events": 24,
+              "detected_events": 6,
+              "event_recall": 0.25,
+              "eligible_ocr_calls": 94
+            },
+            {
+              "phase_frames": 3,
+              "expected_events": 24,
+              "detected_events": 12,
+              "event_recall": 0.5,
+              "eligible_ocr_calls": 93
+            },
+            {
+              "phase_frames": 4,
+              "expected_events": 24,
+              "detected_events": 12,
+              "event_recall": 0.5,
+              "eligible_ocr_calls": 92
+            },
+            {
+              "phase_frames": 5,
+              "expected_events": 24,
+              "detected_events": 12,
+              "event_recall": 0.5,
+              "eligible_ocr_calls": 92
+            },
+            {
+              "phase_frames": 6,
+              "expected_events": 24,
+              "detected_events": 6,
+              "event_recall": 0.25,
+              "eligible_ocr_calls": 94
+            },
+            {
+              "phase_frames": 7,
+              "expected_events": 24,
+              "detected_events": 6,
+              "event_recall": 0.25,
+              "eligible_ocr_calls": 95
+            },
+            {
+              "phase_frames": 8,
+              "expected_events": 24,
+              "detected_events": 12,
+              "event_recall": 0.5,
+              "eligible_ocr_calls": 94
+            },
+            {
+              "phase_frames": 9,
+              "expected_events": 24,
+              "detected_events": 12,
+              "event_recall": 0.5,
+              "eligible_ocr_calls": 94
+            },
+            {
+              "phase_frames": 10,
+              "expected_events": 24,
+              "detected_events": 12,
+              "event_recall": 0.5,
+              "eligible_ocr_calls": 90
+            },
+            {
+              "phase_frames": 11,
+              "expected_events": 24,
+              "detected_events": 12,
+              "event_recall": 0.5,
+              "eligible_ocr_calls": 91
+            },
+            {
+              "phase_frames": 12,
+              "expected_events": 24,
+              "detected_events": 12,
+              "event_recall": 0.5,
+              "eligible_ocr_calls": 94
+            },
+            {
+              "phase_frames": 13,
+              "expected_events": 24,
+              "detected_events": 12,
+              "event_recall": 0.5,
+              "eligible_ocr_calls": 94
+            },
+            {
+              "phase_frames": 14,
+              "expected_events": 24,
+              "detected_events": 12,
+              "event_recall": 0.5,
+              "eligible_ocr_calls": 90
+            }
+          ],
+          "phase_recall_mean": 0.43333333333333335,
+          "phase_recall_min": 0.25,
+          "phase_recall_max": 0.5,
+          "all_frame_eligible_ocr_calls": 909,
+          "claim_limit": "Sampling replay and eligible-call counts only. No human-efficiency or wall-time speedup claim."
+        }
+      },
+      "evidence_integrity": {
+        "headline_ready": true,
+        "meaning": "Ready means complete, consistent measurements and correctly applied chosen masks. It does not mean high detection accuracy or complete privacy protection.",
+        "planned_clips": 12,
+        "detection_scored_clips": 12,
+        "fully_evaluated_clips": 12,
+        "planned_truth_regions": 336,
+        "independently_scored_truth_regions": 336,
+        "unscored_truth_regions": 0,
+        "unscored_policy": "A clip with a mismatched/missing coverage denominator contributes none of its planned regions to scored; no denominator substitution across clips.",
+        "selected_geometry_not_applicable_clips": 6,
+        "duplicate_ids": [],
+        "unexpected_ids": [],
+        "missing_ids": [],
+        "split_mismatches": [],
+        "processing_errors": [],
+        "unknown_checks": [],
+        "frame_count_failures": [],
+        "selected_geometry_failures": [],
+        "source_preservation_failures": [],
+        "denominator_failures": [],
+        "phase_replay_failures": [],
+        "manifest_matches": true,
+        "inference_core_matches_current": true,
+        "inference_core_unchanged_during_run": true
+      },
+      "headline_ready": true,
+      "failures": [
+        {
+          "id": "v2_heldout_crm_A_positive",
+          "error": null,
+          "missed_events": [
+            {
+              "id": "custom",
+              "type": "custom",
+              "exposure_seconds": 1.0
+            }
+          ],
+          "false_positive_events": 0,
+          "uncovered_frame_regions": 15,
+          "rescan_status": "passed",
+          "independent_frame_count_matches": true,
+          "selected_frame_count_matches": true,
+          "selected_geometry_present": true,
+          "selected_geometry_complete": true,
+          "original_unchanged": true
+        },
+        {
+          "id": "v2_heldout_crm_B_positive",
+          "error": null,
+          "missed_events": [
+            {
+              "id": "custom",
+              "type": "custom",
+              "exposure_seconds": 1.0
+            }
+          ],
+          "false_positive_events": 0,
+          "uncovered_frame_regions": 15,
+          "rescan_status": "passed",
+          "independent_frame_count_matches": true,
+          "selected_frame_count_matches": true,
+          "selected_geometry_present": true,
+          "selected_geometry_complete": true,
+          "original_unchanged": true
+        },
+        {
+          "id": "v2_heldout_crm_C_positive",
+          "error": null,
+          "missed_events": [
+            {
+              "id": "custom",
+              "type": "custom",
+              "exposure_seconds": 1.0
+            }
+          ],
+          "false_positive_events": 0,
+          "uncovered_frame_regions": 15,
+          "rescan_status": "passed",
+          "independent_frame_count_matches": true,
+          "selected_frame_count_matches": true,
+          "selected_geometry_present": true,
+          "selected_geometry_complete": true,
+          "original_unchanged": true
+        },
+        {
+          "id": "v2_heldout_spreadsheet_A_positive",
+          "error": null,
+          "missed_events": [
+            {
+              "id": "custom",
+              "type": "custom",
+              "exposure_seconds": 1.0
+            }
+          ],
+          "false_positive_events": 0,
+          "uncovered_frame_regions": 15,
+          "rescan_status": "passed",
+          "independent_frame_count_matches": true,
+          "selected_frame_count_matches": true,
+          "selected_geometry_present": true,
+          "selected_geometry_complete": true,
+          "original_unchanged": true
+        },
+        {
+          "id": "v2_heldout_spreadsheet_C_positive",
+          "error": null,
+          "missed_events": [
+            {
+              "id": "token",
+              "type": "token",
+              "exposure_seconds": 2.0
+            },
+            {
+              "id": "custom",
+              "type": "custom",
+              "exposure_seconds": 1.0
+            }
+          ],
+          "false_positive_events": 0,
+          "uncovered_frame_regions": 45,
+          "rescan_status": "passed",
+          "independent_frame_count_matches": true,
+          "selected_frame_count_matches": true,
+          "selected_geometry_present": true,
+          "selected_geometry_complete": true,
+          "original_unchanged": true
+        }
+      ],
+      "manifest_sha256": "8baac199eac64651b2525a50b3bd9bab9455f8a59ee6071b9d40848e867dfe93",
+      "inference_core_sha256": {
+        "app/media.py": "7bd5cda21359d34fc27c71c61dd4d8004c6b7ffd66d4db1f766f3223fdfbf3be",
+        "app/ocr.py": "10f6c57f6167fa8f5eafe02ddfd13f4cd266b93c88e99458c27ee0f470f01554",
+        "app/detectors.py": "e43bc2e630aff8656daf61094938da44a073f378d8eeccfe9fc8dd6d6d040a27",
+        "app/pipeline.py": "6d475539566818fd6185167755bda5d528cde8c838b06650575dc13ab72b9221"
+      },
+      "inference_core_unchanged": true,
+      "freeze_note": "Root authorized one run after hero workflow validation; source freeze reports/evaluation_v2_source_freeze.json at 2026-10-04T16:16:44.028902+00:00; shared workstation media production, no concurrent app OCR."
+    }
+  },
+  "scope": "Fictional raster-rendered English UI, 24 correlated clips; CPU only; not customer or browser recordings.",
+  "original_failure_preserved": "Original dev_019 token miss remains known; same-model output rescan did not catch it.",
+  "ablation_limit": "All 15 sampling phases replay identical per-frame observations. Eligible OCR-call counts are work counts, not measured speedup or human time saved.",
+  "interruption_and_resume": {
+    "status": "completed",
+    "original_pause_at": "2026-10-04T16:42:39.969187+00:00",
+    "resumed_at": "2026-10-05T00:49:18.859445+00:00",
+    "finished_at": "2026-10-05T01:03:23.692980+00:00",
+    "prior_completed_clips_preserved": 10,
+    "clips_restarted_from_frame_zero": [
+      "v2_heldout_spreadsheet_C_positive",
+      "v2_heldout_spreadsheet_C_negative"
+    ],
+    "same_original_evaluation": true,
+    "new_blind_trial": false,
+    "source_freeze_files_verified": 17,
+    "frozen_clips_verified": 24,
+    "prior_sample_values_unchanged": true,
+    "prior_observation_and_export_bytes_unchanged": true,
+    "provenance_report": "evaluation_v2_resume_provenance.json",
+    "pause_checkpoint_preserved": true,
+    "timing_caveat": "A new process resumed the two incomplete clips, so the first resumed clip can include model initialization. All times are observations on the shared workstation, not standardized throughput or a speedup comparison."
+  },
+  "same_model_rescan_blind_spot": {
+    "id": "v2_heldout_spreadsheet_C_positive",
+    "detected_events": 2,
+    "expected_events": 4,
+    "missed_events": [
+      {
+        "id": "token",
+        "type": "token",
+        "exposure_seconds": 2.0
+      },
+      {
+        "id": "custom",
+        "type": "custom",
+        "exposure_seconds": 1.0
+      }
+    ],
+    "fully_masked_annotated_frame_regions": 11,
+    "expected_annotated_frame_regions": 56,
+    "same_model_rescan_status": "passed",
+    "same_model_rescan_findings_count": 0,
+    "interpretation": "The same OCR model passed the output rescan despite wholly missed token and custom-keyword events and 45 uncovered annotated frame regions. A successful rescan is not independent privacy assurance."
+  }
+}

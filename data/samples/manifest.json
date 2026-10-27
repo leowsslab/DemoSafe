@@ -1,0 +1,26 @@
+{
+  "schema": 1,
+  "generator": "scripts/generate_samples.py",
+  "generator_sha256": "be67a82479e4081ecb8673ed36fbf82bc9a7475a8cae857413d7402dc73d6f0a",
+  "license": "CC0-1.0",
+  "authorship": "Self-authored synthetic UI fixtures. No captured third-party interfaces. All persons, workspace content and credentials are fictional.",
+  "fonts": [
+    {
+      "name": "segoeui.ttf",
+      "sha256": "704eada12961a27fd271f7d3b09e2066520e758390c1776744eff430fee30f6e"
+    },
+    {
+      "name": "consola.ttf",
+      "sha256": "cf00b507b3286870cc5064ebd0633c303f70b491a4af25eec2d32df413db0179"
+    }
+  ],
+  "ffmpeg": "7.1-essentials_build-www.gyan.dev",
+  "split_policy": "Locked by UI template. Development: customer_dashboard, support_inbox, developer_terminal. Held-out: project_board, order_spreadsheet, workspace_settings. Never tune on held-out outcomes.",
+  "counts": {
+    "dev": 24,
+    "heldout": 24,
+    "demo": 2
+  },
+  "limitations": "Synthetic English screen text, high contrast, 23-28px labels, 1280x720 at 10fps. This does not establish recall on real customer recordings. Same render and matching rules across splits; layouts are held out, categories are not.",
+  "truth_location": "../benchmark_truth"
+}

@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#F4F2EC">
+  <title>DemoSafe — Review workspace</title>
+  <link rel="stylesheet" href="/style.css">
+  <script defer src="/app.js"></script>
+</head>
+<body>
+  <svg class="icon-definitions" aria-hidden="true"><defs>
+    <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3 4.5 6v5c0 4.5 3 8 7.5 10 4.5-2 7.5-5.5 7.5-10V6L12 3Z"/><path d="m8.5 12 2.3 2.3 4.7-4.8"/></symbol>
+    <symbol id="i-upload" viewBox="0 0 24 24"><path d="M12 16V3m-5 5 5-5 5 5M4 15v5h16v-5"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M4 12h15m-6-6 6 6-6 6"/></symbol>
+    <symbol id="i-file" viewBox="0 0 24 24"><path d="M14 3H5v18h14V8l-5-5Z"/><path d="M14 3v6h5M8 13h8m-8 4h5"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></symbol>
+    <symbol id="i-box" viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="2" stroke-dasharray="4 3"/><path d="M12 8v8m-4-4h8"/></symbol>
+    <symbol id="i-download" viewBox="0 0 24 24"><path d="M12 3v13m-5-5 5 5 5-5M4 16v5h16v-5"/></symbol>
+    <symbol id="i-close" viewBox="0 0 24 24"><path d="m6 6 12 12M6 18 18 6"/></symbol>
+    <symbol id="i-lock" viewBox="0 0 24 24"><rect x="5" y="10" width="14" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3m-4 4v3"/></symbol>
+  </defs></svg>
+
+  <header class="site-header">
+    <a href="/" class="brand" aria-label="DemoSafe home">DemoSafe<span class="brand-period" aria-hidden="true">.</span></a>
+    <div class="header-right"><span class="header-context">Screen-content review</span><span class="local-label"><span class="status-dot"></span>Local workspace</span><span class="prototype-label">Prototype</span></div>
+  </header>
+
+  <main>
+    <section class="workspace-masthead" aria-labelledby="page-title">
+      <div><p class="workspace-index">DemoSafe / Review desk</p><h1 id="page-title">A new review.</h1></div>
+      <p class="workspace-brief">Inspect visible text. Decide what stays.<br>Export a separate, reviewed copy.</p>
+    </section>
+
+    <nav class="workflow" aria-label="Review workflow"><span id="step-import" class="workflow-step active"><b>01</b> Source</span><span class="workflow-line" aria-hidden="true">/</span><span id="step-review" class="workflow-step"><b>02</b> Review</span><span class="workflow-line" aria-hidden="true">/</span><span id="step-export" class="workflow-step"><b>03</b> Export & rescan</span></nav>
+    <div id="notice" class="notice" role="alert" hidden></div>
+
+    <section class="workbench" aria-label="DemoSafe review workspace">
+      <header class="workbench-header"><div class="workbench-heading"><span class="document-index" aria-hidden="true"><svg class="icon"><use href="#i-file"/></svg></span><div><h2 id="workspace-title">Source file</h2><p id="workspace-subtitle">Screenshot or screen recording</p></div></div><div class="backend-label"><span class="status-dot muted"></span><span id="backend-label">Checking local engine…</span></div></header>
+
+      <div id="intake" class="intake-grid">
+        <div id="dropzone" class="dropzone">
+          <div class="intake-lead">
+            <span class="upload-symbol" aria-hidden="true"><svg class="icon"><use href="#i-upload"/></svg></span>
+            <p class="small-label">Your source</p>
+            <h3>Add media to review.</h3>
+            <p class="intake-description">Drop a screenshot or recording here.<br>The original file stays unchanged.</p>
+            <div class="intake-action"><label class="button primary upload-button" for="file-input">Choose a file<svg class="icon"><use href="#i-arrow"/></svg></label><input id="file-input" type="file" disabled accept="image/png,image/jpeg,video/mp4,video/webm,video/quicktime" class="visually-hidden"><span class="drop-alternative">or drag it into this area</span></div>
+            <p id="file-hint" class="file-hint">PNG, JPG · MP4, WebM, MOV · 100 MB max<br>Video: up to 60 s · 1920 × 1080 · 30 fps · constant frame rate</p>
+          </div>
+          <div class="sample-section"><div class="sample-heading"><span class="small-label">Try a fictional sample</span><span class="sample-index" aria-hidden="true">Fictional media</span></div><div class="sample-controls"><select id="sample-select" aria-label="Choose a generated sample" disabled><option>Loading samples…</option></select><button id="load-sample" class="button secondary" disabled>Load sample</button></div><p id="sample-description" class="muted-copy">Samples contain fictional data for demonstration.</p></div>
+        </div>
+        <aside class="setup-panel" aria-label="Detection settings">
+          <div class="setup-heading"><span class="small-label">Review setup</span><h3>What to look for</h3><p>Supported patterns, flagged for review.</p></div>
+          <ul class="detection-types"><li><span class="type-mark" aria-hidden="true">01</span><span><strong>Email addresses</strong></span></li><li><span class="type-mark" aria-hidden="true">02</span><span><strong>Phone numbers</strong></span></li><li><span class="type-mark" aria-hidden="true">03</span><span><strong>Credential-like text</strong></span></li></ul>
+          <div class="keyword-setup"><label for="keywords" class="field-label">Custom keywords <span>Optional</span></label><textarea id="keywords" rows="2" placeholder="Project codename&#10;Internal customer name" spellcheck="false"></textarea><p class="input-help">One phrase per line. Uses recognized text.</p></div>
+          <div class="scope-note"><span class="scope-rule" aria-hidden="true"></span><p>Visual text only. Audio is not analyzed. Exported videos are silent.</p></div>
+        </aside>
+      </div>
+
+      <div id="processing" class="processing" hidden aria-live="polite"><div class="processing-top"><div><span id="processing-kicker" class="small-label">Local analysis</span><h3 id="processing-title">Analyzing visible text…</h3></div><button id="cancel-job" class="button secondary">Cancel</button></div><div class="progress-track"><div id="progress-bar" class="progress-fill"></div></div><div class="progress-caption"><span id="progress-message">Your file remains on this computer.</span><strong id="progress-percent">0%</strong></div></div>
+
+      <div id="review" class="review-grid" hidden>
+        <div class="media-column">
+          <div class="preview-toolbar"><div class="segmented" aria-label="Preview mode"><button id="view-original" class="selected" aria-pressed="true">Original</button><button id="view-compare" aria-pressed="false" disabled>Compare export</button></div><span id="media-details" class="media-details"></span></div>
+          <div id="preview-grid" class="preview-grid"><div class="media-pane"><div class="pane-label"><span>Original source</span><span id="time-display">00:00.00</span></div><div id="original-frame" class="media-frame"><video id="original-video" controls muted playsinline preload="metadata" hidden></video><img id="original-image" alt="Original uploaded screenshot" hidden><svg id="overlay" class="detection-overlay" aria-label="Detection and manual mask regions"></svg><div id="draw-instruction" class="draw-instruction" hidden>Drag a rectangle over the area to hide</div></div></div><div id="result-pane" class="media-pane" hidden><div class="pane-label"><span>Redacted copy</span><span>Local / silent</span></div><div id="result-frame" class="media-frame"><video id="result-video" controls muted playsinline preload="metadata" hidden></video><img id="result-image" alt="Exported image with selected regions masked" hidden></div></div></div>
+          <div class="preview-key"><span><i class="key-swatch detected"></i>Detected text</span><span><i class="key-swatch selected"></i>Selected finding</span><span><i class="key-swatch manual"></i>Manual mask</span></div>
+          <section class="manual-section" aria-labelledby="manual-title"><div class="section-title-row"><div><h3 id="manual-title">Manual masks</h3><p>Cover details the detector missed. Set the exact time range.</p></div><button id="draw-mask" class="button secondary"><svg class="icon"><use href="#i-box"/></svg>Draw mask</button></div><div id="manual-editor" class="manual-editor" hidden><div class="manual-fields"><label>Start (seconds)<input id="mask-start" type="number" min="0" step="0.01" value="0"></label><label>End (seconds)<input id="mask-end" type="number" min="0" step="0.01" value="1"></label><button id="save-mask" class="button primary" disabled>Add mask</button><button id="cancel-mask" class="button text-button">Cancel</button></div><p id="mask-status" class="input-help" role="status">Draw a rectangle in the original preview, then set its time range.</p><details class="coordinate-editor"><summary>Enter a rectangle with the keyboard</summary><p class="input-help">Coordinates use original image pixels, measured from the top-left corner.</p><div class="coordinate-fields"><label>Left<input id="box-left" type="number" min="0" step="1" value="0"></label><label>Top<input id="box-top" type="number" min="0" step="1" value="0"></label><label>Right<input id="box-right" type="number" min="4" step="1" value="100"></label><label>Bottom<input id="box-bottom" type="number" min="4" step="1" value="100"></label></div><button id="set-mask-box" class="button secondary">Set rectangle</button></details></div><ul id="manual-list" class="manual-list" aria-label="Manual masks"></ul></section>
+          <section id="verification" class="verification" hidden aria-live="polite"><div class="verification-icon"><svg class="icon"><use href="#i-check"/></svg></div><div><h3 id="verification-title">Export verification</h3><p id="verification-message"></p><p class="verification-limit">An automated rescan cannot certify that every sensitive detail is removed.</p></div></section>
+        </div>
+
+        <aside class="findings-panel" aria-labelledby="findings-title"><div class="findings-heading"><div><span class="small-label">Decision inspector</span><h3 id="findings-title">Findings <span id="finding-count" class="count-badge">0</span></h3></div><span id="selection-count" class="selection-count">0 selected</span></div><p class="findings-description">Inspect a finding to see its location. Checked items are masked on export.</p><div class="findings-filter"><label for="filter-type" class="visually-hidden">Filter finding type</label><select id="filter-type"><option value="all">All types</option><option value="email">Email addresses</option><option value="phone">Phone numbers</option><option value="token">Credential patterns</option><option value="custom">Custom keywords</option></select><button id="select-all" class="text-button">Select all</button></div><div id="finding-list" class="finding-list" role="list"></div><div id="no-findings" class="no-findings" hidden><span class="empty-rule" aria-hidden="true"></span><strong>No supported patterns found.</strong><p>Check the preview yourself. OCR can miss small, blurred, or unusual text. Add manual masks if needed.</p></div><div class="export-area"><dl class="decision-summary" aria-label="Export decisions"><div><dt>Detected</dt><dd id="summary-detected">0</dd></div><div><dt>Selected</dt><dd id="summary-selected">0</dd></div><div><dt>Manual</dt><dd id="summary-manual">0</dd></div><div><dt>Kept visible</dt><dd id="summary-kept">0</dd></div></dl><p id="export-summary">Review the findings before exporting.</p><button id="export-job" class="button primary full-width">Export redacted copy<svg class="icon"><use href="#i-arrow"/></svg></button><div id="download-actions" class="download-actions" hidden><a id="download-media" class="button secondary" download><svg class="icon"><use href="#i-download"/></svg>Download</a><a id="download-report" class="report-link" download>Review report <span>↗</span></a></div><p class="export-note">Original preserved. Video audio removed.</p></div></aside>
+      </div>
+      <div id="finished-message" class="finished-message" hidden><h3 id="finished-title"></h3><p id="finished-description"></p><button id="finished-restart" class="button primary">Start a new review</button></div>
+      <footer class="workbench-footer"><span>Processed locally<span class="footer-divider" aria-hidden="true">/</span>Original preserved</span><span id="hardware-status">CPU baseline · UGen300 not connected</span></footer>
+    </section>
+    <div class="bottom-row"><p><strong>Human review required.</strong> OCR can miss sensitive text; a completed rescan is not a privacy guarantee.</p><div class="review-actions"><button id="delete-job" class="text-button danger-text" hidden>Delete this review</button><button id="new-review" class="text-button" hidden>Start a new review <span>↗</span></button></div></div>
+  </main>
+  <dialog id="delete-dialog" aria-labelledby="delete-title"><h2 id="delete-title">Delete this local review?</h2><p>This removes the imported copy, preview, exported copy and report from DemoSafe. The file you originally selected on your computer stays unchanged.</p><p>This action cannot be undone within DemoSafe.</p><div class="dialog-actions"><button id="delete-cancel" class="button secondary">Keep review</button><button id="delete-confirm" class="button danger-button">Delete review and files</button></div></dialog>
+  <footer class="site-footer"><span>DemoSafe<span class="footer-divider">/</span>Screen-content review</span><span>Local prototype · CPU inference</span></footer>
+</body>
+</html>

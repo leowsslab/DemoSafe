@@ -1,0 +1,214 @@
+{
+  "date": "2026-10-04T15:33:44.956603+00:00",
+  "scope": "Local source/API/dependency review; not penetration testing or certification",
+  "response_headers": {
+    "cache-control": "no-store",
+    "x-content-type-options": "nosniff",
+    "referrer-policy": "no-referrer",
+    "content-security-policy": "default-src 'self'; base-uri 'none'; object-src 'none'; frame-ancestors 'none'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; media-src 'self' blob:; connect-src 'self'; font-src 'self' data:; form-action 'self'",
+    "x-frame-options": "DENY",
+    "access-control-allow-origin": null
+  },
+  "api_probes": [
+    {
+      "case": "health_without_auth",
+      "status": 401
+    },
+    {
+      "case": "unexpected_host",
+      "status": 403
+    },
+    {
+      "case": "remote_origin_post",
+      "status": 403
+    },
+    {
+      "case": "different_local_port_post",
+      "status": 403
+    },
+    {
+      "case": "no_origin_post",
+      "status": 403
+    },
+    {
+      "case": "null_origin_post",
+      "status": 403
+    },
+    {
+      "case": "missing_job",
+      "status": 401
+    }
+  ],
+  "session_bootstrap_status": 200,
+  "authenticated_probes": [
+    {
+      "case": "authorized_health",
+      "status": 200
+    },
+    {
+      "case": "authorized_wrong_port",
+      "status": 403
+    },
+    {
+      "case": "authorized_remote_origin",
+      "status": 403
+    },
+    {
+      "case": "authorized_without_origin",
+      "status": 403
+    },
+    {
+      "case": "authorized_valid_origin_missing_sample",
+      "status": 404
+    }
+  ],
+  "listener_lines": [
+    "TCP    127.0.0.1:8765         0.0.0.0:0              LISTENING       38140"
+  ],
+  "retained_jobs": {
+    "files": 6,
+    "bytes": 1317268,
+    "originals": 2,
+    "all_originals_match_bundled_synthetic_samples": true
+  },
+  "packages": [
+    {
+      "name": "annotated-doc",
+      "version": "0.0.5"
+    },
+    {
+      "name": "annotated-types",
+      "version": "0.8.0"
+    },
+    {
+      "name": "anyio",
+      "version": "4.15.1"
+    },
+    {
+      "name": "click",
+      "version": "8.5.0"
+    },
+    {
+      "name": "colorama",
+      "version": "0.4.6"
+    },
+    {
+      "name": "fastapi",
+      "version": "0.142.2"
+    },
+    {
+      "name": "flatbuffers",
+      "version": "25.12.19"
+    },
+    {
+      "name": "h11",
+      "version": "0.16.0"
+    },
+    {
+      "name": "idna",
+      "version": "3.20"
+    },
+    {
+      "name": "imageio-ffmpeg",
+      "version": "0.6.0"
+    },
+    {
+      "name": "numpy",
+      "version": "2.3.5"
+    },
+    {
+      "name": "onnxruntime",
+      "version": "1.30.0"
+    },
+    {
+      "name": "opencv-python",
+      "version": "5.0.0.93"
+    },
+    {
+      "name": "opentelemetry-api",
+      "version": "1.45.0"
+    },
+    {
+      "name": "packaging",
+      "version": "26.3"
+    },
+    {
+      "name": "pillow",
+      "version": "12.3.0"
+    },
+    {
+      "name": "protobuf",
+      "version": "7.36.2"
+    },
+    {
+      "name": "pyclipper",
+      "version": "1.4.0"
+    },
+    {
+      "name": "pydantic",
+      "version": "2.13.5"
+    },
+    {
+      "name": "pydantic_core",
+      "version": "2.46.5"
+    },
+    {
+      "name": "python-multipart",
+      "version": "0.0.32"
+    },
+    {
+      "name": "PyYAML",
+      "version": "6.0.3"
+    },
+    {
+      "name": "rapidocr-onnxruntime",
+      "version": "1.4.4"
+    },
+    {
+      "name": "shapely",
+      "version": "2.1.2"
+    },
+    {
+      "name": "six",
+      "version": "1.17.0"
+    },
+    {
+      "name": "starlette",
+      "version": "1.7.0"
+    },
+    {
+      "name": "tqdm",
+      "version": "4.70.1"
+    },
+    {
+      "name": "typing-inspection",
+      "version": "0.4.4"
+    },
+    {
+      "name": "typing_extensions",
+      "version": "4.16.0"
+    },
+    {
+      "name": "uvicorn",
+      "version": "0.54.0"
+    }
+  ],
+  "missing_packages": [],
+  "osv": {
+    "status": "completed",
+    "database": "https://api.osv.dev/v1/querybatch",
+    "queried_package_versions": 30,
+    "findings": [],
+    "limits": "Python package/version database matching only. Does not cover bundled FFmpeg/OpenCV native library builds, unknown vulnerabilities, code-level authorization issues or network egress."
+  },
+  "source_sha256": {
+    "app/detectors.py": "e43bc2e630aff8656daf61094938da44a073f378d8eeccfe9fc8dd6d6d040a27",
+    "app/main.py": "67e25877dc50969c27c88bd4fa2c9c25fd6d3ebd3dad2d2101366d865f656a40",
+    "app/media.py": "7bd5cda21359d34fc27c71c61dd4d8004c6b7ffd66d4db1f766f3223fdfbf3be",
+    "app/ocr.py": "10f6c57f6167fa8f5eafe02ddfd13f4cd266b93c88e99458c27ee0f470f01554",
+    "app/paths.py": "870cb9a0bf87ac60a1f67700b18fd695bdf14a4524711139e38d7536ef9ce8df",
+    "app/pipeline.py": "6d475539566818fd6185167755bda5d528cde8c838b06650575dc13ab72b9221",
+    "app/session.py": "19011e1f39341a1dfc8a335e7f63eaa5241f9e728f2b86fb90cec9b6c94fe1d7",
+    "app/__init__.py": "32dcb40b4b8c5bc4164494d9b2aa480b1dce1a062ea35665ca2afdd40a05b12a"
+  }
+}

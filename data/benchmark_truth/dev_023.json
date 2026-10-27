@@ -1,0 +1,20 @@
+{
+  "schema": 1,
+  "id": "dev_023",
+  "split": "dev",
+  "template": "developer_terminal",
+  "scenario": "clean_summary",
+  "media": "dev/dev_023.mp4",
+  "width": 1280,
+  "height": 720,
+  "fps": 10,
+  "frame_count": 40,
+  "duration": 4,
+  "font_size": 28,
+  "exposure": 0.0,
+  "keywords": [
+    "ORCHID CONFIDENTIAL"
+  ],
+  "events": [],
+  "sha256": "1e7f895d76fec6e0ed572725c73a4677e528aceea76643a59ac009e547b58470"
+}

@@ -1,0 +1,36 @@
+{
+  "status": "interrupted",
+  "paused_at": "2026-10-04T16:42:39.969187+00:00",
+  "session_id": 31451,
+  "session_exit_code": 1,
+  "process_terminated_confirmed": true,
+  "source_freeze_matches": true,
+  "completed_ids": [
+    "v2_heldout_crm_A_positive",
+    "v2_heldout_crm_A_negative",
+    "v2_heldout_crm_B_positive",
+    "v2_heldout_crm_B_negative",
+    "v2_heldout_crm_C_positive",
+    "v2_heldout_crm_C_negative",
+    "v2_heldout_spreadsheet_A_positive",
+    "v2_heldout_spreadsheet_A_negative",
+    "v2_heldout_spreadsheet_B_positive",
+    "v2_heldout_spreadsheet_B_negative"
+  ],
+  "pending_ids": [
+    "v2_heldout_spreadsheet_C_positive",
+    "v2_heldout_spreadsheet_C_negative"
+  ],
+  "partial_artifacts": {
+    "v2_heldout_spreadsheet_C_positive": {
+      "observation": false,
+      "export": false
+    },
+    "v2_heldout_spreadsheet_C_negative": {
+      "observation": false,
+      "export": false
+    }
+  },
+  "resume_command": ".\\scripts\\resume_robustness_v2_heldout.ps1",
+  "resume_semantics": "Verify every frozen source hash and dataset manifest before --resume. Skip exactly completed IDs. Any uncompleted clip restarts from frame zero and its unscored derived files may be overwritten; do not reuse partial inference or treat it as another completed evaluation."
+}

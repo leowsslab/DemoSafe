@@ -1,0 +1,38 @@
+{
+  "schema": 2,
+  "id": "v2_dev_helpdesk_C_negative",
+  "split": "dev",
+  "layout": "helpdesk",
+  "condition": "C",
+  "positive": false,
+  "width": 1280,
+  "height": 720,
+  "fps": 15,
+  "frame_count": 120,
+  "media": "media/v2_dev_helpdesk_C_negative.mp4",
+  "media_sha256": "87fbc12e0d7d6c6a59bce13da1b58087e8869d43623e7b6bc27bca359e8fa528",
+  "keywords": [
+    "CEDAR INTERNAL"
+  ],
+  "events": [],
+  "font_file": "segoeui.ttf",
+  "font_sha256": "704eada12961a27fd271f7d3b09e2066520e758390c1776744eff430fee30f6e",
+  "condition_parameters": {
+    "font_px": 20,
+    "crf": 32,
+    "contrast": "approximately 4.5:1",
+    "moving_background": true
+  },
+  "text_foreground": [
+    119,
+    119,
+    119
+  ],
+  "text_background": [
+    255,
+    255,
+    255
+  ],
+  "uncompressed_full_pixel_contrast_ratio": 4.4781,
+  "contrast_note": "Nominal full-pixel foreground/background ratio before antialiasing and video compression; edge pixels differ."
+}

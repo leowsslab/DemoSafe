@@ -1,0 +1,48 @@
+{
+  "schema": 1,
+  "id": "heldout_046",
+  "split": "heldout",
+  "template": "workspace_settings",
+  "scenario": "moving_email",
+  "media": "heldout/heldout_046.mp4",
+  "width": 1280,
+  "height": 720,
+  "fps": 10,
+  "frame_count": 40,
+  "duration": 4,
+  "font_size": 23,
+  "exposure": 0.2,
+  "keywords": [
+    "ORCHID CONFIDENTIAL"
+  ],
+  "events": [
+    {
+      "id": "heldout_046_0",
+      "type": "email",
+      "text": "demo55@example.com",
+      "start": 1.0,
+      "end": 1.2,
+      "frames": [
+        {
+          "index": 10,
+          "box": [
+            462,
+            445,
+            703,
+            467
+          ]
+        },
+        {
+          "index": 11,
+          "box": [
+            450,
+            445,
+            691,
+            467
+          ]
+        }
+      ]
+    }
+  ],
+  "sha256": "b48fc37ae6f9708a4b5ad5825fefc6f11992ff7285276c4d9be9939e2ccac187"
+}

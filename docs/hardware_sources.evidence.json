@@ -1,0 +1,69 @@
+{
+  "checked_at_local_date": "2026-10-04",
+  "purpose": "Planning evidence for DemoSafe hardware integration; not proof of local device execution",
+  "local_hardware_verified": false,
+  "source_revision_pinned": false,
+  "sources": [
+    {
+      "id": "asus_ugen_utility",
+      "url": "https://github.com/Asus-UGen-Series/Ugen-Utility",
+      "supports": ["Separate UGen300 USB and PCIe packages", "Driver version 5.3.0 documented", "Paddle OCR feature listed"],
+      "limits": ["Utility currently Linux only", "No local execution performed"]
+    },
+    {
+      "id": "asus_windows_demos",
+      "url": "https://github.com/Asus-UGen-Series/UGen300-Series-11-Ready-to-run-AI-Demos-for-Windows",
+      "supports": ["Windows 11 and USB UGen300 route", "Python 3.10 and HailoRT 5.3.x documented"],
+      "limits": ["Does not establish DemoSafe OCR performance"]
+    },
+    {
+      "id": "hailo_paddle_ocr",
+      "url": "https://github.com/hailo-ai/hailo-apps/blob/main/hailo_apps/python/standalone_apps/paddle_ocr/README.md",
+      "supports": ["Hailo-10H support and Windows installation documented", "Hailo-10H runtime requirement listed as 5.3.0"],
+      "limits": ["Example environment and artifact versions must be matched", "USB integration still requires device verification"]
+    },
+    {
+      "id": "hailo_paddle_ocr_requirements",
+      "url": "https://github.com/hailo-ai/hailo-apps/blob/main/hailo_apps/python/standalone_apps/paddle_ocr/requirements.txt",
+      "supports": ["numpy<2.0", "opencv-python<=4.10.0.84"],
+      "limits": ["Conflicts with current DemoSafe NumPy 2.3.5 and OpenCV 5.0 pins"]
+    },
+    {
+      "id": "hailo_app_resources",
+      "url": "https://github.com/hailo-ai/hailo-apps/blob/main/hailo_apps/config/resources_config.yaml",
+      "supports": ["Hailo-10H Paddle OCR defaults named ocr_det and ocr"],
+      "limits": ["Names alone do not identify exact weights or character dictionary"]
+    },
+    {
+      "id": "hailo10h_v5_detection",
+      "url": "https://github.com/hailo-ai/hailo_model_zoo/blob/master/docs/public_models/HAILO10H/HAILO10H_text_detection.rst",
+      "supports": ["paddle_ocr_v5_mobile_detection HEF listed for Hailo-10H", "Table cites compiler 5.4.0 and PCIe measurement conditions"],
+      "limits": ["Published FPS is not a UGen300 USB application result"]
+    },
+    {
+      "id": "hailo10h_v5_recognition",
+      "url": "https://github.com/hailo-ai/hailo_model_zoo/blob/master/docs/public_models/HAILO10H/HAILO10H_text_recognition.rst",
+      "supports": ["paddle_ocr_v5_mobile_recognition HEF listed for Hailo-10H"],
+      "limits": ["Model differs from current PP-OCRv4 CPU baseline"]
+    },
+    {
+      "id": "hailo10h_v5_recognition_config",
+      "url": "https://github.com/hailo-ai/hailo_model_zoo/blob/master/hailo_model_zoo/cfg/networks/paddle_ocr_v5_mobile_recognition.yaml",
+      "supports": ["48x320x3 input", "Version-specific v5 character dictionary and preprocessing", "hailo10h listed as supported architecture"],
+      "limits": ["Dictionary and postprocessing cannot be borrowed blindly from another model"]
+    },
+    {
+      "id": "hailo_model_zoo_getting_started",
+      "url": "https://github.com/hailo-ai/hailo_model_zoo/blob/master/docs/GETTING_STARTED.rst",
+      "supports": ["Model Zoo hardware evaluation documents PCIe-only Hailo-10H support", "Guide cites compiler and runtime 5.3.0"],
+      "limits": ["Not a verified USB evaluation route", "Version documentation differs from current public model tables"]
+    }
+  ],
+  "required_at_hardware_gate": [
+    "Record actual device interface and USB link speed",
+    "Pin exact source revisions, runtime, driver, firmware, Python wheel and HEF hashes",
+    "Record model and artifact terms",
+    "Run genuine device inference before setting hardware_verified true",
+    "Distinguish changed-model system comparisons from matched-model hardware comparisons"
+  ]
+}

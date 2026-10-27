@@ -1,0 +1,38 @@
+{
+  "schema": 2,
+  "id": "v2_dev_terminal_A_negative",
+  "split": "dev",
+  "layout": "terminal",
+  "condition": "A",
+  "positive": false,
+  "width": 1280,
+  "height": 720,
+  "fps": 15,
+  "frame_count": 120,
+  "media": "media/v2_dev_terminal_A_negative.mp4",
+  "media_sha256": "3d0b9b5f7ae5f2fe672b22687e27da531cb62706e15c4bf7cd60f8fad737daa0",
+  "keywords": [
+    "CEDAR INTERNAL"
+  ],
+  "events": [],
+  "font_file": "consola.ttf",
+  "font_sha256": "cf00b507b3286870cc5064ebd0633c303f70b491a4af25eec2d32df413db0179",
+  "condition_parameters": {
+    "font_px": 24,
+    "crf": 18,
+    "contrast": "high",
+    "moving_background": false
+  },
+  "text_foreground": [
+    244,
+    248,
+    250
+  ],
+  "text_background": [
+    15,
+    23,
+    33
+  ],
+  "uncompressed_full_pixel_contrast_ratio": 16.8728,
+  "contrast_note": "Nominal full-pixel foreground/background ratio before antialiasing and video compression; edge pixels differ."
+}

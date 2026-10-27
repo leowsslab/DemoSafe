@@ -1,0 +1,4157 @@
+{
+  "schema": 2,
+  "split": "heldout",
+  "status": "completed",
+  "planned_samples": 12,
+  "started_at": "2026-10-04T16:17:08.034290+00:00",
+  "manifest_sha256": "8baac199eac64651b2525a50b3bd9bab9455f8a59ee6071b9d40848e867dfe93",
+  "dataset_frozen_at": "2026-10-04T15:20:14.843094+00:00",
+  "source_sha256": {
+    "app/__init__.py": "32dcb40b4b8c5bc4164494d9b2aa480b1dce1a062ea35665ca2afdd40a05b12a",
+    "app/detectors.py": "e43bc2e630aff8656daf61094938da44a073f378d8eeccfe9fc8dd6d6d040a27",
+    "app/main.py": "67e25877dc50969c27c88bd4fa2c9c25fd6d3ebd3dad2d2101366d865f656a40",
+    "app/media.py": "7bd5cda21359d34fc27c71c61dd4d8004c6b7ffd66d4db1f766f3223fdfbf3be",
+    "app/ocr.py": "10f6c57f6167fa8f5eafe02ddfd13f4cd266b93c88e99458c27ee0f470f01554",
+    "app/paths.py": "870cb9a0bf87ac60a1f67700b18fd695bdf14a4524711139e38d7536ef9ce8df",
+    "app/pipeline.py": "6d475539566818fd6185167755bda5d528cde8c838b06650575dc13ab72b9221",
+    "app/session.py": "19011e1f39341a1dfc8a335e7f63eaa5241f9e728f2b86fb90cec9b6c94fe1d7"
+  },
+  "evaluator_sha256": "092b0613846bfcf3c72b7367afa74520a252f5c5a30d1111d8c692c4b4ec9011",
+  "freeze_note": "Root authorized one run after hero workflow validation; source freeze reports/evaluation_v2_source_freeze.json at 2026-10-04T16:16:44.028902+00:00; shared workstation media production, no concurrent app OCR.",
+  "data_limitations": [
+    "Fictional raster-rendered UI, not customer or browser recordings.",
+    "Layout families disjoint between splits, but renderer infrastructure and event timing are shared.",
+    "Conditions are paired correlated variants, not independent population samples.",
+    "C changes font size, contrast, compression and background motion together; no single-factor causal claim.",
+    "English supported text patterns only. Does not evaluate human efficiency or UGen300."
+  ],
+  "event_matching": "One-to-one type plus >=50% truth box coverage on at least one expected frame. Per-frame recall and independent pixel coverage report partial misses.",
+  "mask_coverage": ">=99.5% of each annotated region, every RGB channel <=16, on every annotated frame. Original missed regions remain in denominator.",
+  "samples": [
+    {
+      "id": "v2_heldout_crm_A_positive",
+      "layout": "crm",
+      "condition": "A",
+      "positive": true,
+      "split": "heldout",
+      "analysis_wall_seconds": 43.2456,
+      "runtime_metrics": {
+        "frames_scanned": 120,
+        "unique_frames_ocr": 43,
+        "exact_cache_hits": 77,
+        "analysis_seconds": 43.231,
+        "ocr_seconds": 42.197,
+        "processing_fps": 2.78,
+        "findings_count": 3,
+        "audio_checked": false,
+        "all_frames_decoded": true
+      },
+      "detection": {
+        "expected_events": 4,
+        "detected_events": 3,
+        "missed_events": [
+          {
+            "id": "custom",
+            "type": "custom",
+            "exposure_seconds": 1.0
+          }
+        ],
+        "predicted_events": 3,
+        "false_positive_events": 0,
+        "false_positive_ids": [],
+        "event_recall": 0.75,
+        "expected_sensitive_frame_occurrences": 56,
+        "detected_sensitive_frame_occurrences": 41,
+        "sensitive_frame_recall": 0.7321428571428571,
+        "matches": [
+          {
+            "truth_event": "token",
+            "prediction_event": "e0003",
+            "matching_frames": 30
+          },
+          {
+            "truth_event": "phone",
+            "prediction_event": "e0002",
+            "matching_frames": 8
+          },
+          {
+            "truth_event": "email",
+            "prediction_event": "e0001",
+            "matching_frames": 3
+          }
+        ]
+      },
+      "ablation_1hz": {
+        "method": "Replay unchanged per-frame observations at every 1 Hz phase; original temporal track IDs retained only to match events. No separate product implementation or speedup measurement.",
+        "cache_model": "Exact decoded-pixel SHA-256 LRU, capacity 128, empty at clip start; call counts are eligible work, not timings.",
+        "all_frame_eligible_ocr_calls": 43,
+        "all_frame_decoded_frames": 120,
+        "phases": [
+          {
+            "phase_frames": 0,
+            "phase_seconds": 0.0,
+            "sampled_frames": 8,
+            "eligible_ocr_calls": 6,
+            "detected_events": 2,
+            "expected_events": 4,
+            "event_recall": 0.5
+          },
+          {
+            "phase_frames": 1,
+            "phase_seconds": 0.06666666666666667,
+            "sampled_frames": 8,
+            "eligible_ocr_calls": 6,
+            "detected_events": 1,
+            "expected_events": 4,
+            "event_recall": 0.25
+          },
+          {
+            "phase_frames": 2,
+            "phase_seconds": 0.13333333333333333,
+            "sampled_frames": 8,
+            "eligible_ocr_calls": 8,
+            "detected_events": 1,
+            "expected_events": 4,
+            "event_recall": 0.25
+          },
+          {
+            "phase_frames": 3,
+            "phase_seconds": 0.2,
+            "sampled_frames": 8,
+            "eligible_ocr_calls": 7,
+            "detected_events": 2,
+            "expected_events": 4,
+            "event_recall": 0.5
+          },
+          {
+            "phase_frames": 4,
+            "phase_seconds": 0.26666666666666666,
+            "sampled_frames": 8,
+            "eligible_ocr_calls": 6,
+            "detected_events": 2,
+            "expected_events": 4,
+            "event_recall": 0.5
+          },
+          {
+            "phase_frames": 5,
+            "phase_seconds": 0.3333333333333333,
+            "sampled_frames": 8,
+            "eligible_ocr_calls": 6,
+            "detected_events": 2,
+            "expected_events": 4,
+            "event_recall": 0.5
+          },
+          {
+            "phase_frames": 6,
+            "phase_seconds": 0.4,
+            "sampled_frames": 8,
+            "eligible_ocr_calls": 8,
+            "detected_events": 1,
+            "expected_events": 4,
+            "event_recall": 0.25
+          },
+          {
+            "phase_frames": 7,
+            "phase_seconds": 0.4666666666666667,
+            "sampled_frames": 8,
+            "eligible_ocr_calls": 8,
+            "detected_events": 1,
+            "expected_events": 4,
+            "event_recall": 0.25
+          },
+          {
+            "phase_frames": 8,
+            "phase_seconds": 0.5333333333333333,
+            "sampled_frames": 8,
+            "eligible_ocr_calls": 7,
+            "detected_events": 2,
+            "expected_events": 4,
+            "event_recall": 0.5
+          },
+          {
+            "phase_frames": 9,
+            "phase_seconds": 0.6,
+            "sampled_frames": 8,
+            "eligible_ocr_calls": 7,
+            "detected_events": 2,
+            "expected_events": 4,
+            "event_recall": 0.5
+          },
+          {
+            "phase_frames": 10,
+            "phase_seconds": 0.6666666666666666,
+            "sampled_frames": 8,
+            "eligible_ocr_calls": 5,
+            "detected_events": 2,
+            "expected_events": 4,
+            "event_recall": 0.5
+          },
+          {
+            "phase_frames": 11,
+            "phase_seconds": 0.7333333333333333,
+            "sampled_frames": 8,
+            "eligible_ocr_calls": 6,
+            "detected_events": 2,
+            "expected_events": 4,
+            "event_recall": 0.5
+          },
+          {
+            "phase_frames": 12,
+            "phase_seconds": 0.8,
+            "sampled_frames": 8,
+            "eligible_ocr_calls": 7,
+            "detected_events": 2,
+            "expected_events": 4,
+            "event_recall": 0.5
+          },
+          {
+            "phase_frames": 13,
+            "phase_seconds": 0.8666666666666667,
+            "sampled_frames": 8,
+            "eligible_ocr_calls": 7,
+            "detected_events": 2,
+            "expected_events": 4,
+            "event_recall": 0.5
+          },
+          {
+            "phase_frames": 14,
+            "phase_seconds": 0.9333333333333333,
+            "sampled_frames": 8,
+            "eligible_ocr_calls": 5,
+            "detected_events": 2,
+            "expected_events": 4,
+            "event_recall": 0.5
+          }
+        ],
+        "phase_recall_mean": 0.43333333333333335,
+        "phase_recall_min": 0.25,
+        "phase_recall_max": 0.5
+      },
+      "observations_sha256": "0d2698a3c08a162a8038fc53a40784f5a64e1b6b32236f63c277a71139007493",
+      "export_wall_seconds": 38.1472,
+      "mask_coverage": {
+        "solid_mask_color": "RGB(0,0,0)",
+        "codec_tolerance_per_channel": 16,
+        "required_black_fraction": 0.995,
+        "output_frames": 120,
+        "expected_frames": 120,
+        "frame_count_matches": true,
+        "checked_sensitive_frame_occurrences": 56,
+        "fully_masked_frame_occurrences": 41,
+        "fully_masked_events": 3,
+        "expected_events": 4,
+        "minimum_black_fraction": 0.0,
+        "mean_black_fraction": 0.7321428571428571,
+        "uncovered_occurrences": [
+          {
+            "event_id": "custom",
+            "frame": 96,
+            "black_fraction": 0.0
+          },
+          {
+            "event_id": "custom",
+            "frame": 97,
+            "black_fraction": 0.0
+          },
+          {
+            "event_id": "custom",
+            "frame": 98,
+            "black_fraction": 0.0
+          },
+          {
+            "event_id": "custom",
+            "frame": 99,
+            "black_fraction": 0.0
+          },
+          {
+            "event_id": "custom",
+            "frame": 100,
+            "black_fraction": 0.0
+          },
+          {
+            "event_id": "custom",
+            "frame": 101,
+            "black_fraction": 0.0
+          },
+          {
+            "event_id": "custom",
+            "frame": 102,
+            "black_fraction": 0.0
+          },
+          {
+            "event_id": "custom",
+            "frame": 103,
+            "black_fraction": 0.0
+          },
+          {
+            "event_id": "custom",
+            "frame": 104,
+            "black_fraction": 0.0
+          },
+          {
+            "event_id": "custom",
+            "frame": 105,
+            "black_fraction": 0.0
+          },
+          {
+            "event_id": "custom",
+            "frame": 106,
+            "black_fraction": 0.0
+          },
+          {
+            "event_id": "custom",
+            "frame": 107,
+            "black_fraction": 0.0
+          },
+          {
+            "event_id": "custom",
+            "frame": 108,
+            "black_fraction": 0.0
+          },
+          {
+            "event_id": "custom",
+            "frame": 109,
+            "black_fraction": 0.0
+          },
+          {
+            "event_id": "custom",
+            "frame": 110,
+            "black_fraction": 0.0
+          }
+        ]
+      },
+      "selected_mask_geometry": {
+        "solid_mask_color": "RGB(0,0,0)",
+        "codec_tolerance_per_channel": 16,
+        "required_black_fraction": 0.995,
+        "output_frames": 120,
+        "expected_frames": 120,
+        "frame_count_matches": true,
+        "checked_sensitive_frame_occurrences": 41,
+        "fully_masked_frame_occurrences": 41,
+        "fully_masked_events": 3,
+        "expected_events": 3,
+        "minimum_black_fraction": 1.0,
+        "mean_black_fraction": 1.0,
+        "uncovered_occurrences": []
+      },
+      "application_verification": {
+        "schema_version": 1,
+        "backend": "CPU · ONNX Runtime",
+        "model": "RapidOCR 1.4.4 / PP-OCRv4 detection + recognition",
+        "hardware_verified": false,
+        "media": {
+          "media_type": "video",
+          "width": 1280,
+          "height": 720,
+          "fps": 15.0,
+          "duration": 8.0,
+          "frame_count": 120
+        },
+        "analysis": {
+          "frames_scanned": 120,
+          "unique_frames_ocr": 43,
+          "exact_cache_hits": 77,
+          "analysis_seconds": 43.231,
+          "ocr_seconds": 42.197,
+          "processing_fps": 2.78,
+          "findings_count": 3,
+          "audio_checked": false,
+          "all_frames_decoded": true
+        },
+        "decisions": [
+          {
+            "event_id": "e0001",
+            "type": "email",
+            "start": 1.2,
+            "end": 1.4,
+            "action": "redact"
+          },
+          {
+            "event_id": "e0002",
+            "type": "phone",
+            "start": 2.533333333333333,
+            "end": 3.066666666666667,
+            "action": "redact"
+          },
+          {
+            "event_id": "e0003",
+            "type": "token",
+            "start": 4.0,
+            "end": 6.0,
+            "action": "redact"
+          }
+        ],
+        "manual_mask_count": 0,
+        "masked_frames": 41,
+        "audio_removed": true,
+        "audio_checked": false,
+        "export_seconds": 38.146,
+        "rescan": {
+          "status": "passed",
+          "findings_count": 0,
+          "message": "No supported text patterns detected in output; not a guarantee of privacy."
+        },
+        "limitations": [
+          "Supported visible text patterns only; names, faces and arbitrary confidential content may be missed.",
+          "Output rescan uses the same OCR and rules and is not an independent privacy guarantee.",
+          "OCR accuracy depends on font, size, contrast, compression and language."
+        ]
+      },
+      "output_sha256": "0cb4fa740e8d142b77b9aa4e21764f6b097ba1abf33ea821d8469aaa7a72068c",
+      "source_sha256": "885191ae3e1afb2eb0b9a3fc9ec4fa07eea6cd1ff191a552f4323d8cde58138b",
+      "original_unchanged": true
+    },
+    {
+      "id": "v2_heldout_crm_A_negative",
+      "layout": "crm",
+      "condition": "A",
+      "positive": false,
+      "split": "heldout",
+      "analysis_wall_seconds": 34.3842,
+      "runtime_metrics": {
+        "frames_scanned": 120,
+        "unique_frames_ocr": 38,
+        "exact_cache_hits": 82,
+        "analysis_seconds": 34.373,
+        "ocr_seconds": 33.393,
+        "processing_fps": 3.49,
+        "findings_count": 0,
+        "audio_checked": false,
+        "all_frames_decoded": true
+      },
+      "detection": {
+        "expected_events": 0,
+        "detected_events": 0,
+        "missed_events": [],
+        "predicted_events": 0,
+        "false_positive_events": 0,
+        "false_positive_ids": [],
+        "event_recall": null,
+        "expected_sensitive_frame_occurrences": 0,
+        "detected_sensitive_frame_occurrences": 0,
+        "sensitive_frame_recall": null,
+        "matches": []
+      },
+      "ablation_1hz": {
+        "method": "Replay unchanged per-frame observations at every 1 Hz phase; original temporal track IDs retained only to match events. No separate product implementation or speedup measurement.",
+        "cache_model": "Exact decoded-pixel SHA-256 LRU, capacity 128, empty at clip start; call counts are eligible work, not timings.",
+        "all_frame_eligible_ocr_calls": 38,
+        "all_frame_decoded_frames": 120,
+        "phases": [
+          {
+            "phase_frames": 0,
+            "phase_seconds": 0.0,
+            "sampled_frames": 8,
+            "eligible_ocr_calls": 6,
+            "detected_events": 0,
+            "expected_events": 0,
+            "event_recall": null
+          },
+          {
+            "phase_frames": 1,
+            "phase_seconds": 0.06666666666666667,
+            "sampled_frames": 8,
+            "eligible_ocr_calls": 6,
+            "detected_events": 0,
+            "expected_events": 0,
+            "event_recall": null
+          },
+          {
+            "phase_frames": 2,
+            "phase_seconds": 0.13333333333333333,
+            "sampled_frames": 8,
+            "eligible_ocr_calls": 6,
+            "detected_events": 0,
+            "expected_events": 0,
+            "event_recall": null
+          },
+          {
+            "phase_frames": 3,
+            "phase_seconds": 0.2,
+            "sampled_frames": 8,
+            "eligible_ocr_calls": 6,
+            "detected_events": 0,
+            "expected_events": 0,
+            "event_recall": null
+          },
+          {
+            "phase_frames": 4,
+            "phase_seconds": 0.26666666666666666,
+            "sampled_frames": 8,
+            "eligible_ocr_calls": 6,
+            "detected_events": 0,
+            "expected_events": 0,
+            "event_recall": null
+          },
+          {
+            "phase_frames": 5,
+            "phase_seconds": 0.3333333333333333,
+            "sampled_frames": 8,
+            "eligible_ocr_calls": 6,
+            "detected_events": 0,
+            "expected_events": 0,
+            "event_recall": null
+          },
+          {
+            "phase_frames": 6,
+            "phase_seconds": 0.4,
+            "sampled_frames": 8,
+            "eligible_ocr_calls": 6,
+            "detected_events": 0,
+            "expected_events": 0,
+            "event_recall": null
+          },
+          {
+            "phase_frames": 7,
+            "phase_seconds": 0.4666666666666667,
+            "sampled_frames": 8,
+            "eligible_ocr_calls": 7,
+            "detected_events": 0,
+            "expected_events": 0,
+            "event_recall": null
+          },
+          {
+            "phase_frames": 8,
+            "phase_seconds": 0.5333333333333333,
+            "sampled_frames": 8,
+            "eligible_ocr_calls": 7,
+            "detected_events": 0,
+            "expected_events": 0,
+            "event_recall": null
+          },
+          {
+            "phase_frames": 9,
+            "phase_seconds": 0.6,
+            "sampled_frames": 8,
+            "eligible_ocr_calls": 7,
+            "detected_events": 0,
+            "expected_events": 0,
+            "event_recall": null
+          },
+          {
+            "phase_frames": 10,
+            "phase_seconds": 0.6666666666666666,
+            "sampled_frames": 8,
+            "eligible_ocr_calls": 5,
+            "detected_events": 0,
+            "expected_events": 0,
+            "event_recall": null
+          },
+          {
+            "phase_frames": 11,
+            "phase_seconds": 0.7333333333333333,
+            "sampled_frames": 8,
+            "eligible_ocr_calls": 6,
+            "detected_events": 0,
+            "expected_events": 0,
+            "event_recall": null
+          },
+          {
+            "phase_frames": 12,
+            "phase_seconds": 0.8,
+            "sampled_frames": 8,
+            "eligible_ocr_calls": 7,
+            "detected_events": 0,
+            "expected_events": 0,
+            "event_recall": null
+          },
+          {
+            "phase_frames": 13,
+            "phase_seconds": 0.8666666666666667,
+            "sampled_frames": 8,
+            "eligible_ocr_calls": 7,
+            "detected_events": 0,
+            "expected_events": 0,
+            "event_recall": null
+          },
+          {
+            "phase_frames": 14,
+            "phase_seconds": 0.9333333333333333,
+            "sampled_frames": 8,
+            "eligible_ocr_calls": 5,
+            "detected_events": 0,
+            "expected_events": 0,
+            "event_recall": null
+          }
+        ],
+        "phase_recall_mean": null,
+        "phase_recall_min": null,
+        "phase_recall_max": null
+      },
+      "observations_sha256": "03e64c268bd6e235a57f2ef43312ef40981b6f2926bcdb1775e7e71632bf6fd0",
+      "export_wall_seconds": 36.9236,
+      "mask_coverage": {
+        "solid_mask_color": "RGB(0,0,0)",
+        "codec_tolerance_per_channel": 16,
+        "required_black_fraction": 0.995,
+        "output_frames": 120,
+        "expected_frames": 120,
+        "frame_count_matches": true,
+        "checked_sensitive_frame_occurrences": 0,
+        "fully_masked_frame_occurrences": 0,
+        "fully_masked_events": 0,
+        "expected_events": 0,
+        "minimum_black_fraction": null,
+        "mean_black_fraction": null,
+        "uncovered_occurrences": []
+      },
+      "selected_mask_geometry": {
+        "solid_mask_color": "RGB(0,0,0)",
+        "codec_tolerance_per_channel": 16,
+        "required_black_fraction": 0.995,
+        "output_frames": 120,
+        "expected_frames": 120,
+        "frame_count_matches": true,
+        "checked_sensitive_frame_occurrences": 0,
+        "fully_masked_frame_occurrences": 0,
+        "fully_masked_events": 0,
+        "expected_events": 0,
+        "minimum_black_fraction": null,
+        "mean_black_fraction": null,
+        "uncovered_occurrences": []
+      },
+      "application_verification": {
+        "schema_version": 1,
+        "backend": "CPU · ONNX Runtime",
+        "model": "RapidOCR 1.4.4 / PP-OCRv4 detection + recognition",
+        "hardware_verified": false,
+        "media": {
+          "media_type": "video",
+          "width": 1280,
+          "height": 720,
+          "fps": 15.0,
+          "duration": 8.0,
+          "frame_count": 120
+        },
+        "analysis": {
+          "frames_scanned": 120,
+          "unique_frames_ocr": 38,
+          "exact_cache_hits": 82,
+          "analysis_seconds": 34.373,
+          "ocr_seconds": 33.393,
+          "processing_fps": 3.49,
+          "findings_count": 0,
+          "audio_checked": false,
+          "all_frames_decoded": true
+        },
+        "decisions": [],
+        "manual_mask_count": 0,
+        "masked_frames": 0,
+        "audio_removed": true,
+        "audio_checked": false,
+        "export_seconds": 36.923,
+        "rescan": {
+          "status": "passed",
+          "findings_count": 0,
+          "message": "No supported text patterns detected in output; not a guarantee of privacy."
+        },
+        "limitations": [
+          "Supported visible text patterns only; names, faces and arbitrary confidential content may be missed.",
+          "Output rescan uses the same OCR and rules and is not an independent privacy guarantee.",
+          "OCR accuracy depends on font, size, contrast, compression and language."
+        ]
+      },
+      "output_sha256": "813e83c84a8ac5e85d49084b3c90f1cf187829c8bcb8e0a5d9081ec28255c468",
+      "source_sha256": "8c18a14a6ece61220c815cd48408e1e71b66ff77408109747ebf94151fc7bbe5",
+      "original_unchanged": true
+    },
+    {
+      "id": "v2_heldout_crm_B_positive",
+      "layout": "crm",
+      "condition": "B",
+      "positive": true,
+      "split": "heldout",
+      "analysis_wall_seconds": 45.9953,
+      "runtime_metrics": {
+        "frames_scanned": 120,
+        "unique_frames_ocr": 51,
+        "exact_cache_hits": 69,
+        "analysis_seconds": 45.986,
+        "ocr_seconds": 45.009,
+        "processing_fps": 2.61,
+        "findings_count": 3,
+        "audio_checked": false,
+        "all_frames_decoded": true
+      },
+      "detection": {
+        "expected_events": 4,
+        "detected_events": 3,
+        "missed_events": [
+          {
+            "id": "custom",
+            "type": "custom",
+            "exposure_seconds": 1.0
+          }
+        ],
+        "predicted_events": 3,
+        "false_positive_events": 0,
+        "false_positive_ids": [],
+        "event_recall": 0.75,
+        "expected_sensitive_frame_occurrences": 56,
+        "detected_sensitive_frame_occurrences": 41,
+        "sensitive_frame_recall": 0.7321428571428571,
+        "matches": [
+          {
+            "truth_event": "token",
+            "prediction_event": "e0003",
+            "matching_frames": 30
+          },
+          {
+            "truth_event": "phone",
+            "prediction_event": "e0002",
+            "matching_frames": 8
+          },
+          {
+            "truth_event": "email",
+            "prediction_event": "e0001",
+            "matching_frames": 3
+          }
+        ]
+      },
+      "ablation_1hz": {
+        "method": "Replay unchanged per-frame observations at every 1 Hz phase; original temporal track IDs retained only to match events. No separate product implementation or speedup measurement.",
+        "cache_model": "Exact decoded-pixel SHA-256 LRU, capacity 128, empty at clip start; call counts are eligible work, not timings.",
+        "all_frame_eligible_ocr_calls": 51,
+        "all_frame_decoded_frames": 120,
+        "phases": [
+          {
+            "phase_frames": 0,
+            "phase_seconds": 0.0,
+            "sampled_frames": 8,
+            "eligible_ocr_calls": 8,
+            "detected_events": 2,
+            "expected_events": 4,
+            "event_recall": 0.5
+          },
+          {
+            "phase_frames": 1,
+            "phase_seconds": 0.06666666666666667,
+            "sampled_frames": 8,
+            "eligible_ocr_calls": 8,
+            "detected_events": 1,
+            "expected_events": 4,
+            "event_recall": 0.25
+          },
+          {
+            "phase_frames": 2,
+            "phase_seconds": 0.13333333333333333,
+            "sampled_frames": 8,
+            "eligible_ocr_calls": 8,
+            "detected_events": 1,
+            "expected_events": 4,
+            "event_recall": 0.25
+          },
+          {
+            "phase_frames": 3,
+            "phase_seconds": 0.2,
+            "sampled_frames": 8,
+            "eligible_ocr_calls": 8,
+            "detected_events": 2,
+            "expected_events": 4,
+            "event_recall": 0.5
+          },
+          {
+            "phase_frames": 4,
+            "phase_seconds": 0.26666666666666666,
+            "sampled_frames": 8,
+            "eligible_ocr_calls": 8,
+            "detected_events": 2,
+            "expected_events": 4,
+            "event_recall": 0.5
+          },
+          {
+            "phase_frames": 5,
+            "phase_seconds": 0.3333333333333333,
+            "sampled_frames": 8,
+            "eligible_ocr_calls": 8,
+            "detected_events": 2,
+            "expected_events": 4,
+            "event_recall": 0.5
+          },
+          {
+            "phase_frames": 6,
+            "phase_seconds": 0.4,
+            "sampled_frames": 8,
+            "eligible_ocr_calls": 8,
+            "detected_events": 1,
+            "expected_events": 4,
+            "event_recall": 0.25
+          },
+          {
+            "phase_frames": 7,
+            "phase_seconds": 0.4666666666666667,
+            "sampled_frames": 8,
+            "eligible_ocr_calls": 8,
+            "detected_events": 1,
+            "expected_events": 4,
+            "event_recall": 0.25
+          },
+          {
+            "phase_frames": 8,
+            "phase_seconds": 0.5333333333333333,
+            "sampled_frames": 8,
+            "eligible_ocr_calls": 8,
+            "detected_events": 2,
+            "expected_events": 4,
+            "event_recall": 0.5
+          },
+          {
+            "phase_frames": 9,
+            "phase_seconds": 0.6,
+            "sampled_frames": 8,
+            "eligible_ocr_calls": 8,
+            "detected_events": 2,
+            "expected_events": 4,
+            "event_recall": 0.5
+          },
+          {
+            "phase_frames": 10,
+            "phase_seconds": 0.6666666666666666,
+            "sampled_frames": 8,
+            "eligible_ocr_calls": 8,
+            "detected_events": 2,
+            "expected_events": 4,
+            "event_recall": 0.5
+          },
+          {
+            "phase_frames": 11,
+            "phase_seconds": 0.7333333333333333,
+            "sampled_frames": 8,
+            "eligible_ocr_calls": 8,
+            "detected_events": 2,
+            "expected_events": 4,
+            "event_recall": 0.5
+          },
+          {
+            "phase_frames": 12,
+            "phase_seconds": 0.8,
+            "sampled_frames": 8,
+            "eligible_ocr_calls": 8,
+            "detected_events": 2,
+            "expected_events": 4,
+            "event_recall": 0.5
+          },
+          {
+            "phase_frames": 13,
+            "phase_seconds": 0.8666666666666667,
+            "sampled_frames": 8,
+            "eligible_ocr_calls": 8,
+            "detected_events": 2,
+            "expected_events": 4,
+            "event_recall": 0.5
+          },
+          {
+            "phase_frames": 14,
+            "phase_seconds": 0.9333333333333333,
+            "sampled_frames": 8,
+            "eligible_ocr_calls": 8,
+            "detected_events": 2,
+            "expected_events": 4,
+            "event_recall": 0.5
+          }
+        ],
+        "phase_recall_mean": 0.43333333333333335,
+        "phase_recall_min": 0.25,
+        "phase_recall_max": 0.5
+      },
+      "observations_sha256": "093a401c5f872ddebf562d2f408a8f198b7f2fc68c11c0ba1dc57554b7c099f2",
+      "export_wall_seconds": 35.5992,
+      "mask_coverage": {
+        "solid_mask_color": "RGB(0,0,0)",
+        "codec_tolerance_per_channel": 16,
+        "required_black_fraction": 0.995,
+        "output_frames": 120,
+        "expected_frames": 120,
+        "frame_count_matches": true,
+        "checked_sensitive_frame_occurrences": 56,
+        "fully_masked_frame_occurrences": 41,
+        "fully_masked_events": 3,
+        "expected_events": 4,
+        "minimum_black_fraction": 0.0005827505827505828,
+        "mean_black_fraction": 0.732298951048951,
+        "uncovered_occurrences": [
+          {
+            "event_id": "custom",
+            "frame": 96,
+            "black_fraction": 0.000583
+          },
+          {
+            "event_id": "custom",
+            "frame": 97,
+            "black_fraction": 0.000583
+          },
+          {
+            "event_id": "custom",
+            "frame": 98,
+            "black_fraction": 0.000583
+          },
+          {
+            "event_id": "custom",
+            "frame": 99,
+            "black_fraction": 0.000583
+          },
+          {
+            "event_id": "custom",
+            "frame": 100,
+            "black_fraction": 0.000583
+          },
+          {
+            "event_id": "custom",
+            "frame": 101,
+            "black_fraction": 0.000583
+          },
+          {
+            "event_id": "custom",
+            "frame": 102,
+            "black_fraction": 0.000583
+          },
+          {
+            "event_id": "custom",
+            "frame": 103,
+            "black_fraction": 0.000583
+          },
+          {
+            "event_id": "custom",
+            "frame": 104,
+            "black_fraction": 0.000583
+          },
+          {
+            "event_id": "custom",
+            "frame": 105,
+            "black_fraction": 0.000583
+          },
+          {
+            "event_id": "custom",
+            "frame": 106,
+            "black_fraction": 0.000583
+          },
+          {
+            "event_id": "custom",
+            "frame": 107,
+            "black_fraction": 0.000583
+          },
+          {
+            "event_id": "custom",
+            "frame": 108,
+            "black_fraction": 0.000583
+          },
+          {
+            "event_id": "custom",
+            "frame": 109,
+            "black_fraction": 0.000583
+          },
+          {
+            "event_id": "custom",
+            "frame": 110,
+            "black_fraction": 0.000583
+          }
+        ]
+      },
+      "selected_mask_geometry": {
+        "solid_mask_color": "RGB(0,0,0)",
+        "codec_tolerance_per_channel": 16,
+        "required_black_fraction": 0.995,
+        "output_frames": 120,
+        "expected_frames": 120,
+        "frame_count_matches": true,
+        "checked_sensitive_frame_occurrences": 41,
+        "fully_masked_frame_occurrences": 41,
+        "fully_masked_events": 3,
+        "expected_events": 3,
+        "minimum_black_fraction": 1.0,
+        "mean_black_fraction": 1.0,
+        "uncovered_occurrences": []
+      },
+      "application_verification": {
+        "schema_version": 1,
+        "backend": "CPU · ONNX Runtime",
+        "model": "RapidOCR 1.4.4 / PP-OCRv4 detection + recognition",
+        "hardware_verified": false,
+        "media": {
+          "media_type": "video",
+          "width": 1280,
+          "height": 720,
+          "fps": 15.0,
+          "duration": 8.0,
+          "frame_count": 120
+        },
+        "analysis": {
+          "frames_scanned": 120,
+          "unique_frames_ocr": 51,
+          "exact_cache_hits": 69,
+          "analysis_seconds": 45.986,
+          "ocr_seconds": 45.009,
+          "processing_fps": 2.61,
+          "findings_count": 3,
+          "audio_checked": false,
+          "all_frames_decoded": true
+        },
+        "decisions": [
+          {
+            "event_id": "e0001",
+            "type": "email",
+            "start": 1.2,
+            "end": 1.4,
+            "action": "redact"
+          },
+          {
+            "event_id": "e0002",
+            "type": "phone",
+            "start": 2.533333333333333,
+            "end": 3.066666666666667,
+            "action": "redact"
+          },
+          {
+            "event_id": "e0003",
+            "type": "token",
+            "start": 4.0,
+            "end": 6.0,
+            "action": "redact"
+          }
+        ],
+        "manual_mask_count": 0,
+        "masked_frames": 41,
+        "audio_removed": true,
+        "audio_checked": false,
+        "export_seconds": 35.598,
+        "rescan": {
+          "status": "passed",
+          "findings_count": 0,
+          "message": "No supported text patterns detected in output; not a guarantee of privacy."
+        },
+        "limitations": [
+          "Supported visible text patterns only; names, faces and arbitrary confidential content may be missed.",
+          "Output rescan uses the same OCR and rules and is not an independent privacy guarantee.",
+          "OCR accuracy depends on font, size, contrast, compression and language."
+        ]
+      },
+      "output_sha256": "a43068b3e2575aaf0dfea6a5ae9299d35cfead2fc3fe572c7b1afee8b0aef8c0",
+      "source_sha256": "234e88d4a0e04751964fc9471172730572b070b9008a5db37a00284bac79ada5",
+      "original_unchanged": true
+    },
+    {
+      "id": "v2_heldout_crm_B_negative",
+      "layout": "crm",
+      "condition": "B",
+      "positive": false,
+      "split": "heldout",
+      "analysis_wall_seconds": 33.9186,
+      "runtime_metrics": {
+        "frames_scanned": 120,
+        "unique_frames_ocr": 40,
+        "exact_cache_hits": 80,
+        "analysis_seconds": 33.909,
+        "ocr_seconds": 32.939,
+        "processing_fps": 3.54,
+        "findings_count": 0,
+        "audio_checked": false,
+        "all_frames_decoded": true
+      },
+      "detection": {
+        "expected_events": 0,
+        "detected_events": 0,
+        "missed_events": [],
+        "predicted_events": 0,
+        "false_positive_events": 0,
+        "false_positive_ids": [],
+        "event_recall": null,
+        "expected_sensitive_frame_occurrences": 0,
+        "detected_sensitive_frame_occurrences": 0,
+        "sensitive_frame_recall": null,
+        "matches": []
+      },
+      "ablation_1hz": {
+        "method": "Replay unchanged per-frame observations at every 1 Hz phase; original temporal track IDs retained only to match events. No separate product implementation or speedup measurement.",
+        "cache_model": "Exact decoded-pixel SHA-256 LRU, capacity 128, empty at clip start; call counts are eligible work, not timings.",
+        "all_frame_eligible_ocr_calls": 40,
+        "all_frame_decoded_frames": 120,
+        "phases": [
+          {
+            "phase_frames": 0,
+            "phase_seconds": 0.0,
+            "sampled_frames": 8,
+            "eligible_ocr_calls": 8,
+            "detected_events": 0,
+            "expected_events": 0,
+            "event_recall": null
+          },
+          {
+            "phase_frames": 1,
+            "phase_seconds": 0.06666666666666667,
+            "sampled_frames": 8,
+            "eligible_ocr_calls": 8,
+            "detected_events": 0,
+            "expected_events": 0,
+            "event_recall": null
+          },
+          {
+            "phase_frames": 2,
+            "phase_seconds": 0.13333333333333333,
+            "sampled_frames": 8,
+            "eligible_ocr_calls": 8,
+            "detected_events": 0,
+            "expected_events": 0,
+            "event_recall": null
+          },
+          {
+            "phase_frames": 3,
+            "phase_seconds": 0.2,
+            "sampled_frames": 8,
+            "eligible_ocr_calls": 8,
+            "detected_events": 0,
+            "expected_events": 0,
+            "event_recall": null
+          },
+          {
+            "phase_frames": 4,
+            "phase_seconds": 0.26666666666666666,
+            "sampled_frames": 8,
+            "eligible_ocr_calls": 8,
+            "detected_events": 0,
+            "expected_events": 0,
+            "event_recall": null
+          },
+          {
+            "phase_frames": 5,
+            "phase_seconds": 0.3333333333333333,
+            "sampled_frames": 8,
+            "eligible_ocr_calls": 8,
+            "detected_events": 0,
+            "expected_events": 0,
+            "event_recall": null
+          },
+          {
+            "phase_frames": 6,
+            "phase_seconds": 0.4,
+            "sampled_frames": 8,
+            "eligible_ocr_calls": 8,
+            "detected_events": 0,
+            "expected_events": 0,
+            "event_recall": null
+          },
+          {
+            "phase_frames": 7,
+            "phase_seconds": 0.4666666666666667,
+            "sampled_frames": 8,
+            "eligible_ocr_calls": 8,
+            "detected_events": 0,
+            "expected_events": 0,
+            "event_recall": null
+          },
+          {
+            "phase_frames": 8,
+            "phase_seconds": 0.5333333333333333,
+            "sampled_frames": 8,
+            "eligible_ocr_calls": 8,
+            "detected_events": 0,
+            "expected_events": 0,
+            "event_recall": null
+          },
+          {
+            "phase_frames": 9,
+            "phase_seconds": 0.6,
+            "sampled_frames": 8,
+            "eligible_ocr_calls": 8,
+            "detected_events": 0,
+            "expected_events": 0,
+            "event_recall": null
+          },
+          {
+            "phase_frames": 10,
+            "phase_seconds": 0.6666666666666666,
+            "sampled_frames": 8,
+            "eligible_ocr_calls": 8,
+            "detected_events": 0,
+            "expected_events": 0,
+            "event_recall": null
+          },
+          {
+            "phase_frames": 11,
+            "phase_seconds": 0.7333333333333333,
+            "sampled_frames": 8,
+            "eligible_ocr_calls": 8,
+            "detected_events": 0,
+            "expected_events": 0,
+            "event_recall": null
+          },
+          {
+            "phase_frames": 12,
+            "phase_seconds": 0.8,
+            "sampled_frames": 8,
+            "eligible_ocr_calls": 8,
+            "detected_events": 0,
+            "expected_events": 0,
+            "event_recall": null
+          },
+          {
+            "phase_frames": 13,
+            "phase_seconds": 0.8666666666666667,
+            "sampled_frames": 8,
+            "eligible_ocr_calls": 8,
+            "detected_events": 0,
+            "expected_events": 0,
+            "event_recall": null
+          },
+          {
+            "phase_frames": 14,
+            "phase_seconds": 0.9333333333333333,
+            "sampled_frames": 8,
+            "eligible_ocr_calls": 8,
+            "detected_events": 0,
+            "expected_events": 0,
+            "event_recall": null
+          }
+        ],
+        "phase_recall_mean": null,
+        "phase_recall_min": null,
+        "phase_recall_max": null
+      },
+      "observations_sha256": "03e64c268bd6e235a57f2ef43312ef40981b6f2926bcdb1775e7e71632bf6fd0",
+      "export_wall_seconds": 35.1362,
+      "mask_coverage": {
+        "solid_mask_color": "RGB(0,0,0)",
+        "codec_tolerance_per_channel": 16,
+        "required_black_fraction": 0.995,
+        "output_frames": 120,
+        "expected_frames": 120,
+        "frame_count_matches": true,
+        "checked_sensitive_frame_occurrences": 0,
+        "fully_masked_frame_occurrences": 0,
+        "fully_masked_events": 0,
+        "expected_events": 0,
+        "minimum_black_fraction": null,
+        "mean_black_fraction": null,
+        "uncovered_occurrences": []
+      },
+      "selected_mask_geometry": {
+        "solid_mask_color": "RGB(0,0,0)",
+        "codec_tolerance_per_channel": 16,
+        "required_black_fraction": 0.995,
+        "output_frames": 120,
+        "expected_frames": 120,
+        "frame_count_matches": true,
+        "checked_sensitive_frame_occurrences": 0,
+        "fully_masked_frame_occurrences": 0,
+        "fully_masked_events": 0,
+        "expected_events": 0,
+        "minimum_black_fraction": null,
+        "mean_black_fraction": null,
+        "uncovered_occurrences": []
+      },
+      "application_verification": {
+        "schema_version": 1,
+        "backend": "CPU · ONNX Runtime",
+        "model": "RapidOCR 1.4.4 / PP-OCRv4 detection + recognition",
+        "hardware_verified": false,
+        "media": {
+          "media_type": "video",
+          "width": 1280,
+          "height": 720,
+          "fps": 15.0,
+          "duration": 8.0,
+          "frame_count": 120
+        },
+        "analysis": {
+          "frames_scanned": 120,
+          "unique_frames_ocr": 40,
+          "exact_cache_hits": 80,
+          "analysis_seconds": 33.909,
+          "ocr_seconds": 32.939,
+          "processing_fps": 3.54,
+          "findings_count": 0,
+          "audio_checked": false,
+          "all_frames_decoded": true
+        },
+        "decisions": [],
+        "manual_mask_count": 0,
+        "masked_frames": 0,
+        "audio_removed": true,
+        "audio_checked": false,
+        "export_seconds": 35.135,
+        "rescan": {
+          "status": "passed",
+          "findings_count": 0,
+          "message": "No supported text patterns detected in output; not a guarantee of privacy."
+        },
+        "limitations": [
+          "Supported visible text patterns only; names, faces and arbitrary confidential content may be missed.",
+          "Output rescan uses the same OCR and rules and is not an independent privacy guarantee.",
+          "OCR accuracy depends on font, size, contrast, compression and language."
+        ]
+      },
+      "output_sha256": "b5679b9ebe97d675fc4a31c4e13ad20a076fe9cf44d3fbce6a85a28bd51291f9",
+      "source_sha256": "f878cf2d07acb4a41314b495b31c07b2ba81a9c7ba7a902f8fb9a1b12ec2330c",
+      "original_unchanged": true
+    },
+    {
+      "id": "v2_heldout_crm_C_positive",
+      "layout": "crm",
+      "condition": "C",
+      "positive": true,
+      "split": "heldout",
+      "analysis_wall_seconds": 103.5465,
+      "runtime_metrics": {
+        "frames_scanned": 120,
+        "unique_frames_ocr": 120,
+        "exact_cache_hits": 0,
+        "analysis_seconds": 103.536,
+        "ocr_seconds": 102.541,
+        "processing_fps": 1.16,
+        "findings_count": 3,
+        "audio_checked": false,
+        "all_frames_decoded": true
+      },
+      "detection": {
+        "expected_events": 4,
+        "detected_events": 3,
+        "missed_events": [
+          {
+            "id": "custom",
+            "type": "custom",
+            "exposure_seconds": 1.0
+          }
+        ],
+        "predicted_events": 3,
+        "false_positive_events": 0,
+        "false_positive_ids": [],
+        "event_recall": 0.75,
+        "expected_sensitive_frame_occurrences": 56,
+        "detected_sensitive_frame_occurrences": 41,
+        "sensitive_frame_recall": 0.7321428571428571,
+        "matches": [
+          {
+            "truth_event": "token",
+            "prediction_event": "e0003",
+            "matching_frames": 30
+          },
+          {
+            "truth_event": "phone",
+            "prediction_event": "e0002",
+            "matching_frames": 8
+          },
+          {
+            "truth_event": "email",
+            "prediction_event": "e0001",
+            "matching_frames": 3
+          }
+        ]
+      },
+      "ablation_1hz": {
+        "method": "Replay unchanged per-frame observations at every 1 Hz phase; original temporal track IDs retained only to match events. No separate product implementation or speedup measurement.",
+        "cache_model": "Exact decoded-pixel SHA-256 LRU, capacity 128, empty at clip start; call counts are eligible work, not timings.",
+        "all_frame_eligible_ocr_calls": 120,
+        "all_frame_decoded_frames": 120,
+        "phases": [
+          {
+            "phase_frames": 0,
+            "phase_seconds": 0.0,
+            "sampled_frames": 8,
+            "eligible_ocr_calls": 8,
+            "detected_events": 2,
+            "expected_events": 4,
+            "event_recall": 0.5
+          },
+          {
+            "phase_frames": 1,
+            "phase_seconds": 0.06666666666666667,
+            "sampled_frames": 8,
+            "eligible_ocr_calls": 8,
+            "detected_events": 1,
+            "expected_events": 4,
+            "event_recall": 0.25
+          },
+          {
+            "phase_frames": 2,
+            "phase_seconds": 0.13333333333333333,
+            "sampled_frames": 8,
+            "eligible_ocr_calls": 8,
+            "detected_events": 1,
+            "expected_events": 4,
+            "event_recall": 0.25
+          },
+          {
+            "phase_frames": 3,
+            "phase_seconds": 0.2,
+            "sampled_frames": 8,
+            "eligible_ocr_calls": 8,
+            "detected_events": 2,
+            "expected_events": 4,
+            "event_recall": 0.5
+          },
+          {
+            "phase_frames": 4,
+            "phase_seconds": 0.26666666666666666,
+            "sampled_frames": 8,
+            "eligible_ocr_calls": 8,
+            "detected_events": 2,
+            "expected_events": 4,
+            "event_recall": 0.5
+          },
+          {
+            "phase_frames": 5,
+            "phase_seconds": 0.3333333333333333,
+            "sampled_frames": 8,
+            "eligible_ocr_calls": 8,
+            "detected_events": 2,
+            "expected_events": 4,
+            "event_recall": 0.5
+          },
+          {
+            "phase_frames": 6,
+            "phase_seconds": 0.4,
+            "sampled_frames": 8,
+            "eligible_ocr_calls": 8,
+            "detected_events": 1,
+            "expected_events": 4,
+            "event_recall": 0.25
+          },
+          {
+            "phase_frames": 7,
+            "phase_seconds": 0.4666666666666667,
+            "sampled_frames": 8,
+            "eligible_ocr_calls": 8,
+            "detected_events": 1,
+            "expected_events": 4,
+            "event_recall": 0.25
+          },
+          {
+            "phase_frames": 8,
+            "phase_seconds": 0.5333333333333333,
+            "sampled_frames": 8,
+            "eligible_ocr_calls": 8,
+            "detected_events": 2,
+            "expected_events": 4,
+            "event_recall": 0.5
+          },
+          {
+            "phase_frames": 9,
+            "phase_seconds": 0.6,
+            "sampled_frames": 8,
+            "eligible_ocr_calls": 8,
+            "detected_events": 2,
+            "expected_events": 4,
+            "event_recall": 0.5
+          },
+          {
+            "phase_frames": 10,
+            "phase_seconds": 0.6666666666666666,
+            "sampled_frames": 8,
+            "eligible_ocr_calls": 8,
+            "detected_events": 2,
+            "expected_events": 4,
+            "event_recall": 0.5
+          },
+          {
+            "phase_frames": 11,
+            "phase_seconds": 0.7333333333333333,
+            "sampled_frames": 8,
+            "eligible_ocr_calls": 8,
+            "detected_events": 2,
+            "expected_events": 4,
+            "event_recall": 0.5
+          },
+          {
+            "phase_frames": 12,
+            "phase_seconds": 0.8,
+            "sampled_frames": 8,
+            "eligible_ocr_calls": 8,
+            "detected_events": 2,
+            "expected_events": 4,
+            "event_recall": 0.5
+          },
+          {
+            "phase_frames": 13,
+            "phase_seconds": 0.8666666666666667,
+            "sampled_frames": 8,
+            "eligible_ocr_calls": 8,
+            "detected_events": 2,
+            "expected_events": 4,
+            "event_recall": 0.5
+          },
+          {
+            "phase_frames": 14,
+            "phase_seconds": 0.9333333333333333,
+            "sampled_frames": 8,
+            "eligible_ocr_calls": 8,
+            "detected_events": 2,
+            "expected_events": 4,
+            "event_recall": 0.5
+          }
+        ],
+        "phase_recall_mean": 0.43333333333333335,
+        "phase_recall_min": 0.25,
+        "phase_recall_max": 0.5
+      },
+      "observations_sha256": "4599135a5c2e80e134991eed7e48973c3b2686828536128a04feb06e89d6c084",
+      "export_wall_seconds": 105.8562,
+      "mask_coverage": {
+        "solid_mask_color": "RGB(0,0,0)",
+        "codec_tolerance_per_channel": 16,
+        "required_black_fraction": 0.995,
+        "output_frames": 120,
+        "expected_frames": 120,
+        "frame_count_matches": true,
+        "checked_sensitive_frame_occurrences": 56,
+        "fully_masked_frame_occurrences": 41,
+        "fully_masked_events": 3,
+        "expected_events": 4,
+        "minimum_black_fraction": 0.0,
+        "mean_black_fraction": 0.7321428571428571,
+        "uncovered_occurrences": [
+          {
+            "event_id": "custom",
+            "frame": 96,
+            "black_fraction": 0.0
+          },
+          {
+            "event_id": "custom",
+            "frame": 97,
+            "black_fraction": 0.0
+          },
+          {
+            "event_id": "custom",
+            "frame": 98,
+            "black_fraction": 0.0
+          },
+          {
+            "event_id": "custom",
+            "frame": 99,
+            "black_fraction": 0.0
+          },
+          {
+            "event_id": "custom",
+            "frame": 100,
+            "black_fraction": 0.0
+          },
+          {
+            "event_id": "custom",
+            "frame": 101,
+            "black_fraction": 0.0
+          },
+          {
+            "event_id": "custom",
+            "frame": 102,
+            "black_fraction": 0.0
+          },
+          {
+            "event_id": "custom",
+            "frame": 103,
+            "black_fraction": 0.0
+          },
+          {
+            "event_id": "custom",
+            "frame": 104,
+            "black_fraction": 0.0
+          },
+          {
+            "event_id": "custom",
+            "frame": 105,
+            "black_fraction": 0.0
+          },
+          {
+            "event_id": "custom",
+            "frame": 106,
+            "black_fraction": 0.0
+          },
+          {
+            "event_id": "custom",
+            "frame": 107,
+            "black_fraction": 0.0
+          },
+          {
+            "event_id": "custom",
+            "frame": 108,
+            "black_fraction": 0.0
+          },
+          {
+            "event_id": "custom",
+            "frame": 109,
+            "black_fraction": 0.0
+          },
+          {
+            "event_id": "custom",
+            "frame": 110,
+            "black_fraction": 0.0
+          }
+        ]
+      },
+      "selected_mask_geometry": {
+        "solid_mask_color": "RGB(0,0,0)",
+        "codec_tolerance_per_channel": 16,
+        "required_black_fraction": 0.995,
+        "output_frames": 120,
+        "expected_frames": 120,
+        "frame_count_matches": true,
+        "checked_sensitive_frame_occurrences": 41,
+        "fully_masked_frame_occurrences": 41,
+        "fully_masked_events": 3,
+        "expected_events": 3,
+        "minimum_black_fraction": 1.0,
+        "mean_black_fraction": 1.0,
+        "uncovered_occurrences": []
+      },
+      "application_verification": {
+        "schema_version": 1,
+        "backend": "CPU · ONNX Runtime",
+        "model": "RapidOCR 1.4.4 / PP-OCRv4 detection + recognition",
+        "hardware_verified": false,
+        "media": {
+          "media_type": "video",
+          "width": 1280,
+          "height": 720,
+          "fps": 15.0,
+          "duration": 8.0,
+          "frame_count": 120
+        },
+        "analysis": {
+          "frames_scanned": 120,
+          "unique_frames_ocr": 120,
+          "exact_cache_hits": 0,
+          "analysis_seconds": 103.536,
+          "ocr_seconds": 102.541,
+          "processing_fps": 1.16,
+          "findings_count": 3,
+          "audio_checked": false,
+          "all_frames_decoded": true
+        },
+        "decisions": [
+          {
+            "event_id": "e0001",
+            "type": "email",
+            "start": 1.2,
+            "end": 1.4,
+            "action": "redact"
+          },
+          {
+            "event_id": "e0002",
+            "type": "phone",
+            "start": 2.533333333333333,
+            "end": 3.066666666666667,
+            "action": "redact"
+          },
+          {
+            "event_id": "e0003",
+            "type": "token",
+            "start": 4.0,
+            "end": 6.0,
+            "action": "redact"
+          }
+        ],
+        "manual_mask_count": 0,
+        "masked_frames": 41,
+        "audio_removed": true,
+        "audio_checked": false,
+        "export_seconds": 105.855,
+        "rescan": {
+          "status": "passed",
+          "findings_count": 0,
+          "message": "No supported text patterns detected in output; not a guarantee of privacy."
+        },
+        "limitations": [
+          "Supported visible text patterns only; names, faces and arbitrary confidential content may be missed.",
+          "Output rescan uses the same OCR and rules and is not an independent privacy guarantee.",
+          "OCR accuracy depends on font, size, contrast, compression and language."
+        ]
+      },
+      "output_sha256": "3c18475c54d651f5bc318dc87de6e3f58392552ca603baa7083f85c8c749f12f",
+      "source_sha256": "6402ff15987a90ffba497e1e007d05e4f578c207beefd6c276cefe74edd6c936",
+      "original_unchanged": true
+    },
+    {
+      "id": "v2_heldout_crm_C_negative",
+      "layout": "crm",
+      "condition": "C",
+      "positive": false,
+      "split": "heldout",
+      "analysis_wall_seconds": 108.102,
+      "runtime_metrics": {
+        "frames_scanned": 120,
+        "unique_frames_ocr": 120,
+        "exact_cache_hits": 0,
+        "analysis_seconds": 108.093,
+        "ocr_seconds": 107.091,
+        "processing_fps": 1.11,
+        "findings_count": 0,
+        "audio_checked": false,
+        "all_frames_decoded": true
+      },
+      "detection": {
+        "expected_events": 0,
+        "detected_events": 0,
+        "missed_events": [],
+        "predicted_events": 0,
+        "false_positive_events": 0,
+        "false_positive_ids": [],
+        "event_recall": null,
+        "expected_sensitive_frame_occurrences": 0,
+        "detected_sensitive_frame_occurrences": 0,
+        "sensitive_frame_recall": null,
+        "matches": []
+      },
+      "ablation_1hz": {
+        "method": "Replay unchanged per-frame observations at every 1 Hz phase; original temporal track IDs retained only to match events. No separate product implementation or speedup measurement.",
+        "cache_model": "Exact decoded-pixel SHA-256 LRU, capacity 128, empty at clip start; call counts are eligible work, not timings.",
+        "all_frame_eligible_ocr_calls": 120,
+        "all_frame_decoded_frames": 120,
+        "phases": [
+          {
+            "phase_frames": 0,
+            "phase_seconds": 0.0,
+            "sampled_frames": 8,
+            "eligible_ocr_calls": 8,
+            "detected_events": 0,
+            "expected_events": 0,
+            "event_recall": null
+          },
+          {
+            "phase_frames": 1,
+            "phase_seconds": 0.06666666666666667,
+            "sampled_frames": 8,
+            "eligible_ocr_calls": 8,
+            "detected_events": 0,
+            "expected_events": 0,
+            "event_recall": null
+          },
+          {
+            "phase_frames": 2,
+            "phase_seconds": 0.13333333333333333,
+            "sampled_frames": 8,
+            "eligible_ocr_calls": 8,
+            "detected_events": 0,
+            "expected_events": 0,
+            "event_recall": null
+          },
+          {
+            "phase_frames": 3,
+            "phase_seconds": 0.2,
+            "sampled_frames": 8,
+            "eligible_ocr_calls": 8,
+            "detected_events": 0,
+            "expected_events": 0,
+            "event_recall": null
+          },
+          {
+            "phase_frames": 4,
+            "phase_seconds": 0.26666666666666666,
+            "sampled_frames": 8,
+            "eligible_ocr_calls": 8,
+            "detected_events": 0,
+            "expected_events": 0,
+            "event_recall": null
+          },
+          {
+            "phase_frames": 5,
+            "phase_seconds": 0.3333333333333333,
+            "sampled_frames": 8,
+            "eligible_ocr_calls": 8,
+            "detected_events": 0,
+            "expected_events": 0,
+            "event_recall": null
+          },
+          {
+            "phase_frames": 6,
+            "phase_seconds": 0.4,
+            "sampled_frames": 8,
+            "eligible_ocr_calls": 8,
+            "detected_events": 0,
+            "expected_events": 0,
+            "event_recall": null
+          },
+          {
+            "phase_frames": 7,
+            "phase_seconds": 0.4666666666666667,
+            "sampled_frames": 8,
+            "eligible_ocr_calls": 8,
+            "detected_events": 0,
+            "expected_events": 0,
+            "event_recall": null
+          },
+          {
+            "phase_frames": 8,
+            "phase_seconds": 0.5333333333333333,
+            "sampled_frames": 8,
+            "eligible_ocr_calls": 8,
+            "detected_events": 0,
+            "expected_events": 0,
+            "event_recall": null
+          },
+          {
+            "phase_frames": 9,
+            "phase_seconds": 0.6,
+            "sampled_frames": 8,
+            "eligible_ocr_calls": 8,
+            "detected_events": 0,
+            "expected_events": 0,
+            "event_recall": null
+          },
+          {
+            "phase_frames": 10,
+            "phase_seconds": 0.6666666666666666,
+            "sampled_frames": 8,
+            "eligible_ocr_calls": 8,
+            "detected_events": 0,
+            "expected_events": 0,
+            "event_recall": null
+          },
+          {
+            "phase_frames": 11,
+            "phase_seconds": 0.7333333333333333,
+            "sampled_frames": 8,
+            "eligible_ocr_calls": 8,
+            "detected_events": 0,
+            "expected_events": 0,
+            "event_recall": null
+          },
+          {
+            "phase_frames": 12,
+            "phase_seconds": 0.8,
+            "sampled_frames": 8,
+            "eligible_ocr_calls": 8,
+            "detected_events": 0,
+            "expected_events": 0,
+            "event_recall": null
+          },
+          {
+            "phase_frames": 13,
+            "phase_seconds": 0.8666666666666667,
+            "sampled_frames": 8,
+            "eligible_ocr_calls": 8,
+            "detected_events": 0,
+            "expected_events": 0,
+            "event_recall": null
+          },
+          {
+            "phase_frames": 14,
+            "phase_seconds": 0.9333333333333333,
+            "sampled_frames": 8,
+            "eligible_ocr_calls": 8,
+            "detected_events": 0,
+            "expected_events": 0,
+            "event_recall": null
+          }
+        ],
+        "phase_recall_mean": null,
+        "phase_recall_min": null,
+        "phase_recall_max": null
+      },
+      "observations_sha256": "03e64c268bd6e235a57f2ef43312ef40981b6f2926bcdb1775e7e71632bf6fd0",
+      "export_wall_seconds": 132.5434,
+      "mask_coverage": {
+        "solid_mask_color": "RGB(0,0,0)",
+        "codec_tolerance_per_channel": 16,
+        "required_black_fraction": 0.995,
+        "output_frames": 120,
+        "expected_frames": 120,
+        "frame_count_matches": true,
+        "checked_sensitive_frame_occurrences": 0,
+        "fully_masked_frame_occurrences": 0,
+        "fully_masked_events": 0,
+        "expected_events": 0,
+        "minimum_black_fraction": null,
+        "mean_black_fraction": null,
+        "uncovered_occurrences": []
+      },
+      "selected_mask_geometry": {
+        "solid_mask_color": "RGB(0,0,0)",
+        "codec_tolerance_per_channel": 16,
+        "required_black_fraction": 0.995,
+        "output_frames": 120,
+        "expected_frames": 120,
+        "frame_count_matches": true,
+        "checked_sensitive_frame_occurrences": 0,
+        "fully_masked_frame_occurrences": 0,
+        "fully_masked_events": 0,
+        "expected_events": 0,
+        "minimum_black_fraction": null,
+        "mean_black_fraction": null,
+        "uncovered_occurrences": []
+      },
+      "application_verification": {
+        "schema_version": 1,
+        "backend": "CPU · ONNX Runtime",
+        "model": "RapidOCR 1.4.4 / PP-OCRv4 detection + recognition",
+        "hardware_verified": false,
+        "media": {
+          "media_type": "video",
+          "width": 1280,
+          "height": 720,
+          "fps": 15.0,
+          "duration": 8.0,
+          "frame_count": 120
+        },
+        "analysis": {
+          "frames_scanned": 120,
+          "unique_frames_ocr": 120,
+          "exact_cache_hits": 0,
+          "analysis_seconds": 108.093,
+          "ocr_seconds": 107.091,
+          "processing_fps": 1.11,
+          "findings_count": 0,
+          "audio_checked": false,
+          "all_frames_decoded": true
+        },
+        "decisions": [],
+        "manual_mask_count": 0,
+        "masked_frames": 0,
+        "audio_removed": true,
+        "audio_checked": false,
+        "export_seconds": 132.542,
+        "rescan": {
+          "status": "passed",
+          "findings_count": 0,
+          "message": "No supported text patterns detected in output; not a guarantee of privacy."
+        },
+        "limitations": [
+          "Supported visible text patterns only; names, faces and arbitrary confidential content may be missed.",
+          "Output rescan uses the same OCR and rules and is not an independent privacy guarantee.",
+          "OCR accuracy depends on font, size, contrast, compression and language."
+        ]
+      },
+      "output_sha256": "b7346b230057a6838ab2626e4c46c9534e883302b43f0e47e8152d59c786d32e",
+      "source_sha256": "9404f52e2125035a95bebb70b4496367c51b679d94c8510d97f3d5aec8d8b533",
+      "original_unchanged": true
+    },
+    {
+      "id": "v2_heldout_spreadsheet_A_positive",
+      "layout": "spreadsheet",
+      "condition": "A",
+      "positive": true,
+      "split": "heldout",
+      "analysis_wall_seconds": 92.6891,
+      "runtime_metrics": {
+        "frames_scanned": 120,
+        "unique_frames_ocr": 58,
+        "exact_cache_hits": 62,
+        "analysis_seconds": 92.681,
+        "ocr_seconds": 91.588,
+        "processing_fps": 1.29,
+        "findings_count": 3,
+        "audio_checked": false,
+        "all_frames_decoded": true
+      },
+      "detection": {
+        "expected_events": 4,
+        "detected_events": 3,
+        "missed_events": [
+          {
+            "id": "custom",
+            "type": "custom",
+            "exposure_seconds": 1.0
+          }
+        ],
+        "predicted_events": 3,
+        "false_positive_events": 0,
+        "false_positive_ids": [],
+        "event_recall": 0.75,
+        "expected_sensitive_frame_occurrences": 56,
+        "detected_sensitive_frame_occurrences": 41,
+        "sensitive_frame_recall": 0.7321428571428571,
+        "matches": [
+          {
+            "truth_event": "token",
+            "prediction_event": "e0003",
+            "matching_frames": 30
+          },
+          {
+            "truth_event": "phone",
+            "prediction_event": "e0002",
+            "matching_frames": 8
+          },
+          {
+            "truth_event": "email",
+            "prediction_event": "e0001",
+            "matching_frames": 3
+          }
+        ]
+      },
+      "ablation_1hz": {
+        "method": "Replay unchanged per-frame observations at every 1 Hz phase; original temporal track IDs retained only to match events. No separate product implementation or speedup measurement.",
+        "cache_model": "Exact decoded-pixel SHA-256 LRU, capacity 128, empty at clip start; call counts are eligible work, not timings.",
+        "all_frame_eligible_ocr_calls": 58,
+        "all_frame_decoded_frames": 120,
+        "phases": [
+          {
+            "phase_frames": 0,
+            "phase_seconds": 0.0,
+            "sampled_frames": 8,
+            "eligible_ocr_calls": 8,
+            "detected_events": 2,
+            "expected_events": 4,
+            "event_recall": 0.5
+          },
+          {
+            "phase_frames": 1,
+            "phase_seconds": 0.06666666666666667,
+            "sampled_frames": 8,
+            "eligible_ocr_calls": 8,
+            "detected_events": 1,
+            "expected_events": 4,
+            "event_recall": 0.25
+          },
+          {
+            "phase_frames": 2,
+            "phase_seconds": 0.13333333333333333,
+            "sampled_frames": 8,
+            "eligible_ocr_calls": 8,
+            "detected_events": 1,
+            "expected_events": 4,
+            "event_recall": 0.25
+          },
+          {
+            "phase_frames": 3,
+            "phase_seconds": 0.2,
+            "sampled_frames": 8,
+            "eligible_ocr_calls": 8,
+            "detected_events": 2,
+            "expected_events": 4,
+            "event_recall": 0.5
+          },
+          {
+            "phase_frames": 4,
+            "phase_seconds": 0.26666666666666666,
+            "sampled_frames": 8,
+            "eligible_ocr_calls": 8,
+            "detected_events": 2,
+            "expected_events": 4,
+            "event_recall": 0.5
+          },
+          {
+            "phase_frames": 5,
+            "phase_seconds": 0.3333333333333333,
+            "sampled_frames": 8,
+            "eligible_ocr_calls": 8,
+            "detected_events": 2,
+            "expected_events": 4,
+            "event_recall": 0.5
+          },
+          {
+            "phase_frames": 6,
+            "phase_seconds": 0.4,
+            "sampled_frames": 8,
+            "eligible_ocr_calls": 8,
+            "detected_events": 1,
+            "expected_events": 4,
+            "event_recall": 0.25
+          },
+          {
+            "phase_frames": 7,
+            "phase_seconds": 0.4666666666666667,
+            "sampled_frames": 8,
+            "eligible_ocr_calls": 8,
+            "detected_events": 1,
+            "expected_events": 4,
+            "event_recall": 0.25
+          },
+          {
+            "phase_frames": 8,
+            "phase_seconds": 0.5333333333333333,
+            "sampled_frames": 8,
+            "eligible_ocr_calls": 8,
+            "detected_events": 2,
+            "expected_events": 4,
+            "event_recall": 0.5
+          },
+          {
+            "phase_frames": 9,
+            "phase_seconds": 0.6,
+            "sampled_frames": 8,
+            "eligible_ocr_calls": 8,
+            "detected_events": 2,
+            "expected_events": 4,
+            "event_recall": 0.5
+          },
+          {
+            "phase_frames": 10,
+            "phase_seconds": 0.6666666666666666,
+            "sampled_frames": 8,
+            "eligible_ocr_calls": 8,
+            "detected_events": 2,
+            "expected_events": 4,
+            "event_recall": 0.5
+          },
+          {
+            "phase_frames": 11,
+            "phase_seconds": 0.7333333333333333,
+            "sampled_frames": 8,
+            "eligible_ocr_calls": 8,
+            "detected_events": 2,
+            "expected_events": 4,
+            "event_recall": 0.5
+          },
+          {
+            "phase_frames": 12,
+            "phase_seconds": 0.8,
+            "sampled_frames": 8,
+            "eligible_ocr_calls": 8,
+            "detected_events": 2,
+            "expected_events": 4,
+            "event_recall": 0.5
+          },
+          {
+            "phase_frames": 13,
+            "phase_seconds": 0.8666666666666667,
+            "sampled_frames": 8,
+            "eligible_ocr_calls": 8,
+            "detected_events": 2,
+            "expected_events": 4,
+            "event_recall": 0.5
+          },
+          {
+            "phase_frames": 14,
+            "phase_seconds": 0.9333333333333333,
+            "sampled_frames": 8,
+            "eligible_ocr_calls": 8,
+            "detected_events": 2,
+            "expected_events": 4,
+            "event_recall": 0.5
+          }
+        ],
+        "phase_recall_mean": 0.43333333333333335,
+        "phase_recall_min": 0.25,
+        "phase_recall_max": 0.5
+      },
+      "observations_sha256": "b96e096f91461951eb9966e109dc4d0d480c521bc2aa79e742cc33e4dba9fede",
+      "export_wall_seconds": 66.0875,
+      "mask_coverage": {
+        "solid_mask_color": "RGB(0,0,0)",
+        "codec_tolerance_per_channel": 16,
+        "required_black_fraction": 0.995,
+        "output_frames": 120,
+        "expected_frames": 120,
+        "frame_count_matches": true,
+        "checked_sensitive_frame_occurrences": 56,
+        "fully_masked_frame_occurrences": 41,
+        "fully_masked_events": 3,
+        "expected_events": 4,
+        "minimum_black_fraction": 0.0,
+        "mean_black_fraction": 0.7321428571428571,
+        "uncovered_occurrences": [
+          {
+            "event_id": "custom",
+            "frame": 96,
+            "black_fraction": 0.0
+          },
+          {
+            "event_id": "custom",
+            "frame": 97,
+            "black_fraction": 0.0
+          },
+          {
+            "event_id": "custom",
+            "frame": 98,
+            "black_fraction": 0.0
+          },
+          {
+            "event_id": "custom",
+            "frame": 99,
+            "black_fraction": 0.0
+          },
+          {
+            "event_id": "custom",
+            "frame": 100,
+            "black_fraction": 0.0
+          },
+          {
+            "event_id": "custom",
+            "frame": 101,
+            "black_fraction": 0.0
+          },
+          {
+            "event_id": "custom",
+            "frame": 102,
+            "black_fraction": 0.0
+          },
+          {
+            "event_id": "custom",
+            "frame": 103,
+            "black_fraction": 0.0
+          },
+          {
+            "event_id": "custom",
+            "frame": 104,
+            "black_fraction": 0.0
+          },
+          {
+            "event_id": "custom",
+            "frame": 105,
+            "black_fraction": 0.0
+          },
+          {
+            "event_id": "custom",
+            "frame": 106,
+            "black_fraction": 0.0
+          },
+          {
+            "event_id": "custom",
+            "frame": 107,
+            "black_fraction": 0.0
+          },
+          {
+            "event_id": "custom",
+            "frame": 108,
+            "black_fraction": 0.0
+          },
+          {
+            "event_id": "custom",
+            "frame": 109,
+            "black_fraction": 0.0
+          },
+          {
+            "event_id": "custom",
+            "frame": 110,
+            "black_fraction": 0.0
+          }
+        ]
+      },
+      "selected_mask_geometry": {
+        "solid_mask_color": "RGB(0,0,0)",
+        "codec_tolerance_per_channel": 16,
+        "required_black_fraction": 0.995,
+        "output_frames": 120,
+        "expected_frames": 120,
+        "frame_count_matches": true,
+        "checked_sensitive_frame_occurrences": 41,
+        "fully_masked_frame_occurrences": 41,
+        "fully_masked_events": 3,
+        "expected_events": 3,
+        "minimum_black_fraction": 1.0,
+        "mean_black_fraction": 1.0,
+        "uncovered_occurrences": []
+      },
+      "application_verification": {
+        "schema_version": 1,
+        "backend": "CPU · ONNX Runtime",
+        "model": "RapidOCR 1.4.4 / PP-OCRv4 detection + recognition",
+        "hardware_verified": false,
+        "media": {
+          "media_type": "video",
+          "width": 1280,
+          "height": 720,
+          "fps": 15.0,
+          "duration": 8.0,
+          "frame_count": 120
+        },
+        "analysis": {
+          "frames_scanned": 120,
+          "unique_frames_ocr": 58,
+          "exact_cache_hits": 62,
+          "analysis_seconds": 92.681,
+          "ocr_seconds": 91.588,
+          "processing_fps": 1.29,
+          "findings_count": 3,
+          "audio_checked": false,
+          "all_frames_decoded": true
+        },
+        "decisions": [
+          {
+            "event_id": "e0001",
+            "type": "email",
+            "start": 1.2,
+            "end": 1.4,
+            "action": "redact"
+          },
+          {
+            "event_id": "e0002",
+            "type": "phone",
+            "start": 2.533333333333333,
+            "end": 3.066666666666667,
+            "action": "redact"
+          },
+          {
+            "event_id": "e0003",
+            "type": "token",
+            "start": 4.0,
+            "end": 6.0,
+            "action": "redact"
+          }
+        ],
+        "manual_mask_count": 0,
+        "masked_frames": 41,
+        "audio_removed": true,
+        "audio_checked": false,
+        "export_seconds": 66.086,
+        "rescan": {
+          "status": "passed",
+          "findings_count": 0,
+          "message": "No supported text patterns detected in output; not a guarantee of privacy."
+        },
+        "limitations": [
+          "Supported visible text patterns only; names, faces and arbitrary confidential content may be missed.",
+          "Output rescan uses the same OCR and rules and is not an independent privacy guarantee.",
+          "OCR accuracy depends on font, size, contrast, compression and language."
+        ]
+      },
+      "output_sha256": "1384485ea210c37d241266686705b442a5fad5bac7e578c2b06cc86464a1fed0",
+      "source_sha256": "2a85b757dc5a58d32a65e71a4d92c3da2201ee44811efeaa68914ebd0cf0ab70",
+      "original_unchanged": true
+    },
+    {
+      "id": "v2_heldout_spreadsheet_A_negative",
+      "layout": "spreadsheet",
+      "condition": "A",
+      "positive": false,
+      "split": "heldout",
+      "analysis_wall_seconds": 65.3176,
+      "runtime_metrics": {
+        "frames_scanned": 120,
+        "unique_frames_ocr": 46,
+        "exact_cache_hits": 74,
+        "analysis_seconds": 65.31,
+        "ocr_seconds": 64.2,
+        "processing_fps": 1.84,
+        "findings_count": 0,
+        "audio_checked": false,
+        "all_frames_decoded": true
+      },
+      "detection": {
+        "expected_events": 0,
+        "detected_events": 0,
+        "missed_events": [],
+        "predicted_events": 0,
+        "false_positive_events": 0,
+        "false_positive_ids": [],
+        "event_recall": null,
+        "expected_sensitive_frame_occurrences": 0,
+        "detected_sensitive_frame_occurrences": 0,
+        "sensitive_frame_recall": null,
+        "matches": []
+      },
+      "ablation_1hz": {
+        "method": "Replay unchanged per-frame observations at every 1 Hz phase; original temporal track IDs retained only to match events. No separate product implementation or speedup measurement.",
+        "cache_model": "Exact decoded-pixel SHA-256 LRU, capacity 128, empty at clip start; call counts are eligible work, not timings.",
+        "all_frame_eligible_ocr_calls": 46,
+        "all_frame_decoded_frames": 120,
+        "phases": [
+          {
+            "phase_frames": 0,
+            "phase_seconds": 0.0,
+            "sampled_frames": 8,
+            "eligible_ocr_calls": 8,
+            "detected_events": 0,
+            "expected_events": 0,
+            "event_recall": null
+          },
+          {
+            "phase_frames": 1,
+            "phase_seconds": 0.06666666666666667,
+            "sampled_frames": 8,
+            "eligible_ocr_calls": 8,
+            "detected_events": 0,
+            "expected_events": 0,
+            "event_recall": null
+          },
+          {
+            "phase_frames": 2,
+            "phase_seconds": 0.13333333333333333,
+            "sampled_frames": 8,
+            "eligible_ocr_calls": 8,
+            "detected_events": 0,
+            "expected_events": 0,
+            "event_recall": null
+          },
+          {
+            "phase_frames": 3,
+            "phase_seconds": 0.2,
+            "sampled_frames": 8,
+            "eligible_ocr_calls": 8,
+            "detected_events": 0,
+            "expected_events": 0,
+            "event_recall": null
+          },
+          {
+            "phase_frames": 4,
+            "phase_seconds": 0.26666666666666666,
+            "sampled_frames": 8,
+            "eligible_ocr_calls": 8,
+            "detected_events": 0,
+            "expected_events": 0,
+            "event_recall": null
+          },
+          {
+            "phase_frames": 5,
+            "phase_seconds": 0.3333333333333333,
+            "sampled_frames": 8,
+            "eligible_ocr_calls": 8,
+            "detected_events": 0,
+            "expected_events": 0,
+            "event_recall": null
+          },
+          {
+            "phase_frames": 6,
+            "phase_seconds": 0.4,
+            "sampled_frames": 8,
+            "eligible_ocr_calls": 8,
+            "detected_events": 0,
+            "expected_events": 0,
+            "event_recall": null
+          },
+          {
+            "phase_frames": 7,
+            "phase_seconds": 0.4666666666666667,
+            "sampled_frames": 8,
+            "eligible_ocr_calls": 8,
+            "detected_events": 0,
+            "expected_events": 0,
+            "event_recall": null
+          },
+          {
+            "phase_frames": 8,
+            "phase_seconds": 0.5333333333333333,
+            "sampled_frames": 8,
+            "eligible_ocr_calls": 8,
+            "detected_events": 0,
+            "expected_events": 0,
+            "event_recall": null
+          },
+          {
+            "phase_frames": 9,
+            "phase_seconds": 0.6,
+            "sampled_frames": 8,
+            "eligible_ocr_calls": 8,
+            "detected_events": 0,
+            "expected_events": 0,
+            "event_recall": null
+          },
+          {
+            "phase_frames": 10,
+            "phase_seconds": 0.6666666666666666,
+            "sampled_frames": 8,
+            "eligible_ocr_calls": 8,
+            "detected_events": 0,
+            "expected_events": 0,
+            "event_recall": null
+          },
+          {
+            "phase_frames": 11,
+            "phase_seconds": 0.7333333333333333,
+            "sampled_frames": 8,
+            "eligible_ocr_calls": 7,
+            "detected_events": 0,
+            "expected_events": 0,
+            "event_recall": null
+          },
+          {
+            "phase_frames": 12,
+            "phase_seconds": 0.8,
+            "sampled_frames": 8,
+            "eligible_ocr_calls": 8,
+            "detected_events": 0,
+            "expected_events": 0,
+            "event_recall": null
+          },
+          {
+            "phase_frames": 13,
+            "phase_seconds": 0.8666666666666667,
+            "sampled_frames": 8,
+            "eligible_ocr_calls": 8,
+            "detected_events": 0,
+            "expected_events": 0,
+            "event_recall": null
+          },
+          {
+            "phase_frames": 14,
+            "phase_seconds": 0.9333333333333333,
+            "sampled_frames": 8,
+            "eligible_ocr_calls": 8,
+            "detected_events": 0,
+            "expected_events": 0,
+            "event_recall": null
+          }
+        ],
+        "phase_recall_mean": null,
+        "phase_recall_min": null,
+        "phase_recall_max": null
+      },
+      "observations_sha256": "03e64c268bd6e235a57f2ef43312ef40981b6f2926bcdb1775e7e71632bf6fd0",
+      "export_wall_seconds": 59.1417,
+      "mask_coverage": {
+        "solid_mask_color": "RGB(0,0,0)",
+        "codec_tolerance_per_channel": 16,
+        "required_black_fraction": 0.995,
+        "output_frames": 120,
+        "expected_frames": 120,
+        "frame_count_matches": true,
+        "checked_sensitive_frame_occurrences": 0,
+        "fully_masked_frame_occurrences": 0,
+        "fully_masked_events": 0,
+        "expected_events": 0,
+        "minimum_black_fraction": null,
+        "mean_black_fraction": null,
+        "uncovered_occurrences": []
+      },
+      "selected_mask_geometry": {
+        "solid_mask_color": "RGB(0,0,0)",
+        "codec_tolerance_per_channel": 16,
+        "required_black_fraction": 0.995,
+        "output_frames": 120,
+        "expected_frames": 120,
+        "frame_count_matches": true,
+        "checked_sensitive_frame_occurrences": 0,
+        "fully_masked_frame_occurrences": 0,
+        "fully_masked_events": 0,
+        "expected_events": 0,
+        "minimum_black_fraction": null,
+        "mean_black_fraction": null,
+        "uncovered_occurrences": []
+      },
+      "application_verification": {
+        "schema_version": 1,
+        "backend": "CPU · ONNX Runtime",
+        "model": "RapidOCR 1.4.4 / PP-OCRv4 detection + recognition",
+        "hardware_verified": false,
+        "media": {
+          "media_type": "video",
+          "width": 1280,
+          "height": 720,
+          "fps": 15.0,
+          "duration": 8.0,
+          "frame_count": 120
+        },
+        "analysis": {
+          "frames_scanned": 120,
+          "unique_frames_ocr": 46,
+          "exact_cache_hits": 74,
+          "analysis_seconds": 65.31,
+          "ocr_seconds": 64.2,
+          "processing_fps": 1.84,
+          "findings_count": 0,
+          "audio_checked": false,
+          "all_frames_decoded": true
+        },
+        "decisions": [],
+        "manual_mask_count": 0,
+        "masked_frames": 0,
+        "audio_removed": true,
+        "audio_checked": false,
+        "export_seconds": 59.141,
+        "rescan": {
+          "status": "passed",
+          "findings_count": 0,
+          "message": "No supported text patterns detected in output; not a guarantee of privacy."
+        },
+        "limitations": [
+          "Supported visible text patterns only; names, faces and arbitrary confidential content may be missed.",
+          "Output rescan uses the same OCR and rules and is not an independent privacy guarantee.",
+          "OCR accuracy depends on font, size, contrast, compression and language."
+        ]
+      },
+      "output_sha256": "d6c00753e9980fe29d5bd9f3377bbda3c8037ad64cb034f310dfaee4eef7d9c9",
+      "source_sha256": "381ab2309066b193499ae7dbe3b702ef482d6abbd91b763883101c8ed07bf740",
+      "original_unchanged": true
+    },
+    {
+      "id": "v2_heldout_spreadsheet_B_positive",
+      "layout": "spreadsheet",
+      "condition": "B",
+      "positive": true,
+      "split": "heldout",
+      "analysis_wall_seconds": 114.3715,
+      "runtime_metrics": {
+        "frames_scanned": 120,
+        "unique_frames_ocr": 80,
+        "exact_cache_hits": 40,
+        "analysis_seconds": 114.362,
+        "ocr_seconds": 113.363,
+        "processing_fps": 1.05,
+        "findings_count": 4,
+        "audio_checked": false,
+        "all_frames_decoded": true
+      },
+      "detection": {
+        "expected_events": 4,
+        "detected_events": 4,
+        "missed_events": [],
+        "predicted_events": 4,
+        "false_positive_events": 0,
+        "false_positive_ids": [],
+        "event_recall": 1.0,
+        "expected_sensitive_frame_occurrences": 56,
+        "detected_sensitive_frame_occurrences": 56,
+        "sensitive_frame_recall": 1.0,
+        "matches": [
+          {
+            "truth_event": "token",
+            "prediction_event": "e0003",
+            "matching_frames": 30
+          },
+          {
+            "truth_event": "custom",
+            "prediction_event": "e0004",
+            "matching_frames": 15
+          },
+          {
+            "truth_event": "phone",
+            "prediction_event": "e0002",
+            "matching_frames": 8
+          },
+          {
+            "truth_event": "email",
+            "prediction_event": "e0001",
+            "matching_frames": 3
+          }
+        ]
+      },
+      "ablation_1hz": {
+        "method": "Replay unchanged per-frame observations at every 1 Hz phase; original temporal track IDs retained only to match events. No separate product implementation or speedup measurement.",
+        "cache_model": "Exact decoded-pixel SHA-256 LRU, capacity 128, empty at clip start; call counts are eligible work, not timings.",
+        "all_frame_eligible_ocr_calls": 80,
+        "all_frame_decoded_frames": 120,
+        "phases": [
+          {
+            "phase_frames": 0,
+            "phase_seconds": 0.0,
+            "sampled_frames": 8,
+            "eligible_ocr_calls": 8,
+            "detected_events": 3,
+            "expected_events": 4,
+            "event_recall": 0.75
+          },
+          {
+            "phase_frames": 1,
+            "phase_seconds": 0.06666666666666667,
+            "sampled_frames": 8,
+            "eligible_ocr_calls": 8,
+            "detected_events": 2,
+            "expected_events": 4,
+            "event_recall": 0.5
+          },
+          {
+            "phase_frames": 2,
+            "phase_seconds": 0.13333333333333333,
+            "sampled_frames": 8,
+            "eligible_ocr_calls": 8,
+            "detected_events": 2,
+            "expected_events": 4,
+            "event_recall": 0.5
+          },
+          {
+            "phase_frames": 3,
+            "phase_seconds": 0.2,
+            "sampled_frames": 8,
+            "eligible_ocr_calls": 8,
+            "detected_events": 3,
+            "expected_events": 4,
+            "event_recall": 0.75
+          },
+          {
+            "phase_frames": 4,
+            "phase_seconds": 0.26666666666666666,
+            "sampled_frames": 8,
+            "eligible_ocr_calls": 8,
+            "detected_events": 3,
+            "expected_events": 4,
+            "event_recall": 0.75
+          },
+          {
+            "phase_frames": 5,
+            "phase_seconds": 0.3333333333333333,
+            "sampled_frames": 8,
+            "eligible_ocr_calls": 8,
+            "detected_events": 3,
+            "expected_events": 4,
+            "event_recall": 0.75
+          },
+          {
+            "phase_frames": 6,
+            "phase_seconds": 0.4,
+            "sampled_frames": 8,
+            "eligible_ocr_calls": 8,
+            "detected_events": 2,
+            "expected_events": 4,
+            "event_recall": 0.5
+          },
+          {
+            "phase_frames": 7,
+            "phase_seconds": 0.4666666666666667,
+            "sampled_frames": 8,
+            "eligible_ocr_calls": 8,
+            "detected_events": 2,
+            "expected_events": 4,
+            "event_recall": 0.5
+          },
+          {
+            "phase_frames": 8,
+            "phase_seconds": 0.5333333333333333,
+            "sampled_frames": 8,
+            "eligible_ocr_calls": 8,
+            "detected_events": 3,
+            "expected_events": 4,
+            "event_recall": 0.75
+          },
+          {
+            "phase_frames": 9,
+            "phase_seconds": 0.6,
+            "sampled_frames": 8,
+            "eligible_ocr_calls": 8,
+            "detected_events": 3,
+            "expected_events": 4,
+            "event_recall": 0.75
+          },
+          {
+            "phase_frames": 10,
+            "phase_seconds": 0.6666666666666666,
+            "sampled_frames": 8,
+            "eligible_ocr_calls": 8,
+            "detected_events": 3,
+            "expected_events": 4,
+            "event_recall": 0.75
+          },
+          {
+            "phase_frames": 11,
+            "phase_seconds": 0.7333333333333333,
+            "sampled_frames": 8,
+            "eligible_ocr_calls": 8,
+            "detected_events": 3,
+            "expected_events": 4,
+            "event_recall": 0.75
+          },
+          {
+            "phase_frames": 12,
+            "phase_seconds": 0.8,
+            "sampled_frames": 8,
+            "eligible_ocr_calls": 8,
+            "detected_events": 3,
+            "expected_events": 4,
+            "event_recall": 0.75
+          },
+          {
+            "phase_frames": 13,
+            "phase_seconds": 0.8666666666666667,
+            "sampled_frames": 8,
+            "eligible_ocr_calls": 8,
+            "detected_events": 3,
+            "expected_events": 4,
+            "event_recall": 0.75
+          },
+          {
+            "phase_frames": 14,
+            "phase_seconds": 0.9333333333333333,
+            "sampled_frames": 8,
+            "eligible_ocr_calls": 8,
+            "detected_events": 3,
+            "expected_events": 4,
+            "event_recall": 0.75
+          }
+        ],
+        "phase_recall_mean": 0.6833333333333333,
+        "phase_recall_min": 0.5,
+        "phase_recall_max": 0.75
+      },
+      "observations_sha256": "e6deb83986a5524f0bde2589a0c1951a9668d4ac87a6724eee225289820a0bc1",
+      "export_wall_seconds": 66.3028,
+      "mask_coverage": {
+        "solid_mask_color": "RGB(0,0,0)",
+        "codec_tolerance_per_channel": 16,
+        "required_black_fraction": 0.995,
+        "output_frames": 120,
+        "expected_frames": 120,
+        "frame_count_matches": true,
+        "checked_sensitive_frame_occurrences": 56,
+        "fully_masked_frame_occurrences": 56,
+        "fully_masked_events": 4,
+        "expected_events": 4,
+        "minimum_black_fraction": 1.0,
+        "mean_black_fraction": 1.0,
+        "uncovered_occurrences": []
+      },
+      "selected_mask_geometry": {
+        "solid_mask_color": "RGB(0,0,0)",
+        "codec_tolerance_per_channel": 16,
+        "required_black_fraction": 0.995,
+        "output_frames": 120,
+        "expected_frames": 120,
+        "frame_count_matches": true,
+        "checked_sensitive_frame_occurrences": 56,
+        "fully_masked_frame_occurrences": 56,
+        "fully_masked_events": 4,
+        "expected_events": 4,
+        "minimum_black_fraction": 1.0,
+        "mean_black_fraction": 1.0,
+        "uncovered_occurrences": []
+      },
+      "application_verification": {
+        "schema_version": 1,
+        "backend": "CPU · ONNX Runtime",
+        "model": "RapidOCR 1.4.4 / PP-OCRv4 detection + recognition",
+        "hardware_verified": false,
+        "media": {
+          "media_type": "video",
+          "width": 1280,
+          "height": 720,
+          "fps": 15.0,
+          "duration": 8.0,
+          "frame_count": 120
+        },
+        "analysis": {
+          "frames_scanned": 120,
+          "unique_frames_ocr": 80,
+          "exact_cache_hits": 40,
+          "analysis_seconds": 114.362,
+          "ocr_seconds": 113.363,
+          "processing_fps": 1.05,
+          "findings_count": 4,
+          "audio_checked": false,
+          "all_frames_decoded": true
+        },
+        "decisions": [
+          {
+            "event_id": "e0001",
+            "type": "email",
+            "start": 1.2,
+            "end": 1.4,
+            "action": "redact"
+          },
+          {
+            "event_id": "e0002",
+            "type": "phone",
+            "start": 2.533333333333333,
+            "end": 3.066666666666667,
+            "action": "redact"
+          },
+          {
+            "event_id": "e0003",
+            "type": "token",
+            "start": 4.0,
+            "end": 6.0,
+            "action": "redact"
+          },
+          {
+            "event_id": "e0004",
+            "type": "custom",
+            "start": 6.4,
+            "end": 7.4,
+            "action": "redact"
+          }
+        ],
+        "manual_mask_count": 0,
+        "masked_frames": 56,
+        "audio_removed": true,
+        "audio_checked": false,
+        "export_seconds": 66.302,
+        "rescan": {
+          "status": "passed",
+          "findings_count": 0,
+          "message": "No supported text patterns detected in output; not a guarantee of privacy."
+        },
+        "limitations": [
+          "Supported visible text patterns only; names, faces and arbitrary confidential content may be missed.",
+          "Output rescan uses the same OCR and rules and is not an independent privacy guarantee.",
+          "OCR accuracy depends on font, size, contrast, compression and language."
+        ]
+      },
+      "output_sha256": "149377ccb7b76b53856e24f7500c8a17134e76059afc62359b72c5fb2f42a9a2",
+      "source_sha256": "a4d66e00350d00afb479bf42da00dd4acd926b4ee7e0229cd9a564bc27ecf13a",
+      "original_unchanged": true
+    },
+    {
+      "id": "v2_heldout_spreadsheet_B_negative",
+      "layout": "spreadsheet",
+      "condition": "B",
+      "positive": false,
+      "split": "heldout",
+      "analysis_wall_seconds": 106.7694,
+      "runtime_metrics": {
+        "frames_scanned": 120,
+        "unique_frames_ocr": 73,
+        "exact_cache_hits": 47,
+        "analysis_seconds": 106.761,
+        "ocr_seconds": 105.729,
+        "processing_fps": 1.12,
+        "findings_count": 0,
+        "audio_checked": false,
+        "all_frames_decoded": true
+      },
+      "detection": {
+        "expected_events": 0,
+        "detected_events": 0,
+        "missed_events": [],
+        "predicted_events": 0,
+        "false_positive_events": 0,
+        "false_positive_ids": [],
+        "event_recall": null,
+        "expected_sensitive_frame_occurrences": 0,
+        "detected_sensitive_frame_occurrences": 0,
+        "sensitive_frame_recall": null,
+        "matches": []
+      },
+      "ablation_1hz": {
+        "method": "Replay unchanged per-frame observations at every 1 Hz phase; original temporal track IDs retained only to match events. No separate product implementation or speedup measurement.",
+        "cache_model": "Exact decoded-pixel SHA-256 LRU, capacity 128, empty at clip start; call counts are eligible work, not timings.",
+        "all_frame_eligible_ocr_calls": 73,
+        "all_frame_decoded_frames": 120,
+        "phases": [
+          {
+            "phase_frames": 0,
+            "phase_seconds": 0.0,
+            "sampled_frames": 8,
+            "eligible_ocr_calls": 8,
+            "detected_events": 0,
+            "expected_events": 0,
+            "event_recall": null
+          },
+          {
+            "phase_frames": 1,
+            "phase_seconds": 0.06666666666666667,
+            "sampled_frames": 8,
+            "eligible_ocr_calls": 8,
+            "detected_events": 0,
+            "expected_events": 0,
+            "event_recall": null
+          },
+          {
+            "phase_frames": 2,
+            "phase_seconds": 0.13333333333333333,
+            "sampled_frames": 8,
+            "eligible_ocr_calls": 8,
+            "detected_events": 0,
+            "expected_events": 0,
+            "event_recall": null
+          },
+          {
+            "phase_frames": 3,
+            "phase_seconds": 0.2,
+            "sampled_frames": 8,
+            "eligible_ocr_calls": 8,
+            "detected_events": 0,
+            "expected_events": 0,
+            "event_recall": null
+          },
+          {
+            "phase_frames": 4,
+            "phase_seconds": 0.26666666666666666,
+            "sampled_frames": 8,
+            "eligible_ocr_calls": 8,
+            "detected_events": 0,
+            "expected_events": 0,
+            "event_recall": null
+          },
+          {
+            "phase_frames": 5,
+            "phase_seconds": 0.3333333333333333,
+            "sampled_frames": 8,
+            "eligible_ocr_calls": 8,
+            "detected_events": 0,
+            "expected_events": 0,
+            "event_recall": null
+          },
+          {
+            "phase_frames": 6,
+            "phase_seconds": 0.4,
+            "sampled_frames": 8,
+            "eligible_ocr_calls": 8,
+            "detected_events": 0,
+            "expected_events": 0,
+            "event_recall": null
+          },
+          {
+            "phase_frames": 7,
+            "phase_seconds": 0.4666666666666667,
+            "sampled_frames": 8,
+            "eligible_ocr_calls": 8,
+            "detected_events": 0,
+            "expected_events": 0,
+            "event_recall": null
+          },
+          {
+            "phase_frames": 8,
+            "phase_seconds": 0.5333333333333333,
+            "sampled_frames": 8,
+            "eligible_ocr_calls": 8,
+            "detected_events": 0,
+            "expected_events": 0,
+            "event_recall": null
+          },
+          {
+            "phase_frames": 9,
+            "phase_seconds": 0.6,
+            "sampled_frames": 8,
+            "eligible_ocr_calls": 8,
+            "detected_events": 0,
+            "expected_events": 0,
+            "event_recall": null
+          },
+          {
+            "phase_frames": 10,
+            "phase_seconds": 0.6666666666666666,
+            "sampled_frames": 8,
+            "eligible_ocr_calls": 8,
+            "detected_events": 0,
+            "expected_events": 0,
+            "event_recall": null
+          },
+          {
+            "phase_frames": 11,
+            "phase_seconds": 0.7333333333333333,
+            "sampled_frames": 8,
+            "eligible_ocr_calls": 8,
+            "detected_events": 0,
+            "expected_events": 0,
+            "event_recall": null
+          },
+          {
+            "phase_frames": 12,
+            "phase_seconds": 0.8,
+            "sampled_frames": 8,
+            "eligible_ocr_calls": 8,
+            "detected_events": 0,
+            "expected_events": 0,
+            "event_recall": null
+          },
+          {
+            "phase_frames": 13,
+            "phase_seconds": 0.8666666666666667,
+            "sampled_frames": 8,
+            "eligible_ocr_calls": 8,
+            "detected_events": 0,
+            "expected_events": 0,
+            "event_recall": null
+          },
+          {
+            "phase_frames": 14,
+            "phase_seconds": 0.9333333333333333,
+            "sampled_frames": 8,
+            "eligible_ocr_calls": 8,
+            "detected_events": 0,
+            "expected_events": 0,
+            "event_recall": null
+          }
+        ],
+        "phase_recall_mean": null,
+        "phase_recall_min": null,
+        "phase_recall_max": null
+      },
+      "observations_sha256": "03e64c268bd6e235a57f2ef43312ef40981b6f2926bcdb1775e7e71632bf6fd0",
+      "export_wall_seconds": 102.3307,
+      "mask_coverage": {
+        "solid_mask_color": "RGB(0,0,0)",
+        "codec_tolerance_per_channel": 16,
+        "required_black_fraction": 0.995,
+        "output_frames": 120,
+        "expected_frames": 120,
+        "frame_count_matches": true,
+        "checked_sensitive_frame_occurrences": 0,
+        "fully_masked_frame_occurrences": 0,
+        "fully_masked_events": 0,
+        "expected_events": 0,
+        "minimum_black_fraction": null,
+        "mean_black_fraction": null,
+        "uncovered_occurrences": []
+      },
+      "selected_mask_geometry": {
+        "solid_mask_color": "RGB(0,0,0)",
+        "codec_tolerance_per_channel": 16,
+        "required_black_fraction": 0.995,
+        "output_frames": 120,
+        "expected_frames": 120,
+        "frame_count_matches": true,
+        "checked_sensitive_frame_occurrences": 0,
+        "fully_masked_frame_occurrences": 0,
+        "fully_masked_events": 0,
+        "expected_events": 0,
+        "minimum_black_fraction": null,
+        "mean_black_fraction": null,
+        "uncovered_occurrences": []
+      },
+      "application_verification": {
+        "schema_version": 1,
+        "backend": "CPU · ONNX Runtime",
+        "model": "RapidOCR 1.4.4 / PP-OCRv4 detection + recognition",
+        "hardware_verified": false,
+        "media": {
+          "media_type": "video",
+          "width": 1280,
+          "height": 720,
+          "fps": 15.0,
+          "duration": 8.0,
+          "frame_count": 120
+        },
+        "analysis": {
+          "frames_scanned": 120,
+          "unique_frames_ocr": 73,
+          "exact_cache_hits": 47,
+          "analysis_seconds": 106.761,
+          "ocr_seconds": 105.729,
+          "processing_fps": 1.12,
+          "findings_count": 0,
+          "audio_checked": false,
+          "all_frames_decoded": true
+        },
+        "decisions": [],
+        "manual_mask_count": 0,
+        "masked_frames": 0,
+        "audio_removed": true,
+        "audio_checked": false,
+        "export_seconds": 102.33,
+        "rescan": {
+          "status": "passed",
+          "findings_count": 0,
+          "message": "No supported text patterns detected in output; not a guarantee of privacy."
+        },
+        "limitations": [
+          "Supported visible text patterns only; names, faces and arbitrary confidential content may be missed.",
+          "Output rescan uses the same OCR and rules and is not an independent privacy guarantee.",
+          "OCR accuracy depends on font, size, contrast, compression and language."
+        ]
+      },
+      "output_sha256": "1e1e36302b5aa773109af5d9d16669111d218da455e531ac3f6afc55eb48ef3f",
+      "source_sha256": "7fa96af452aaef8c731fab27807e2d035b40bb2a4beae2a259a75c17cbc90cff",
+      "original_unchanged": true
+    },
+    {
+      "id": "v2_heldout_spreadsheet_C_positive",
+      "layout": "spreadsheet",
+      "condition": "C",
+      "positive": true,
+      "split": "heldout",
+      "analysis_wall_seconds": 165.3191,
+      "runtime_metrics": {
+        "frames_scanned": 120,
+        "unique_frames_ocr": 120,
+        "exact_cache_hits": 0,
+        "analysis_seconds": 165.204,
+        "ocr_seconds": 164.188,
+        "processing_fps": 0.73,
+        "findings_count": 2,
+        "audio_checked": false,
+        "all_frames_decoded": true
+      },
+      "detection": {
+        "expected_events": 4,
+        "detected_events": 2,
+        "missed_events": [
+          {
+            "id": "token",
+            "type": "token",
+            "exposure_seconds": 2.0
+          },
+          {
+            "id": "custom",
+            "type": "custom",
+            "exposure_seconds": 1.0
+          }
+        ],
+        "predicted_events": 2,
+        "false_positive_events": 0,
+        "false_positive_ids": [],
+        "event_recall": 0.5,
+        "expected_sensitive_frame_occurrences": 56,
+        "detected_sensitive_frame_occurrences": 11,
+        "sensitive_frame_recall": 0.19642857142857142,
+        "matches": [
+          {
+            "truth_event": "phone",
+            "prediction_event": "e0002",
+            "matching_frames": 8
+          },
+          {
+            "truth_event": "email",
+            "prediction_event": "e0001",
+            "matching_frames": 3
+          }
+        ]
+      },
+      "ablation_1hz": {
+        "method": "Replay unchanged per-frame observations at every 1 Hz phase; original temporal track IDs retained only to match events. No separate product implementation or speedup measurement.",
+        "cache_model": "Exact decoded-pixel SHA-256 LRU, capacity 128, empty at clip start; call counts are eligible work, not timings.",
+        "all_frame_eligible_ocr_calls": 120,
+        "all_frame_decoded_frames": 120,
+        "phases": [
+          {
+            "phase_frames": 0,
+            "phase_seconds": 0.0,
+            "sampled_frames": 8,
+            "eligible_ocr_calls": 8,
+            "detected_events": 1,
+            "expected_events": 4,
+            "event_recall": 0.25
+          },
+          {
+            "phase_frames": 1,
+            "phase_seconds": 0.06666666666666667,
+            "sampled_frames": 8,
+            "eligible_ocr_calls": 8,
+            "detected_events": 0,
+            "expected_events": 4,
+            "event_recall": 0.0
+          },
+          {
+            "phase_frames": 2,
+            "phase_seconds": 0.13333333333333333,
+            "sampled_frames": 8,
+            "eligible_ocr_calls": 8,
+            "detected_events": 0,
+            "expected_events": 4,
+            "event_recall": 0.0
+          },
+          {
+            "phase_frames": 3,
+            "phase_seconds": 0.2,
+            "sampled_frames": 8,
+            "eligible_ocr_calls": 8,
+            "detected_events": 1,
+            "expected_events": 4,
+            "event_recall": 0.25
+          },
+          {
+            "phase_frames": 4,
+            "phase_seconds": 0.26666666666666666,
+            "sampled_frames": 8,
+            "eligible_ocr_calls": 8,
+            "detected_events": 1,
+            "expected_events": 4,
+            "event_recall": 0.25
+          },
+          {
+            "phase_frames": 5,
+            "phase_seconds": 0.3333333333333333,
+            "sampled_frames": 8,
+            "eligible_ocr_calls": 8,
+            "detected_events": 1,
+            "expected_events": 4,
+            "event_recall": 0.25
+          },
+          {
+            "phase_frames": 6,
+            "phase_seconds": 0.4,
+            "sampled_frames": 8,
+            "eligible_ocr_calls": 8,
+            "detected_events": 0,
+            "expected_events": 4,
+            "event_recall": 0.0
+          },
+          {
+            "phase_frames": 7,
+            "phase_seconds": 0.4666666666666667,
+            "sampled_frames": 8,
+            "eligible_ocr_calls": 8,
+            "detected_events": 0,
+            "expected_events": 4,
+            "event_recall": 0.0
+          },
+          {
+            "phase_frames": 8,
+            "phase_seconds": 0.5333333333333333,
+            "sampled_frames": 8,
+            "eligible_ocr_calls": 8,
+            "detected_events": 1,
+            "expected_events": 4,
+            "event_recall": 0.25
+          },
+          {
+            "phase_frames": 9,
+            "phase_seconds": 0.6,
+            "sampled_frames": 8,
+            "eligible_ocr_calls": 8,
+            "detected_events": 1,
+            "expected_events": 4,
+            "event_recall": 0.25
+          },
+          {
+            "phase_frames": 10,
+            "phase_seconds": 0.6666666666666666,
+            "sampled_frames": 8,
+            "eligible_ocr_calls": 8,
+            "detected_events": 1,
+            "expected_events": 4,
+            "event_recall": 0.25
+          },
+          {
+            "phase_frames": 11,
+            "phase_seconds": 0.7333333333333333,
+            "sampled_frames": 8,
+            "eligible_ocr_calls": 8,
+            "detected_events": 1,
+            "expected_events": 4,
+            "event_recall": 0.25
+          },
+          {
+            "phase_frames": 12,
+            "phase_seconds": 0.8,
+            "sampled_frames": 8,
+            "eligible_ocr_calls": 8,
+            "detected_events": 1,
+            "expected_events": 4,
+            "event_recall": 0.25
+          },
+          {
+            "phase_frames": 13,
+            "phase_seconds": 0.8666666666666667,
+            "sampled_frames": 8,
+            "eligible_ocr_calls": 8,
+            "detected_events": 1,
+            "expected_events": 4,
+            "event_recall": 0.25
+          },
+          {
+            "phase_frames": 14,
+            "phase_seconds": 0.9333333333333333,
+            "sampled_frames": 8,
+            "eligible_ocr_calls": 8,
+            "detected_events": 1,
+            "expected_events": 4,
+            "event_recall": 0.25
+          }
+        ],
+        "phase_recall_mean": 0.18333333333333332,
+        "phase_recall_min": 0.0,
+        "phase_recall_max": 0.25
+      },
+      "observations_sha256": "9f0bd1b60f2b18551105d859628c6a8f53b536224f9d8baeb301d79ac90aed12",
+      "export_wall_seconds": 198.9278,
+      "mask_coverage": {
+        "solid_mask_color": "RGB(0,0,0)",
+        "codec_tolerance_per_channel": 16,
+        "required_black_fraction": 0.995,
+        "output_frames": 120,
+        "expected_frames": 120,
+        "frame_count_matches": true,
+        "checked_sensitive_frame_occurrences": 56,
+        "fully_masked_frame_occurrences": 11,
+        "fully_masked_events": 2,
+        "expected_events": 4,
+        "minimum_black_fraction": 0.0,
+        "mean_black_fraction": 0.19642857142857142,
+        "uncovered_occurrences": [
+          {
+            "event_id": "token",
+            "frame": 60,
+            "black_fraction": 0.0
+          },
+          {
+            "event_id": "token",
+            "frame": 61,
+            "black_fraction": 0.0
+          },
+          {
+            "event_id": "token",
+            "frame": 62,
+            "black_fraction": 0.0
+          },
+          {
+            "event_id": "token",
+            "frame": 63,
+            "black_fraction": 0.0
+          },
+          {
+            "event_id": "token",
+            "frame": 64,
+            "black_fraction": 0.0
+          },
+          {
+            "event_id": "token",
+            "frame": 65,
+            "black_fraction": 0.0
+          },
+          {
+            "event_id": "token",
+            "frame": 66,
+            "black_fraction": 0.0
+          },
+          {
+            "event_id": "token",
+            "frame": 67,
+            "black_fraction": 0.0
+          },
+          {
+            "event_id": "token",
+            "frame": 68,
+            "black_fraction": 0.0
+          },
+          {
+            "event_id": "token",
+            "frame": 69,
+            "black_fraction": 0.0
+          },
+          {
+            "event_id": "token",
+            "frame": 70,
+            "black_fraction": 0.0
+          },
+          {
+            "event_id": "token",
+            "frame": 71,
+            "black_fraction": 0.0
+          },
+          {
+            "event_id": "token",
+            "frame": 72,
+            "black_fraction": 0.0
+          },
+          {
+            "event_id": "token",
+            "frame": 73,
+            "black_fraction": 0.0
+          },
+          {
+            "event_id": "token",
+            "frame": 74,
+            "black_fraction": 0.0
+          },
+          {
+            "event_id": "token",
+            "frame": 75,
+            "black_fraction": 0.0
+          },
+          {
+            "event_id": "token",
+            "frame": 76,
+            "black_fraction": 0.0
+          },
+          {
+            "event_id": "token",
+            "frame": 77,
+            "black_fraction": 0.0
+          },
+          {
+            "event_id": "token",
+            "frame": 78,
+            "black_fraction": 0.0
+          },
+          {
+            "event_id": "token",
+            "frame": 79,
+            "black_fraction": 0.0
+          },
+          {
+            "event_id": "token",
+            "frame": 80,
+            "black_fraction": 0.0
+          },
+          {
+            "event_id": "token",
+            "frame": 81,
+            "black_fraction": 0.0
+          },
+          {
+            "event_id": "token",
+            "frame": 82,
+            "black_fraction": 0.0
+          },
+          {
+            "event_id": "token",
+            "frame": 83,
+            "black_fraction": 0.0
+          },
+          {
+            "event_id": "token",
+            "frame": 84,
+            "black_fraction": 0.0
+          },
+          {
+            "event_id": "token",
+            "frame": 85,
+            "black_fraction": 0.0
+          },
+          {
+            "event_id": "token",
+            "frame": 86,
+            "black_fraction": 0.0
+          },
+          {
+            "event_id": "token",
+            "frame": 87,
+            "black_fraction": 0.0
+          },
+          {
+            "event_id": "token",
+            "frame": 88,
+            "black_fraction": 0.0
+          },
+          {
+            "event_id": "token",
+            "frame": 89,
+            "black_fraction": 0.0
+          },
+          {
+            "event_id": "custom",
+            "frame": 96,
+            "black_fraction": 0.0
+          },
+          {
+            "event_id": "custom",
+            "frame": 97,
+            "black_fraction": 0.0
+          },
+          {
+            "event_id": "custom",
+            "frame": 98,
+            "black_fraction": 0.0
+          },
+          {
+            "event_id": "custom",
+            "frame": 99,
+            "black_fraction": 0.0
+          },
+          {
+            "event_id": "custom",
+            "frame": 100,
+            "black_fraction": 0.0
+          },
+          {
+            "event_id": "custom",
+            "frame": 101,
+            "black_fraction": 0.0
+          },
+          {
+            "event_id": "custom",
+            "frame": 102,
+            "black_fraction": 0.0
+          },
+          {
+            "event_id": "custom",
+            "frame": 103,
+            "black_fraction": 0.0
+          },
+          {
+            "event_id": "custom",
+            "frame": 104,
+            "black_fraction": 0.0
+          },
+          {
+            "event_id": "custom",
+            "frame": 105,
+            "black_fraction": 0.0
+          },
+          {
+            "event_id": "custom",
+            "frame": 106,
+            "black_fraction": 0.0
+          },
+          {
+            "event_id": "custom",
+            "frame": 107,
+            "black_fraction": 0.0
+          },
+          {
+            "event_id": "custom",
+            "frame": 108,
+            "black_fraction": 0.0
+          },
+          {
+            "event_id": "custom",
+            "frame": 109,
+            "black_fraction": 0.0
+          },
+          {
+            "event_id": "custom",
+            "frame": 110,
+            "black_fraction": 0.0
+          }
+        ]
+      },
+      "selected_mask_geometry": {
+        "solid_mask_color": "RGB(0,0,0)",
+        "codec_tolerance_per_channel": 16,
+        "required_black_fraction": 0.995,
+        "output_frames": 120,
+        "expected_frames": 120,
+        "frame_count_matches": true,
+        "checked_sensitive_frame_occurrences": 11,
+        "fully_masked_frame_occurrences": 11,
+        "fully_masked_events": 2,
+        "expected_events": 2,
+        "minimum_black_fraction": 1.0,
+        "mean_black_fraction": 1.0,
+        "uncovered_occurrences": []
+      },
+      "application_verification": {
+        "schema_version": 1,
+        "backend": "CPU · ONNX Runtime",
+        "model": "RapidOCR 1.4.4 / PP-OCRv4 detection + recognition",
+        "hardware_verified": false,
+        "media": {
+          "media_type": "video",
+          "width": 1280,
+          "height": 720,
+          "fps": 15.0,
+          "duration": 8.0,
+          "frame_count": 120
+        },
+        "analysis": {
+          "frames_scanned": 120,
+          "unique_frames_ocr": 120,
+          "exact_cache_hits": 0,
+          "analysis_seconds": 165.204,
+          "ocr_seconds": 164.188,
+          "processing_fps": 0.73,
+          "findings_count": 2,
+          "audio_checked": false,
+          "all_frames_decoded": true
+        },
+        "decisions": [
+          {
+            "event_id": "e0001",
+            "type": "email",
+            "start": 1.2,
+            "end": 1.4,
+            "action": "redact"
+          },
+          {
+            "event_id": "e0002",
+            "type": "phone",
+            "start": 2.533333333333333,
+            "end": 3.066666666666667,
+            "action": "redact"
+          }
+        ],
+        "manual_mask_count": 0,
+        "masked_frames": 11,
+        "audio_removed": true,
+        "audio_checked": false,
+        "export_seconds": 198.927,
+        "rescan": {
+          "status": "passed",
+          "findings_count": 0,
+          "message": "No supported text patterns detected in output; not a guarantee of privacy."
+        },
+        "limitations": [
+          "Supported visible text patterns only; names, faces and arbitrary confidential content may be missed.",
+          "Output rescan uses the same OCR and rules and is not an independent privacy guarantee.",
+          "OCR accuracy depends on font, size, contrast, compression and language."
+        ]
+      },
+      "output_sha256": "d0a583be567f9b7786575ace4139e918c6b88d4fb2d031dad42980cc3ba681a0",
+      "source_sha256": "5ded7839b758c05e602a71891f39b54b2b9a76e7350a41b02370676de4d60a9b",
+      "original_unchanged": true
+    },
+    {
+      "id": "v2_heldout_spreadsheet_C_negative",
+      "layout": "spreadsheet",
+      "condition": "C",
+      "positive": false,
+      "split": "heldout",
+      "analysis_wall_seconds": 157.0758,
+      "runtime_metrics": {
+        "frames_scanned": 120,
+        "unique_frames_ocr": 120,
+        "exact_cache_hits": 0,
+        "analysis_seconds": 157.066,
+        "ocr_seconds": 156.079,
+        "processing_fps": 0.76,
+        "findings_count": 0,
+        "audio_checked": false,
+        "all_frames_decoded": true
+      },
+      "detection": {
+        "expected_events": 0,
+        "detected_events": 0,
+        "missed_events": [],
+        "predicted_events": 0,
+        "false_positive_events": 0,
+        "false_positive_ids": [],
+        "event_recall": null,
+        "expected_sensitive_frame_occurrences": 0,
+        "detected_sensitive_frame_occurrences": 0,
+        "sensitive_frame_recall": null,
+        "matches": []
+      },
+      "ablation_1hz": {
+        "method": "Replay unchanged per-frame observations at every 1 Hz phase; original temporal track IDs retained only to match events. No separate product implementation or speedup measurement.",
+        "cache_model": "Exact decoded-pixel SHA-256 LRU, capacity 128, empty at clip start; call counts are eligible work, not timings.",
+        "all_frame_eligible_ocr_calls": 120,
+        "all_frame_decoded_frames": 120,
+        "phases": [
+          {
+            "phase_frames": 0,
+            "phase_seconds": 0.0,
+            "sampled_frames": 8,
+            "eligible_ocr_calls": 8,
+            "detected_events": 0,
+            "expected_events": 0,
+            "event_recall": null
+          },
+          {
+            "phase_frames": 1,
+            "phase_seconds": 0.06666666666666667,
+            "sampled_frames": 8,
+            "eligible_ocr_calls": 8,
+            "detected_events": 0,
+            "expected_events": 0,
+            "event_recall": null
+          },
+          {
+            "phase_frames": 2,
+            "phase_seconds": 0.13333333333333333,
+            "sampled_frames": 8,
+            "eligible_ocr_calls": 8,
+            "detected_events": 0,
+            "expected_events": 0,
+            "event_recall": null
+          },
+          {
+            "phase_frames": 3,
+            "phase_seconds": 0.2,
+            "sampled_frames": 8,
+            "eligible_ocr_calls": 8,
+            "detected_events": 0,
+            "expected_events": 0,
+            "event_recall": null
+          },
+          {
+            "phase_frames": 4,
+            "phase_seconds": 0.26666666666666666,
+            "sampled_frames": 8,
+            "eligible_ocr_calls": 8,
+            "detected_events": 0,
+            "expected_events": 0,
+            "event_recall": null
+          },
+          {
+            "phase_frames": 5,
+            "phase_seconds": 0.3333333333333333,
+            "sampled_frames": 8,
+            "eligible_ocr_calls": 8,
+            "detected_events": 0,
+            "expected_events": 0,
+            "event_recall": null
+          },
+          {
+            "phase_frames": 6,
+            "phase_seconds": 0.4,
+            "sampled_frames": 8,
+            "eligible_ocr_calls": 8,
+            "detected_events": 0,
+            "expected_events": 0,
+            "event_recall": null
+          },
+          {
+            "phase_frames": 7,
+            "phase_seconds": 0.4666666666666667,
+            "sampled_frames": 8,
+            "eligible_ocr_calls": 8,
+            "detected_events": 0,
+            "expected_events": 0,
+            "event_recall": null
+          },
+          {
+            "phase_frames": 8,
+            "phase_seconds": 0.5333333333333333,
+            "sampled_frames": 8,
+            "eligible_ocr_calls": 8,
+            "detected_events": 0,
+            "expected_events": 0,
+            "event_recall": null
+          },
+          {
+            "phase_frames": 9,
+            "phase_seconds": 0.6,
+            "sampled_frames": 8,
+            "eligible_ocr_calls": 8,
+            "detected_events": 0,
+            "expected_events": 0,
+            "event_recall": null
+          },
+          {
+            "phase_frames": 10,
+            "phase_seconds": 0.6666666666666666,
+            "sampled_frames": 8,
+            "eligible_ocr_calls": 8,
+            "detected_events": 0,
+            "expected_events": 0,
+            "event_recall": null
+          },
+          {
+            "phase_frames": 11,
+            "phase_seconds": 0.7333333333333333,
+            "sampled_frames": 8,
+            "eligible_ocr_calls": 8,
+            "detected_events": 0,
+            "expected_events": 0,
+            "event_recall": null
+          },
+          {
+            "phase_frames": 12,
+            "phase_seconds": 0.8,
+            "sampled_frames": 8,
+            "eligible_ocr_calls": 8,
+            "detected_events": 0,
+            "expected_events": 0,
+            "event_recall": null
+          },
+          {
+            "phase_frames": 13,
+            "phase_seconds": 0.8666666666666667,
+            "sampled_frames": 8,
+            "eligible_ocr_calls": 8,
+            "detected_events": 0,
+            "expected_events": 0,
+            "event_recall": null
+          },
+          {
+            "phase_frames": 14,
+            "phase_seconds": 0.9333333333333333,
+            "sampled_frames": 8,
+            "eligible_ocr_calls": 8,
+            "detected_events": 0,
+            "expected_events": 0,
+            "event_recall": null
+          }
+        ],
+        "phase_recall_mean": null,
+        "phase_recall_min": null,
+        "phase_recall_max": null
+      },
+      "observations_sha256": "03e64c268bd6e235a57f2ef43312ef40981b6f2926bcdb1775e7e71632bf6fd0",
+      "export_wall_seconds": 198.0929,
+      "mask_coverage": {
+        "solid_mask_color": "RGB(0,0,0)",
+        "codec_tolerance_per_channel": 16,
+        "required_black_fraction": 0.995,
+        "output_frames": 120,
+        "expected_frames": 120,
+        "frame_count_matches": true,
+        "checked_sensitive_frame_occurrences": 0,
+        "fully_masked_frame_occurrences": 0,
+        "fully_masked_events": 0,
+        "expected_events": 0,
+        "minimum_black_fraction": null,
+        "mean_black_fraction": null,
+        "uncovered_occurrences": []
+      },
+      "selected_mask_geometry": {
+        "solid_mask_color": "RGB(0,0,0)",
+        "codec_tolerance_per_channel": 16,
+        "required_black_fraction": 0.995,
+        "output_frames": 120,
+        "expected_frames": 120,
+        "frame_count_matches": true,
+        "checked_sensitive_frame_occurrences": 0,
+        "fully_masked_frame_occurrences": 0,
+        "fully_masked_events": 0,
+        "expected_events": 0,
+        "minimum_black_fraction": null,
+        "mean_black_fraction": null,
+        "uncovered_occurrences": []
+      },
+      "application_verification": {
+        "schema_version": 1,
+        "backend": "CPU · ONNX Runtime",
+        "model": "RapidOCR 1.4.4 / PP-OCRv4 detection + recognition",
+        "hardware_verified": false,
+        "media": {
+          "media_type": "video",
+          "width": 1280,
+          "height": 720,
+          "fps": 15.0,
+          "duration": 8.0,
+          "frame_count": 120
+        },
+        "analysis": {
+          "frames_scanned": 120,
+          "unique_frames_ocr": 120,
+          "exact_cache_hits": 0,
+          "analysis_seconds": 157.066,
+          "ocr_seconds": 156.079,
+          "processing_fps": 0.76,
+          "findings_count": 0,
+          "audio_checked": false,
+          "all_frames_decoded": true
+        },
+        "decisions": [],
+        "manual_mask_count": 0,
+        "masked_frames": 0,
+        "audio_removed": true,
+        "audio_checked": false,
+        "export_seconds": 198.092,
+        "rescan": {
+          "status": "passed",
+          "findings_count": 0,
+          "message": "No supported text patterns detected in output; not a guarantee of privacy."
+        },
+        "limitations": [
+          "Supported visible text patterns only; names, faces and arbitrary confidential content may be missed.",
+          "Output rescan uses the same OCR and rules and is not an independent privacy guarantee.",
+          "OCR accuracy depends on font, size, contrast, compression and language."
+        ]
+      },
+      "output_sha256": "cf3d3cbba7a473a74a6f2f0796a13cc6d3785ede7fe0973d8a0dc1e8fd2f8a10",
+      "source_sha256": "d1c458235fc841e0243ce10a862fbce9958b73ebaa692f20dc57044ec3a40c78",
+      "original_unchanged": true
+    }
+  ],
+  "summary": {
+    "completed_samples": 12,
+    "failed_samples": 0,
+    "expected_events": 24,
+    "detected_events": 18,
+    "event_recall": 0.75,
+    "false_positive_events": 0,
+    "negative_samples": 6,
+    "negative_samples_with_false_positives": 0,
+    "sensitive_frame_recall": 0.6875,
+    "checked_sensitive_frame_occurrences": 336,
+    "fully_masked_frame_occurrences": 231,
+    "full_mask_frame_fraction": 0.6875,
+    "fully_masked_events": 18,
+    "mask_checked_events": 24,
+    "all_export_frame_counts_match": true,
+    "analysis_wall_seconds": 1070.7347,
+    "export_wall_seconds": 1075.0892,
+    "by_condition": {
+      "A": {
+        "completed_samples": 4,
+        "failed_samples": 0,
+        "expected_events": 8,
+        "detected_events": 6,
+        "event_recall": 0.75,
+        "false_positive_events": 0,
+        "negative_samples": 2,
+        "negative_samples_with_false_positives": 0,
+        "sensitive_frame_recall": 0.7321428571428571,
+        "checked_sensitive_frame_occurrences": 112,
+        "fully_masked_frame_occurrences": 82,
+        "full_mask_frame_fraction": 0.7321428571428571,
+        "fully_masked_events": 6,
+        "mask_checked_events": 8,
+        "all_export_frame_counts_match": true,
+        "analysis_wall_seconds": 235.6365,
+        "export_wall_seconds": 200.3
+      },
+      "B": {
+        "completed_samples": 4,
+        "failed_samples": 0,
+        "expected_events": 8,
+        "detected_events": 7,
+        "event_recall": 0.875,
+        "false_positive_events": 0,
+        "negative_samples": 2,
+        "negative_samples_with_false_positives": 0,
+        "sensitive_frame_recall": 0.8660714285714286,
+        "checked_sensitive_frame_occurrences": 112,
+        "fully_masked_frame_occurrences": 97,
+        "full_mask_frame_fraction": 0.8660714285714286,
+        "fully_masked_events": 7,
+        "mask_checked_events": 8,
+        "all_export_frame_counts_match": true,
+        "analysis_wall_seconds": 301.0548,
+        "export_wall_seconds": 239.3689
+      },
+      "C": {
+        "completed_samples": 4,
+        "failed_samples": 0,
+        "expected_events": 8,
+        "detected_events": 5,
+        "event_recall": 0.625,
+        "false_positive_events": 0,
+        "negative_samples": 2,
+        "negative_samples_with_false_positives": 0,
+        "sensitive_frame_recall": 0.4642857142857143,
+        "checked_sensitive_frame_occurrences": 112,
+        "fully_masked_frame_occurrences": 52,
+        "full_mask_frame_fraction": 0.4642857142857143,
+        "fully_masked_events": 5,
+        "mask_checked_events": 8,
+        "all_export_frame_counts_match": true,
+        "analysis_wall_seconds": 534.0434,
+        "export_wall_seconds": 635.4203
+      }
+    },
+    "by_layout": {
+      "crm": {
+        "completed_samples": 6,
+        "failed_samples": 0,
+        "expected_events": 12,
+        "detected_events": 9,
+        "event_recall": 0.75,
+        "false_positive_events": 0,
+        "negative_samples": 3,
+        "negative_samples_with_false_positives": 0,
+        "sensitive_frame_recall": 0.7321428571428571,
+        "checked_sensitive_frame_occurrences": 168,
+        "fully_masked_frame_occurrences": 123,
+        "full_mask_frame_fraction": 0.7321428571428571,
+        "fully_masked_events": 9,
+        "mask_checked_events": 12,
+        "all_export_frame_counts_match": true,
+        "analysis_wall_seconds": 369.1922,
+        "export_wall_seconds": 384.2058
+      },
+      "spreadsheet": {
+        "completed_samples": 6,
+        "failed_samples": 0,
+        "expected_events": 12,
+        "detected_events": 9,
+        "event_recall": 0.75,
+        "false_positive_events": 0,
+        "negative_samples": 3,
+        "negative_samples_with_false_positives": 0,
+        "sensitive_frame_recall": 0.6428571428571429,
+        "checked_sensitive_frame_occurrences": 168,
+        "fully_masked_frame_occurrences": 108,
+        "full_mask_frame_fraction": 0.6428571428571429,
+        "fully_masked_events": 9,
+        "mask_checked_events": 12,
+        "all_export_frame_counts_match": true,
+        "analysis_wall_seconds": 701.5425,
+        "export_wall_seconds": 690.8833999999999
+      }
+    },
+    "all_original_hashes_unchanged": true,
+    "selected_mask_geometry": {
+      "checked_frame_regions": 231,
+      "fully_masked_frame_regions": 231,
+      "meaning": "Selected detection boxes only; independent annotation coverage above still counts missed/partial detections."
+    },
+    "ablation_1hz": {
+      "phases": [
+        {
+          "phase_frames": 0,
+          "expected_events": 24,
+          "detected_events": 12,
+          "event_recall": 0.5,
+          "eligible_ocr_calls": 92
+        },
+        {
+          "phase_frames": 1,
+          "expected_events": 24,
+          "detected_events": 6,
+          "event_recall": 0.25,
+          "eligible_ocr_calls": 92
+        },
+        {
+          "phase_frames": 2,
+          "expected_events": 24,
+          "detected_events": 6,
+          "event_recall": 0.25,
+          "eligible_ocr_calls": 94
+        },
+        {
+          "phase_frames": 3,
+          "expected_events": 24,
+          "detected_events": 12,
+          "event_recall": 0.5,
+          "eligible_ocr_calls": 93
+        },
+        {
+          "phase_frames": 4,
+          "expected_events": 24,
+          "detected_events": 12,
+          "event_recall": 0.5,
+          "eligible_ocr_calls": 92
+        },
+        {
+          "phase_frames": 5,
+          "expected_events": 24,
+          "detected_events": 12,
+          "event_recall": 0.5,
+          "eligible_ocr_calls": 92
+        },
+        {
+          "phase_frames": 6,
+          "expected_events": 24,
+          "detected_events": 6,
+          "event_recall": 0.25,
+          "eligible_ocr_calls": 94
+        },
+        {
+          "phase_frames": 7,
+          "expected_events": 24,
+          "detected_events": 6,
+          "event_recall": 0.25,
+          "eligible_ocr_calls": 95
+        },
+        {
+          "phase_frames": 8,
+          "expected_events": 24,
+          "detected_events": 12,
+          "event_recall": 0.5,
+          "eligible_ocr_calls": 94
+        },
+        {
+          "phase_frames": 9,
+          "expected_events": 24,
+          "detected_events": 12,
+          "event_recall": 0.5,
+          "eligible_ocr_calls": 94
+        },
+        {
+          "phase_frames": 10,
+          "expected_events": 24,
+          "detected_events": 12,
+          "event_recall": 0.5,
+          "eligible_ocr_calls": 90
+        },
+        {
+          "phase_frames": 11,
+          "expected_events": 24,
+          "detected_events": 12,
+          "event_recall": 0.5,
+          "eligible_ocr_calls": 91
+        },
+        {
+          "phase_frames": 12,
+          "expected_events": 24,
+          "detected_events": 12,
+          "event_recall": 0.5,
+          "eligible_ocr_calls": 94
+        },
+        {
+          "phase_frames": 13,
+          "expected_events": 24,
+          "detected_events": 12,
+          "event_recall": 0.5,
+          "eligible_ocr_calls": 94
+        },
+        {
+          "phase_frames": 14,
+          "expected_events": 24,
+          "detected_events": 12,
+          "event_recall": 0.5,
+          "eligible_ocr_calls": 90
+        }
+      ],
+      "phase_recall_mean": 0.43333333333333335,
+      "phase_recall_min": 0.25,
+      "phase_recall_max": 0.5,
+      "all_frame_eligible_ocr_calls": 909,
+      "claim_limit": "Sampling replay and eligible-call counts only. No human-efficiency or wall-time speedup claim."
+    }
+  },
+  "updated_at": "2026-10-05T01:01:34.248767+00:00",
+  "interrupted_at": "2026-10-04T16:42:39.969187+00:00",
+  "interruption_reason": "User requested immediate pause for computer shutdown. Ctrl+C stopped unified exec session 31451 with exit code 1.",
+  "checkpoint": {
+    "completed_ids": [
+      "v2_heldout_crm_A_positive",
+      "v2_heldout_crm_A_negative",
+      "v2_heldout_crm_B_positive",
+      "v2_heldout_crm_B_negative",
+      "v2_heldout_crm_C_positive",
+      "v2_heldout_crm_C_negative",
+      "v2_heldout_spreadsheet_A_positive",
+      "v2_heldout_spreadsheet_A_negative",
+      "v2_heldout_spreadsheet_B_positive",
+      "v2_heldout_spreadsheet_B_negative"
+    ],
+    "pending_ids": [
+      "v2_heldout_spreadsheet_C_positive",
+      "v2_heldout_spreadsheet_C_negative"
+    ],
+    "partial_artifacts": {
+      "v2_heldout_spreadsheet_C_positive": {
+        "observation": false,
+        "export": false
+      },
+      "v2_heldout_spreadsheet_C_negative": {
+        "observation": false,
+        "export": false
+      }
+    },
+    "completed_samples_preserved": 10,
+    "source_freeze_verified_after_interrupt": true,
+    "resume_policy": "Verify every frozen source hash and dataset manifest before --resume. Skip exactly completed IDs. Any uncompleted clip restarts from frame zero and its unscored derived files may be overwritten; do not reuse partial inference or treat it as another completed evaluation."
+  },
+  "finished_at": "2026-10-05T01:01:34.212272+00:00",
+  "source_sha256_after": {
+    "app/__init__.py": "32dcb40b4b8c5bc4164494d9b2aa480b1dce1a062ea35665ca2afdd40a05b12a",
+    "app/detectors.py": "e43bc2e630aff8656daf61094938da44a073f378d8eeccfe9fc8dd6d6d040a27",
+    "app/main.py": "67e25877dc50969c27c88bd4fa2c9c25fd6d3ebd3dad2d2101366d865f656a40",
+    "app/media.py": "7bd5cda21359d34fc27c71c61dd4d8004c6b7ffd66d4db1f766f3223fdfbf3be",
+    "app/ocr.py": "10f6c57f6167fa8f5eafe02ddfd13f4cd266b93c88e99458c27ee0f470f01554",
+    "app/paths.py": "870cb9a0bf87ac60a1f67700b18fd695bdf14a4524711139e38d7536ef9ce8df",
+    "app/pipeline.py": "6d475539566818fd6185167755bda5d528cde8c838b06650575dc13ab72b9221",
+    "app/session.py": "19011e1f39341a1dfc8a335e7f63eaa5241f9e728f2b86fb90cec9b6c94fe1d7"
+  },
+  "inference_core_unchanged": true
+}

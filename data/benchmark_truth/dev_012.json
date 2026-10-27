@@ -1,0 +1,75 @@
+{
+  "schema": 1,
+  "id": "dev_012",
+  "split": "dev",
+  "template": "support_inbox",
+  "scenario": "private_label",
+  "media": "dev/dev_012.mp4",
+  "width": 1280,
+  "height": 720,
+  "fps": 10,
+  "frame_count": 40,
+  "duration": 4,
+  "font_size": 28,
+  "exposure": 0.5,
+  "keywords": [
+    "ORCHID CONFIDENTIAL"
+  ],
+  "events": [
+    {
+      "id": "dev_012_0",
+      "type": "custom",
+      "text": "ORCHID CONFIDENTIAL",
+      "start": 1.0,
+      "end": 1.5,
+      "frames": [
+        {
+          "index": 10,
+          "box": [
+            495,
+            448,
+            793,
+            468
+          ]
+        },
+        {
+          "index": 11,
+          "box": [
+            495,
+            448,
+            793,
+            468
+          ]
+        },
+        {
+          "index": 12,
+          "box": [
+            495,
+            448,
+            793,
+            468
+          ]
+        },
+        {
+          "index": 13,
+          "box": [
+            495,
+            448,
+            793,
+            468
+          ]
+        },
+        {
+          "index": 14,
+          "box": [
+            495,
+            448,
+            793,
+            468
+          ]
+        }
+      ]
+    }
+  ],
+  "sha256": "6007a08aec17dd89c5f8185c013e78bc505b4c3012cac6ec2bbe121732d70c99"
+}

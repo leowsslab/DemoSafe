@@ -1,0 +1,10 @@
+.venv/
+.deps/
+__pycache__/
+.pytest_cache/
+build/
+artifacts/
+data/jobs/
+*.log
+.env
+.env.*

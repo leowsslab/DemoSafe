@@ -1,0 +1,48 @@
+{
+  "schema": 1,
+  "id": "dev_006",
+  "split": "dev",
+  "template": "customer_dashboard",
+  "scenario": "moving_email",
+  "media": "dev/dev_006.mp4",
+  "width": 1280,
+  "height": 720,
+  "fps": 10,
+  "frame_count": 40,
+  "duration": 4,
+  "font_size": 23,
+  "exposure": 0.2,
+  "keywords": [
+    "ORCHID CONFIDENTIAL"
+  ],
+  "events": [
+    {
+      "id": "dev_006_0",
+      "type": "email",
+      "text": "demo05@example.com",
+      "start": 1.0,
+      "end": 1.2,
+      "frames": [
+        {
+          "index": 10,
+          "box": [
+            462,
+            445,
+            703,
+            467
+          ]
+        },
+        {
+          "index": 11,
+          "box": [
+            450,
+            445,
+            691,
+            467
+          ]
+        }
+      ]
+    }
+  ],
+  "sha256": "eb5df5b4522c8874494e30a24d81aa2af0d5919d234f903145bd2115c90ce1c9"
+}

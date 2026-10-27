@@ -1,0 +1,280 @@
+{
+  "schema": 2,
+  "dataset": "robustness_v2",
+  "frozen_at": "2026-10-04T15:20:14.843094+00:00",
+  "generator_sha256": "e8dc6fa1418398da3766531ecf558c6f91cb4670155cd13e25156417b31f1230",
+  "seed": "deterministic; no random generator",
+  "limitations": [
+    "Fictional raster-rendered UI, not customer or browser recordings.",
+    "Layout families disjoint between splits, but renderer infrastructure and event timing are shared.",
+    "Conditions are paired correlated variants, not independent population samples.",
+    "C changes font size, contrast, compression and background motion together; no single-factor causal claim.",
+    "English supported text patterns only. Does not evaluate human efficiency or UGen300."
+  ],
+  "clips": [
+    {
+      "id": "v2_dev_helpdesk_A_positive",
+      "split": "dev",
+      "layout": "helpdesk",
+      "condition": "A",
+      "positive": true,
+      "media": "media/v2_dev_helpdesk_A_positive.mp4",
+      "media_sha256": "f5c85dadb36cade3e038827026ede71170dd3c88aaf34d0d4536fb83ef44809c",
+      "truth": "truth/v2_dev_helpdesk_A_positive.json",
+      "truth_sha256": "0386ab3e9ecf0725db3e917cdac150893459d89bf9fb62e9d9640fc7957ed635"
+    },
+    {
+      "id": "v2_dev_helpdesk_A_negative",
+      "split": "dev",
+      "layout": "helpdesk",
+      "condition": "A",
+      "positive": false,
+      "media": "media/v2_dev_helpdesk_A_negative.mp4",
+      "media_sha256": "a96bbce6efba7245dd6791204c70df3f80b13a493f11cd67c0f8cdbae85b72f7",
+      "truth": "truth/v2_dev_helpdesk_A_negative.json",
+      "truth_sha256": "6546ba6642977e9ffaaeca71279f032673980d13a815940e002ac965f0031887"
+    },
+    {
+      "id": "v2_dev_helpdesk_B_positive",
+      "split": "dev",
+      "layout": "helpdesk",
+      "condition": "B",
+      "positive": true,
+      "media": "media/v2_dev_helpdesk_B_positive.mp4",
+      "media_sha256": "7221d2006bd8de4af34d32654554dcf481d1f3f5a5a9906af79dc9cca3a1b9b8",
+      "truth": "truth/v2_dev_helpdesk_B_positive.json",
+      "truth_sha256": "14293e672f120db8efd3c7be2ea703a31bb8e8cf310d3a92168f45bbd9545721"
+    },
+    {
+      "id": "v2_dev_helpdesk_B_negative",
+      "split": "dev",
+      "layout": "helpdesk",
+      "condition": "B",
+      "positive": false,
+      "media": "media/v2_dev_helpdesk_B_negative.mp4",
+      "media_sha256": "c126da238c71e54773c21c37a7b13426b896d7bc32abcde9161b046fec2fabbb",
+      "truth": "truth/v2_dev_helpdesk_B_negative.json",
+      "truth_sha256": "22514c6e571af640a1373d1aa3c58d3de307ee8a513c697e81c90d552f3d96a8"
+    },
+    {
+      "id": "v2_dev_helpdesk_C_positive",
+      "split": "dev",
+      "layout": "helpdesk",
+      "condition": "C",
+      "positive": true,
+      "media": "media/v2_dev_helpdesk_C_positive.mp4",
+      "media_sha256": "2e19a490cbb758fab0420f044fd4a6d1a0659cff7d3afaf0227c4c372d5e4fa0",
+      "truth": "truth/v2_dev_helpdesk_C_positive.json",
+      "truth_sha256": "806d33e4fa5f50c71868aaf5307e3a8a7e06d6751d0705571442566edb506bd5"
+    },
+    {
+      "id": "v2_dev_helpdesk_C_negative",
+      "split": "dev",
+      "layout": "helpdesk",
+      "condition": "C",
+      "positive": false,
+      "media": "media/v2_dev_helpdesk_C_negative.mp4",
+      "media_sha256": "87fbc12e0d7d6c6a59bce13da1b58087e8869d43623e7b6bc27bca359e8fa528",
+      "truth": "truth/v2_dev_helpdesk_C_negative.json",
+      "truth_sha256": "f5ac32951a109bf3920d36589b170c162fed933d6bf6acf52f00ae8cc2266bc1"
+    },
+    {
+      "id": "v2_dev_terminal_A_positive",
+      "split": "dev",
+      "layout": "terminal",
+      "condition": "A",
+      "positive": true,
+      "media": "media/v2_dev_terminal_A_positive.mp4",
+      "media_sha256": "852c47fbdd5f998c4cfe08676fca1618c266a1ff1e99c47314c2e6a5eef0d313",
+      "truth": "truth/v2_dev_terminal_A_positive.json",
+      "truth_sha256": "1e6e093b7af557dd128d47dde69b8d76c5fb0cb73ed11875fb57e804792be343"
+    },
+    {
+      "id": "v2_dev_terminal_A_negative",
+      "split": "dev",
+      "layout": "terminal",
+      "condition": "A",
+      "positive": false,
+      "media": "media/v2_dev_terminal_A_negative.mp4",
+      "media_sha256": "3d0b9b5f7ae5f2fe672b22687e27da531cb62706e15c4bf7cd60f8fad737daa0",
+      "truth": "truth/v2_dev_terminal_A_negative.json",
+      "truth_sha256": "2bc1ab629dc64efaa991e12b3c1110af27f2535dcc5cdf89500f320546b6372a"
+    },
+    {
+      "id": "v2_dev_terminal_B_positive",
+      "split": "dev",
+      "layout": "terminal",
+      "condition": "B",
+      "positive": true,
+      "media": "media/v2_dev_terminal_B_positive.mp4",
+      "media_sha256": "162786c64a15340355bf8799d7ad5a03bf2677324b1798dc4b9c4e9d03e36ef7",
+      "truth": "truth/v2_dev_terminal_B_positive.json",
+      "truth_sha256": "8fe7458e63b1ba4b4a6fdc3ae4d4c44ca24d28c49c0abb31ba7710d42ba180de"
+    },
+    {
+      "id": "v2_dev_terminal_B_negative",
+      "split": "dev",
+      "layout": "terminal",
+      "condition": "B",
+      "positive": false,
+      "media": "media/v2_dev_terminal_B_negative.mp4",
+      "media_sha256": "a43e4c0f5db376624cf0615597e26a422baefb97142e1a344c8d6abb81e36d70",
+      "truth": "truth/v2_dev_terminal_B_negative.json",
+      "truth_sha256": "0b59ee391db8de68e6fe33fe243fca3e2bc9babf45c9ab8f91a458dad6193047"
+    },
+    {
+      "id": "v2_dev_terminal_C_positive",
+      "split": "dev",
+      "layout": "terminal",
+      "condition": "C",
+      "positive": true,
+      "media": "media/v2_dev_terminal_C_positive.mp4",
+      "media_sha256": "d7685bdd865060f2390d64877aabfe7e3ce42b8d16e4bf5834d6e23b676d2565",
+      "truth": "truth/v2_dev_terminal_C_positive.json",
+      "truth_sha256": "deacfb30f2a862d2072f6e03d7ea462d70942617f33c0bbf47a2f4eed67bb52d"
+    },
+    {
+      "id": "v2_dev_terminal_C_negative",
+      "split": "dev",
+      "layout": "terminal",
+      "condition": "C",
+      "positive": false,
+      "media": "media/v2_dev_terminal_C_negative.mp4",
+      "media_sha256": "173ba44178cf50b0c4b36bb3c495c6be16795b14173c30aa5297ca8cc5ddcc46",
+      "truth": "truth/v2_dev_terminal_C_negative.json",
+      "truth_sha256": "91479de14a6ddc41c485de278199e4f60f8ff768262e7c5790da9396333ba569"
+    },
+    {
+      "id": "v2_heldout_crm_A_positive",
+      "split": "heldout",
+      "layout": "crm",
+      "condition": "A",
+      "positive": true,
+      "media": "media/v2_heldout_crm_A_positive.mp4",
+      "media_sha256": "885191ae3e1afb2eb0b9a3fc9ec4fa07eea6cd1ff191a552f4323d8cde58138b",
+      "truth": "truth/v2_heldout_crm_A_positive.json",
+      "truth_sha256": "66b6976baac2c3795a3b5306395edf7370aa55478c1ee95b894001106af66026"
+    },
+    {
+      "id": "v2_heldout_crm_A_negative",
+      "split": "heldout",
+      "layout": "crm",
+      "condition": "A",
+      "positive": false,
+      "media": "media/v2_heldout_crm_A_negative.mp4",
+      "media_sha256": "8c18a14a6ece61220c815cd48408e1e71b66ff77408109747ebf94151fc7bbe5",
+      "truth": "truth/v2_heldout_crm_A_negative.json",
+      "truth_sha256": "eadc89ab517b6cf0d8fdbf9d670f1cc499ed83f989c4cd3e7aa85942ed1693ee"
+    },
+    {
+      "id": "v2_heldout_crm_B_positive",
+      "split": "heldout",
+      "layout": "crm",
+      "condition": "B",
+      "positive": true,
+      "media": "media/v2_heldout_crm_B_positive.mp4",
+      "media_sha256": "234e88d4a0e04751964fc9471172730572b070b9008a5db37a00284bac79ada5",
+      "truth": "truth/v2_heldout_crm_B_positive.json",
+      "truth_sha256": "c7882668d528022390f81ce8868bee3e42f2be8c2dbf63eec4f6ec48ac754530"
+    },
+    {
+      "id": "v2_heldout_crm_B_negative",
+      "split": "heldout",
+      "layout": "crm",
+      "condition": "B",
+      "positive": false,
+      "media": "media/v2_heldout_crm_B_negative.mp4",
+      "media_sha256": "f878cf2d07acb4a41314b495b31c07b2ba81a9c7ba7a902f8fb9a1b12ec2330c",
+      "truth": "truth/v2_heldout_crm_B_negative.json",
+      "truth_sha256": "fd36dfc29ff378fe20c2657dec1b31fbe57afe235526fa438540ebbe087ad32d"
+    },
+    {
+      "id": "v2_heldout_crm_C_positive",
+      "split": "heldout",
+      "layout": "crm",
+      "condition": "C",
+      "positive": true,
+      "media": "media/v2_heldout_crm_C_positive.mp4",
+      "media_sha256": "6402ff15987a90ffba497e1e007d05e4f578c207beefd6c276cefe74edd6c936",
+      "truth": "truth/v2_heldout_crm_C_positive.json",
+      "truth_sha256": "b5dd47e9306f450f03eb440a96a48f1a92940ac40e95245313cfee0fa77a2b93"
+    },
+    {
+      "id": "v2_heldout_crm_C_negative",
+      "split": "heldout",
+      "layout": "crm",
+      "condition": "C",
+      "positive": false,
+      "media": "media/v2_heldout_crm_C_negative.mp4",
+      "media_sha256": "9404f52e2125035a95bebb70b4496367c51b679d94c8510d97f3d5aec8d8b533",
+      "truth": "truth/v2_heldout_crm_C_negative.json",
+      "truth_sha256": "60bbcb310463c22a03a3ead936c20603b777d3a20b1d0c01701d9bc208fc9567"
+    },
+    {
+      "id": "v2_heldout_spreadsheet_A_positive",
+      "split": "heldout",
+      "layout": "spreadsheet",
+      "condition": "A",
+      "positive": true,
+      "media": "media/v2_heldout_spreadsheet_A_positive.mp4",
+      "media_sha256": "2a85b757dc5a58d32a65e71a4d92c3da2201ee44811efeaa68914ebd0cf0ab70",
+      "truth": "truth/v2_heldout_spreadsheet_A_positive.json",
+      "truth_sha256": "7342fe020bbe1e9372b59679de494166d0062864a42911484e8dc4b6cba8bce3"
+    },
+    {
+      "id": "v2_heldout_spreadsheet_A_negative",
+      "split": "heldout",
+      "layout": "spreadsheet",
+      "condition": "A",
+      "positive": false,
+      "media": "media/v2_heldout_spreadsheet_A_negative.mp4",
+      "media_sha256": "381ab2309066b193499ae7dbe3b702ef482d6abbd91b763883101c8ed07bf740",
+      "truth": "truth/v2_heldout_spreadsheet_A_negative.json",
+      "truth_sha256": "603ffa565ddcd57069a9fbcc21fa00fdc4ef416eb6f59842b9c70ac11544e11a"
+    },
+    {
+      "id": "v2_heldout_spreadsheet_B_positive",
+      "split": "heldout",
+      "layout": "spreadsheet",
+      "condition": "B",
+      "positive": true,
+      "media": "media/v2_heldout_spreadsheet_B_positive.mp4",
+      "media_sha256": "a4d66e00350d00afb479bf42da00dd4acd926b4ee7e0229cd9a564bc27ecf13a",
+      "truth": "truth/v2_heldout_spreadsheet_B_positive.json",
+      "truth_sha256": "e247f2d2d94380f5ee6ee32167a6fb0f17106d95c631186c787faeddba5b8d38"
+    },
+    {
+      "id": "v2_heldout_spreadsheet_B_negative",
+      "split": "heldout",
+      "layout": "spreadsheet",
+      "condition": "B",
+      "positive": false,
+      "media": "media/v2_heldout_spreadsheet_B_negative.mp4",
+      "media_sha256": "7fa96af452aaef8c731fab27807e2d035b40bb2a4beae2a259a75c17cbc90cff",
+      "truth": "truth/v2_heldout_spreadsheet_B_negative.json",
+      "truth_sha256": "9df65fe9e0aa710641fd17b8e326cf7438dfb0910ec6bbe06f356e9b6a2ec94c"
+    },
+    {
+      "id": "v2_heldout_spreadsheet_C_positive",
+      "split": "heldout",
+      "layout": "spreadsheet",
+      "condition": "C",
+      "positive": true,
+      "media": "media/v2_heldout_spreadsheet_C_positive.mp4",
+      "media_sha256": "5ded7839b758c05e602a71891f39b54b2b9a76e7350a41b02370676de4d60a9b",
+      "truth": "truth/v2_heldout_spreadsheet_C_positive.json",
+      "truth_sha256": "bbdae3cb9bce8476a585138900518e430dcce1ba72f30fc30a60c4b355479f42"
+    },
+    {
+      "id": "v2_heldout_spreadsheet_C_negative",
+      "split": "heldout",
+      "layout": "spreadsheet",
+      "condition": "C",
+      "positive": false,
+      "media": "media/v2_heldout_spreadsheet_C_negative.mp4",
+      "media_sha256": "d1c458235fc841e0243ce10a862fbce9958b73ebaa692f20dc57044ec3a40c78",
+      "truth": "truth/v2_heldout_spreadsheet_C_negative.json",
+      "truth_sha256": "99c2bdfd232b4a8afe71ea1858a4f8177a56f662be0c855749fbdca0f5f896b1"
+    }
+  ]
+}

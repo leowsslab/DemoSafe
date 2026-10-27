@@ -1,0 +1,25 @@
+{
+  "generated_at": "2026-10-05T04:50:23.493592+00:00",
+  "scope": "Frontend presentation only; real browser flow verification is coordinated separately.",
+  "original_ids_preserved": 91,
+  "duplicate_ids": false,
+  "protected_control_attributes_unchanged": true,
+  "snapshot": "build/interface-v2-snapshot",
+  "snapshot_hashes_verified": true,
+  "javascript_change_scope": [
+    "Processing/reset copy strings",
+    "Two CSS media-ratio properties set from existing width/height to preserve matching media/overlay geometry under a viewport display cap"
+  ],
+  "function_callbacks_auth_network_export_delete_changed": false,
+  "contrast_on_paper": {
+    "ink": 15.78,
+    "secondary_text": 5.23,
+    "accent_text_focus": 5.62
+  },
+  "current_sha256": {
+    "index.html": "901968bca12e139d626be4a98971b8cda3f7387e19cc95f7e434e35423e08a10",
+    "style.css": "b79ba3b4f13923338760c9a3807f91e74d6f2b16705a0476761fae12824cac96",
+    "app.js": "8adfffb2803bb8e5cf075ab46aad1713b3460cd5601120f865c2b5d18616e4ba"
+  },
+  "browser_validation": "Pending coordinator real-browser validation at 1440x900, 1266x890 and narrow viewport."
+}

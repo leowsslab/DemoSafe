@@ -1,0 +1,102 @@
+{
+  "schema": 1,
+  "created_at": "2026-10-04T13:59:06.427510+00:00",
+  "model": "RapidOCR 1.4.4 / PP-OCRv4 detection + recognition",
+  "backend": "ONNX Runtime CPU",
+  "hardware_verified": false,
+  "final_backend_source_hashes_identical": true,
+  "reports": {
+    "development": "benchmark_dev.json",
+    "heldout": "benchmark_heldout.json",
+    "preliminary_preserved": "benchmark_dev_preliminary.json"
+  },
+  "heldout_execution": "Exactly one evaluation after development fixes and explicit freeze; no tuning on held-out results.",
+  "development": {
+    "completed_samples": 24,
+    "failed_samples": 0,
+    "expected_events": 24,
+    "detected_events": 23,
+    "event_recall": 0.9583333333333334,
+    "false_positive_events": 0,
+    "negative_samples": 6,
+    "negative_samples_with_false_positives": 0,
+    "sensitive_frame_recall": 0.9290780141843972,
+    "checked_sensitive_frame_occurrences": 282,
+    "fully_masked_frame_occurrences": 262,
+    "full_mask_frame_fraction": 0.9290780141843972,
+    "fully_masked_events": 23,
+    "mask_checked_events": 24,
+    "all_export_frame_counts_match": true,
+    "analysis_wall_seconds": 107.6694,
+    "export_wall_seconds": 102.2695
+  },
+  "heldout": {
+    "completed_samples": 24,
+    "failed_samples": 0,
+    "expected_events": 24,
+    "detected_events": 24,
+    "event_recall": 1.0,
+    "false_positive_events": 0,
+    "negative_samples": 6,
+    "negative_samples_with_false_positives": 0,
+    "sensitive_frame_recall": 1.0,
+    "checked_sensitive_frame_occurrences": 282,
+    "fully_masked_frame_occurrences": 282,
+    "full_mask_frame_fraction": 1.0,
+    "fully_masked_events": 24,
+    "mask_checked_events": 24,
+    "all_export_frame_counts_match": true,
+    "analysis_wall_seconds": 112.3116,
+    "export_wall_seconds": 109.0596
+  },
+  "combined": {
+    "clips": 48,
+    "expected_events": 48,
+    "detected_events": 47,
+    "event_recall": 0.9791666666666666,
+    "false_positive_events": 0,
+    "negative_clips": 12,
+    "negative_clips_with_false_positives": 0,
+    "fully_masked_sensitive_frame_occurrences": 544,
+    "expected_sensitive_frame_occurrences": 564,
+    "full_mask_frame_fraction": 0.9645390070921985
+  },
+  "known_failure": {
+    "sample": "dev_019",
+    "type": "token",
+    "context": "Dark monospace terminal notification, 23px token text, 2 second exposure",
+    "missed_sensitive_frame_occurrences": 20,
+    "output_rescan_status": "passed",
+    "meaning": "The original OCR miss repeats on output. Independent truth-based pixel verification catches exposure; same-model rescan is not a privacy guarantee."
+  },
+  "method": {
+    "event_match": "One-to-one event type + >=50% overlap of expected text bbox on at least one expected frame",
+    "coverage": "Every annotated text bbox at every annotated frame; >=99.5% pixels with max RGB channel<=16",
+    "heldout_by": "Three entire background UI layouts held out; three different backgrounds used for development",
+    "positive_event_types": "email, phone, dummy token, supplied custom keyword",
+    "clip_format": "1280x720, 10fps, 4 seconds, lossless H.264",
+    "exposures_seconds": [
+      0.2,
+      0.5,
+      2.0
+    ]
+  },
+  "limitations": [
+    "Synthetic fictional English UI data, not customer recordings or market validation.",
+    "Sensitive notification-card rendering is shared across splits; only background layouts are held out. This is a narrow reproducible functionality test, not evidence of broad UI generalization.",
+    "High-contrast text is 23-28px. Low-resolution, compressed, oblique, unfamiliar text, other languages, faces, spoken secrets, and variable-frame-rate video are not validated by this set.",
+    "Exact-frame caching makes static lossless clips faster than changing/lossy recordings. Timings cannot be extrapolated to real-time processing.",
+    "Small correlated sample: report 24/24 held-out events, not a universal 100% accuracy claim.",
+    "Manual review remains necessary. One development token miss survived output rescan.",
+    "UGen300/Hailo acceleration has not been tested on actual hardware."
+  ],
+  "source_sha256": {
+    "app/__init__.py": "32dcb40b4b8c5bc4164494d9b2aa480b1dce1a062ea35665ca2afdd40a05b12a",
+    "app/detectors.py": "e43bc2e630aff8656daf61094938da44a073f378d8eeccfe9fc8dd6d6d040a27",
+    "app/main.py": "6c2cbba931499ef432cddd6ddd343eb42a3a6f2807b0413a83b100f1e379adeb",
+    "app/media.py": "7bd5cda21359d34fc27c71c61dd4d8004c6b7ffd66d4db1f766f3223fdfbf3be",
+    "app/ocr.py": "10f6c57f6167fa8f5eafe02ddfd13f4cd266b93c88e99458c27ee0f470f01554",
+    "app/paths.py": "870cb9a0bf87ac60a1f67700b18fd695bdf14a4524711139e38d7536ef9ce8df",
+    "app/pipeline.py": "6d475539566818fd6185167755bda5d528cde8c838b06650575dc13ab72b9221"
+  }
+}

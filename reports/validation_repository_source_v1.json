@@ -1,0 +1,15 @@
+{
+  "status": "passed",
+  "scope": "90 source-only application and evaluator tests executed against the staged repository, using the existing isolated Python 3.12 environment. Local archive/film packaging tests are not part of this source repository.",
+  "command": "python -m pytest tests -q",
+  "tests": 90,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "test_xml_sha256": "ca475d8253b114278173e729ddf5244afb188500d5c1052e749c58cc4c282b3f",
+  "warning": "One upstream Starlette warning about httpx deprecation.",
+  "application_code_modified": false,
+  "frozen_source_archive_sha256": "a11553660e5f8a88deeee65784148053a8c8db43a0709bd028df0c89d77b4d76",
+  "repository_published": false,
+  "fresh_environment_install_this_turn": false
+}

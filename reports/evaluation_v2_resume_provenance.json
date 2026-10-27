@@ -1,0 +1,224 @@
+{
+  "schema": 1,
+  "status": "completed",
+  "resumed_at": "2026-10-05T00:49:18.859445+00:00",
+  "authorization": "User explicitly requested 繼續 DemoSafe after shutdown pause.",
+  "pause_checkpoint": "evaluation_v2_resume_checkpoint.json",
+  "pause_checkpoint_sha256": "f68e31a6bec438be9eea0ca9afc9873a38cae715b32bdf09cb486e925bc5ea5b",
+  "original_pause_at": "2026-10-04T16:42:39.969187+00:00",
+  "source_freeze_sha256": "0303c2457c778cb682b8b2fbb7b9b27134d61176fe703fe353aa949039b53e2a",
+  "pre_resume_report": "benchmark_robustness_v2_heldout_pre_resume.json",
+  "pre_resume_report_sha256": "2da1f33eb517855070dc4f9e1b4f007cac35f81cadf9b56142d2ff2e80f6c609",
+  "completed_before": [
+    {
+      "id": "v2_heldout_crm_A_positive",
+      "sample_value_sha256": "d99e628ba16baa61f07eefe0101cb10136286a63510b802fd723c486b331a086",
+      "observations_sha256": "0d2698a3c08a162a8038fc53a40784f5a64e1b6b32236f63c277a71139007493",
+      "output_sha256": "0cb4fa740e8d142b77b9aa4e21764f6b097ba1abf33ea821d8469aaa7a72068c"
+    },
+    {
+      "id": "v2_heldout_crm_A_negative",
+      "sample_value_sha256": "e8a98e7b97f9fb147b9eca6eab8c04a4e97631196133e8e07549a22aa12dd574",
+      "observations_sha256": "03e64c268bd6e235a57f2ef43312ef40981b6f2926bcdb1775e7e71632bf6fd0",
+      "output_sha256": "813e83c84a8ac5e85d49084b3c90f1cf187829c8bcb8e0a5d9081ec28255c468"
+    },
+    {
+      "id": "v2_heldout_crm_B_positive",
+      "sample_value_sha256": "78cc53769105be8b288074ff0d11b76d454076855242a6d7a0e71bfe9ad7370c",
+      "observations_sha256": "093a401c5f872ddebf562d2f408a8f198b7f2fc68c11c0ba1dc57554b7c099f2",
+      "output_sha256": "a43068b3e2575aaf0dfea6a5ae9299d35cfead2fc3fe572c7b1afee8b0aef8c0"
+    },
+    {
+      "id": "v2_heldout_crm_B_negative",
+      "sample_value_sha256": "8b1007890069ee8e4d03e6f707549926d4cef52f671472ef710471003d6911d2",
+      "observations_sha256": "03e64c268bd6e235a57f2ef43312ef40981b6f2926bcdb1775e7e71632bf6fd0",
+      "output_sha256": "b5679b9ebe97d675fc4a31c4e13ad20a076fe9cf44d3fbce6a85a28bd51291f9"
+    },
+    {
+      "id": "v2_heldout_crm_C_positive",
+      "sample_value_sha256": "58b64b316806fe4ca3181028e1cafbd4fa69c767e4f1e23cbdcfbfd7d1ad6932",
+      "observations_sha256": "4599135a5c2e80e134991eed7e48973c3b2686828536128a04feb06e89d6c084",
+      "output_sha256": "3c18475c54d651f5bc318dc87de6e3f58392552ca603baa7083f85c8c749f12f"
+    },
+    {
+      "id": "v2_heldout_crm_C_negative",
+      "sample_value_sha256": "e003cc093f6ed919fc8ba14cb07bdea57163fd09e9ba51b4de6ef0b5d1db0164",
+      "observations_sha256": "03e64c268bd6e235a57f2ef43312ef40981b6f2926bcdb1775e7e71632bf6fd0",
+      "output_sha256": "b7346b230057a6838ab2626e4c46c9534e883302b43f0e47e8152d59c786d32e"
+    },
+    {
+      "id": "v2_heldout_spreadsheet_A_positive",
+      "sample_value_sha256": "4c6ac7f0caa1dea58a9ba6ada162da37426835cc35d776e04d35a1195c3a22c2",
+      "observations_sha256": "b96e096f91461951eb9966e109dc4d0d480c521bc2aa79e742cc33e4dba9fede",
+      "output_sha256": "1384485ea210c37d241266686705b442a5fad5bac7e578c2b06cc86464a1fed0"
+    },
+    {
+      "id": "v2_heldout_spreadsheet_A_negative",
+      "sample_value_sha256": "c2fbc98cfe6018b278cda917f2da528993a004934ae24a2ad603eba750b865e2",
+      "observations_sha256": "03e64c268bd6e235a57f2ef43312ef40981b6f2926bcdb1775e7e71632bf6fd0",
+      "output_sha256": "d6c00753e9980fe29d5bd9f3377bbda3c8037ad64cb034f310dfaee4eef7d9c9"
+    },
+    {
+      "id": "v2_heldout_spreadsheet_B_positive",
+      "sample_value_sha256": "1c5d5cbaa38050e95cfad091d4908249d9986a266d5fa1a096e891446c4f8e4a",
+      "observations_sha256": "e6deb83986a5524f0bde2589a0c1951a9668d4ac87a6724eee225289820a0bc1",
+      "output_sha256": "149377ccb7b76b53856e24f7500c8a17134e76059afc62359b72c5fb2f42a9a2"
+    },
+    {
+      "id": "v2_heldout_spreadsheet_B_negative",
+      "sample_value_sha256": "12a26234d22b4ce5a6f399a19a3c0fdda623974b54c09261eb783abb6b33b4dc",
+      "observations_sha256": "03e64c268bd6e235a57f2ef43312ef40981b6f2926bcdb1775e7e71632bf6fd0",
+      "output_sha256": "1e1e36302b5aa773109af5d9d16669111d218da455e531ac3f6afc55eb48ef3f"
+    }
+  ],
+  "remaining_ids": [
+    "v2_heldout_spreadsheet_C_positive",
+    "v2_heldout_spreadsheet_C_negative"
+  ],
+  "command": "./scripts/resume_robustness_v2_heldout.ps1",
+  "semantics": "Continuation of the original single held-out evaluation after user-requested shutdown interruption. Completed samples are skipped and preserved. Two uncompleted clips restart at frame zero; no partial inference reused and no new blind trial. No OCR/model/fixture/method/evaluator tuning.",
+  "timing_context": "Shared workstation; recorded analysis/export wall times are observations, not standardized performance or speedup measurements.",
+  "finished_at": "2026-10-05T01:03:23.692980+00:00",
+  "resume_exec_session_id": 81911,
+  "resume_command_exit_code": 0,
+  "completed_after": 12,
+  "newly_completed": [
+    {
+      "id": "v2_heldout_spreadsheet_C_positive",
+      "analysis_wall_seconds": 165.3191,
+      "export_wall_seconds": 198.9278,
+      "detected_events": 2,
+      "expected_events": 4,
+      "false_positive_events": 0,
+      "missed_events": [
+        {
+          "id": "token",
+          "type": "token",
+          "exposure_seconds": 2.0
+        },
+        {
+          "id": "custom",
+          "type": "custom",
+          "exposure_seconds": 1.0
+        }
+      ]
+    },
+    {
+      "id": "v2_heldout_spreadsheet_C_negative",
+      "analysis_wall_seconds": 157.0758,
+      "export_wall_seconds": 198.0929,
+      "detected_events": 0,
+      "expected_events": 0,
+      "false_positive_events": 0,
+      "missed_events": []
+    }
+  ],
+  "preservation_checks": [
+    {
+      "id": "v2_heldout_crm_A_positive",
+      "sample_values_unchanged": true,
+      "observation_bytes_unchanged": true,
+      "export_bytes_unchanged": true
+    },
+    {
+      "id": "v2_heldout_crm_A_negative",
+      "sample_values_unchanged": true,
+      "observation_bytes_unchanged": true,
+      "export_bytes_unchanged": true
+    },
+    {
+      "id": "v2_heldout_crm_B_positive",
+      "sample_values_unchanged": true,
+      "observation_bytes_unchanged": true,
+      "export_bytes_unchanged": true
+    },
+    {
+      "id": "v2_heldout_crm_B_negative",
+      "sample_values_unchanged": true,
+      "observation_bytes_unchanged": true,
+      "export_bytes_unchanged": true
+    },
+    {
+      "id": "v2_heldout_crm_C_positive",
+      "sample_values_unchanged": true,
+      "observation_bytes_unchanged": true,
+      "export_bytes_unchanged": true
+    },
+    {
+      "id": "v2_heldout_crm_C_negative",
+      "sample_values_unchanged": true,
+      "observation_bytes_unchanged": true,
+      "export_bytes_unchanged": true
+    },
+    {
+      "id": "v2_heldout_spreadsheet_A_positive",
+      "sample_values_unchanged": true,
+      "observation_bytes_unchanged": true,
+      "export_bytes_unchanged": true
+    },
+    {
+      "id": "v2_heldout_spreadsheet_A_negative",
+      "sample_values_unchanged": true,
+      "observation_bytes_unchanged": true,
+      "export_bytes_unchanged": true
+    },
+    {
+      "id": "v2_heldout_spreadsheet_B_positive",
+      "sample_values_unchanged": true,
+      "observation_bytes_unchanged": true,
+      "export_bytes_unchanged": true
+    },
+    {
+      "id": "v2_heldout_spreadsheet_B_negative",
+      "sample_values_unchanged": true,
+      "observation_bytes_unchanged": true,
+      "export_bytes_unchanged": true
+    }
+  ],
+  "prior_sample_values_unchanged": true,
+  "prior_observation_and_export_bytes_unchanged": true,
+  "serialization_note": "The unchanged evaluator performs its standard ensure_ascii=False JSON serialization. Historical escaped Unicode such as \\u00b7 is written as the same Unicode character. Parsed sample values are identical; the raw benchmark report was not hand-edited to restore escaping. The immutable pre-resume snapshot preserves its original bytes.",
+  "source_freeze_validation": {
+    "verified_files": 17,
+    "changed_files": [],
+    "manifest_matches": true,
+    "frozen_clips_verified": 24
+  },
+  "final_measurement_report_sha256": "8f50cd7cc75ce3d61e060d4a68dae726052450a6f05ef915c35c52162365e57a",
+  "evaluation_results_json_sha256": "86c78285a184b26c4384283180ea33dd1c7f4e058e3e4f78d64b0df012a4c2b5",
+  "evaluation_results_markdown_sha256": "1575b09da81279a2fe5715f8053ece61ad1c82d6f8f69ddb63fb6c91f8ed9b84",
+  "resume_run_log_sha256": "d1a02523a9790bcbe80c0d7414168aec3eaffdfb6c8968ba45dcf82af3d9d33f",
+  "final_headline_ready": {
+    "dev": true,
+    "heldout": true
+  },
+  "interpretation_checks": {
+    "all_24_original_hashes_unchanged": true,
+    "all_24_output_frame_counts_120": true,
+    "all_selected_mask_geometry_checks_match": true,
+    "all_24_clips_have_15_sampling_phases": true,
+    "all_24_observation_and_output_hashes_match": true
+  },
+  "same_model_rescan_blind_spot": {
+    "id": "v2_heldout_spreadsheet_C_positive",
+    "detected_events": 2,
+    "expected_events": 4,
+    "missed_events": [
+      {
+        "id": "token",
+        "type": "token",
+        "exposure_seconds": 2.0
+      },
+      {
+        "id": "custom",
+        "type": "custom",
+        "exposure_seconds": 1.0
+      }
+    ],
+    "fully_masked_annotated_frame_regions": 11,
+    "expected_annotated_frame_regions": 56,
+    "same_model_rescan_status": "passed",
+    "same_model_rescan_findings_count": 0,
+    "interpretation": "The same OCR model passed the output rescan despite wholly missed token and custom-keyword events and 45 uncovered annotated frame regions. A successful rescan is not independent privacy assurance."
+  }
+}

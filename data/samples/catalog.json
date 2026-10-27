@@ -1,0 +1,502 @@
+{
+  "samples": [
+    {
+      "id": "demo_workspace",
+      "name": "The 0.3-second disclosure",
+      "description": "12-second fictional dashboard. Four sensitive events, including a 0.3-second email flash. Custom keyword: ORCHID CONFIDENTIAL",
+      "path": "demo_workspace.mp4",
+      "file": "demo_workspace.mp4",
+      "url": "/samples/demo_workspace.mp4",
+      "split": "demo"
+    },
+    {
+      "id": "demo_screenshot",
+      "name": "Fictional customer preview",
+      "description": "Still-image example with fictional email and phone.",
+      "path": "demo_screenshot.png",
+      "file": "demo_screenshot.png",
+      "url": "/samples/demo_screenshot.png",
+      "split": "demo"
+    },
+    {
+      "id": "dev_001",
+      "name": "Customer Dashboard / email flash",
+      "description": "Fictional dev fixture; 0.2s exposure",
+      "path": "dev/dev_001.mp4",
+      "file": "dev/dev_001.mp4",
+      "url": "/samples/dev/dev_001.mp4",
+      "split": "dev",
+      "template": "customer_dashboard"
+    },
+    {
+      "id": "dev_002",
+      "name": "Customer Dashboard / phone notice",
+      "description": "Fictional dev fixture; 0.5s exposure",
+      "path": "dev/dev_002.mp4",
+      "file": "dev/dev_002.mp4",
+      "url": "/samples/dev/dev_002.mp4",
+      "split": "dev",
+      "template": "customer_dashboard"
+    },
+    {
+      "id": "dev_003",
+      "name": "Customer Dashboard / token preview",
+      "description": "Fictional dev fixture; 2s exposure",
+      "path": "dev/dev_003.mp4",
+      "file": "dev/dev_003.mp4",
+      "url": "/samples/dev/dev_003.mp4",
+      "split": "dev",
+      "template": "customer_dashboard"
+    },
+    {
+      "id": "dev_004",
+      "name": "Customer Dashboard / private label",
+      "description": "Fictional dev fixture; 0.5s exposure",
+      "path": "dev/dev_004.mp4",
+      "file": "dev/dev_004.mp4",
+      "url": "/samples/dev/dev_004.mp4",
+      "split": "dev",
+      "template": "customer_dashboard"
+    },
+    {
+      "id": "dev_005",
+      "name": "Customer Dashboard / mixed panel",
+      "description": "Fictional dev fixture; 2s exposure",
+      "path": "dev/dev_005.mp4",
+      "file": "dev/dev_005.mp4",
+      "url": "/samples/dev/dev_005.mp4",
+      "split": "dev",
+      "template": "customer_dashboard"
+    },
+    {
+      "id": "dev_006",
+      "name": "Customer Dashboard / moving email",
+      "description": "Fictional dev fixture; 0.2s exposure",
+      "path": "dev/dev_006.mp4",
+      "file": "dev/dev_006.mp4",
+      "url": "/samples/dev/dev_006.mp4",
+      "split": "dev",
+      "template": "customer_dashboard"
+    },
+    {
+      "id": "dev_007",
+      "name": "Customer Dashboard / clean summary",
+      "description": "Fictional dev negative control",
+      "path": "dev/dev_007.mp4",
+      "file": "dev/dev_007.mp4",
+      "url": "/samples/dev/dev_007.mp4",
+      "split": "dev",
+      "template": "customer_dashboard"
+    },
+    {
+      "id": "dev_008",
+      "name": "Customer Dashboard / clean numbers",
+      "description": "Fictional dev negative control",
+      "path": "dev/dev_008.mp4",
+      "file": "dev/dev_008.mp4",
+      "url": "/samples/dev/dev_008.mp4",
+      "split": "dev",
+      "template": "customer_dashboard"
+    },
+    {
+      "id": "dev_009",
+      "name": "Support Inbox / email flash",
+      "description": "Fictional dev fixture; 0.2s exposure",
+      "path": "dev/dev_009.mp4",
+      "file": "dev/dev_009.mp4",
+      "url": "/samples/dev/dev_009.mp4",
+      "split": "dev",
+      "template": "support_inbox"
+    },
+    {
+      "id": "dev_010",
+      "name": "Support Inbox / phone notice",
+      "description": "Fictional dev fixture; 0.5s exposure",
+      "path": "dev/dev_010.mp4",
+      "file": "dev/dev_010.mp4",
+      "url": "/samples/dev/dev_010.mp4",
+      "split": "dev",
+      "template": "support_inbox"
+    },
+    {
+      "id": "dev_011",
+      "name": "Support Inbox / token preview",
+      "description": "Fictional dev fixture; 2s exposure",
+      "path": "dev/dev_011.mp4",
+      "file": "dev/dev_011.mp4",
+      "url": "/samples/dev/dev_011.mp4",
+      "split": "dev",
+      "template": "support_inbox"
+    },
+    {
+      "id": "dev_012",
+      "name": "Support Inbox / private label",
+      "description": "Fictional dev fixture; 0.5s exposure",
+      "path": "dev/dev_012.mp4",
+      "file": "dev/dev_012.mp4",
+      "url": "/samples/dev/dev_012.mp4",
+      "split": "dev",
+      "template": "support_inbox"
+    },
+    {
+      "id": "dev_013",
+      "name": "Support Inbox / mixed panel",
+      "description": "Fictional dev fixture; 2s exposure",
+      "path": "dev/dev_013.mp4",
+      "file": "dev/dev_013.mp4",
+      "url": "/samples/dev/dev_013.mp4",
+      "split": "dev",
+      "template": "support_inbox"
+    },
+    {
+      "id": "dev_014",
+      "name": "Support Inbox / moving email",
+      "description": "Fictional dev fixture; 0.2s exposure",
+      "path": "dev/dev_014.mp4",
+      "file": "dev/dev_014.mp4",
+      "url": "/samples/dev/dev_014.mp4",
+      "split": "dev",
+      "template": "support_inbox"
+    },
+    {
+      "id": "dev_015",
+      "name": "Support Inbox / clean summary",
+      "description": "Fictional dev negative control",
+      "path": "dev/dev_015.mp4",
+      "file": "dev/dev_015.mp4",
+      "url": "/samples/dev/dev_015.mp4",
+      "split": "dev",
+      "template": "support_inbox"
+    },
+    {
+      "id": "dev_016",
+      "name": "Support Inbox / clean numbers",
+      "description": "Fictional dev negative control",
+      "path": "dev/dev_016.mp4",
+      "file": "dev/dev_016.mp4",
+      "url": "/samples/dev/dev_016.mp4",
+      "split": "dev",
+      "template": "support_inbox"
+    },
+    {
+      "id": "dev_017",
+      "name": "Developer Terminal / email flash",
+      "description": "Fictional dev fixture; 0.2s exposure",
+      "path": "dev/dev_017.mp4",
+      "file": "dev/dev_017.mp4",
+      "url": "/samples/dev/dev_017.mp4",
+      "split": "dev",
+      "template": "developer_terminal"
+    },
+    {
+      "id": "dev_018",
+      "name": "Developer Terminal / phone notice",
+      "description": "Fictional dev fixture; 0.5s exposure",
+      "path": "dev/dev_018.mp4",
+      "file": "dev/dev_018.mp4",
+      "url": "/samples/dev/dev_018.mp4",
+      "split": "dev",
+      "template": "developer_terminal"
+    },
+    {
+      "id": "dev_019",
+      "name": "Developer Terminal / token preview",
+      "description": "Fictional dev fixture; 2s exposure",
+      "path": "dev/dev_019.mp4",
+      "file": "dev/dev_019.mp4",
+      "url": "/samples/dev/dev_019.mp4",
+      "split": "dev",
+      "template": "developer_terminal"
+    },
+    {
+      "id": "dev_020",
+      "name": "Developer Terminal / private label",
+      "description": "Fictional dev fixture; 0.5s exposure",
+      "path": "dev/dev_020.mp4",
+      "file": "dev/dev_020.mp4",
+      "url": "/samples/dev/dev_020.mp4",
+      "split": "dev",
+      "template": "developer_terminal"
+    },
+    {
+      "id": "dev_021",
+      "name": "Developer Terminal / mixed panel",
+      "description": "Fictional dev fixture; 2s exposure",
+      "path": "dev/dev_021.mp4",
+      "file": "dev/dev_021.mp4",
+      "url": "/samples/dev/dev_021.mp4",
+      "split": "dev",
+      "template": "developer_terminal"
+    },
+    {
+      "id": "dev_022",
+      "name": "Developer Terminal / moving email",
+      "description": "Fictional dev fixture; 0.2s exposure",
+      "path": "dev/dev_022.mp4",
+      "file": "dev/dev_022.mp4",
+      "url": "/samples/dev/dev_022.mp4",
+      "split": "dev",
+      "template": "developer_terminal"
+    },
+    {
+      "id": "dev_023",
+      "name": "Developer Terminal / clean summary",
+      "description": "Fictional dev negative control",
+      "path": "dev/dev_023.mp4",
+      "file": "dev/dev_023.mp4",
+      "url": "/samples/dev/dev_023.mp4",
+      "split": "dev",
+      "template": "developer_terminal"
+    },
+    {
+      "id": "dev_024",
+      "name": "Developer Terminal / clean numbers",
+      "description": "Fictional dev negative control",
+      "path": "dev/dev_024.mp4",
+      "file": "dev/dev_024.mp4",
+      "url": "/samples/dev/dev_024.mp4",
+      "split": "dev",
+      "template": "developer_terminal"
+    },
+    {
+      "id": "heldout_025",
+      "name": "Project Board / email flash",
+      "description": "Fictional heldout fixture; 0.2s exposure",
+      "path": "heldout/heldout_025.mp4",
+      "file": "heldout/heldout_025.mp4",
+      "url": "/samples/heldout/heldout_025.mp4",
+      "split": "heldout",
+      "template": "project_board"
+    },
+    {
+      "id": "heldout_026",
+      "name": "Project Board / phone notice",
+      "description": "Fictional heldout fixture; 0.5s exposure",
+      "path": "heldout/heldout_026.mp4",
+      "file": "heldout/heldout_026.mp4",
+      "url": "/samples/heldout/heldout_026.mp4",
+      "split": "heldout",
+      "template": "project_board"
+    },
+    {
+      "id": "heldout_027",
+      "name": "Project Board / token preview",
+      "description": "Fictional heldout fixture; 2s exposure",
+      "path": "heldout/heldout_027.mp4",
+      "file": "heldout/heldout_027.mp4",
+      "url": "/samples/heldout/heldout_027.mp4",
+      "split": "heldout",
+      "template": "project_board"
+    },
+    {
+      "id": "heldout_028",
+      "name": "Project Board / private label",
+      "description": "Fictional heldout fixture; 0.5s exposure",
+      "path": "heldout/heldout_028.mp4",
+      "file": "heldout/heldout_028.mp4",
+      "url": "/samples/heldout/heldout_028.mp4",
+      "split": "heldout",
+      "template": "project_board"
+    },
+    {
+      "id": "heldout_029",
+      "name": "Project Board / mixed panel",
+      "description": "Fictional heldout fixture; 2s exposure",
+      "path": "heldout/heldout_029.mp4",
+      "file": "heldout/heldout_029.mp4",
+      "url": "/samples/heldout/heldout_029.mp4",
+      "split": "heldout",
+      "template": "project_board"
+    },
+    {
+      "id": "heldout_030",
+      "name": "Project Board / moving email",
+      "description": "Fictional heldout fixture; 0.2s exposure",
+      "path": "heldout/heldout_030.mp4",
+      "file": "heldout/heldout_030.mp4",
+      "url": "/samples/heldout/heldout_030.mp4",
+      "split": "heldout",
+      "template": "project_board"
+    },
+    {
+      "id": "heldout_031",
+      "name": "Project Board / clean summary",
+      "description": "Fictional heldout negative control",
+      "path": "heldout/heldout_031.mp4",
+      "file": "heldout/heldout_031.mp4",
+      "url": "/samples/heldout/heldout_031.mp4",
+      "split": "heldout",
+      "template": "project_board"
+    },
+    {
+      "id": "heldout_032",
+      "name": "Project Board / clean numbers",
+      "description": "Fictional heldout negative control",
+      "path": "heldout/heldout_032.mp4",
+      "file": "heldout/heldout_032.mp4",
+      "url": "/samples/heldout/heldout_032.mp4",
+      "split": "heldout",
+      "template": "project_board"
+    },
+    {
+      "id": "heldout_033",
+      "name": "Order Spreadsheet / email flash",
+      "description": "Fictional heldout fixture; 0.2s exposure",
+      "path": "heldout/heldout_033.mp4",
+      "file": "heldout/heldout_033.mp4",
+      "url": "/samples/heldout/heldout_033.mp4",
+      "split": "heldout",
+      "template": "order_spreadsheet"
+    },
+    {
+      "id": "heldout_034",
+      "name": "Order Spreadsheet / phone notice",
+      "description": "Fictional heldout fixture; 0.5s exposure",
+      "path": "heldout/heldout_034.mp4",
+      "file": "heldout/heldout_034.mp4",
+      "url": "/samples/heldout/heldout_034.mp4",
+      "split": "heldout",
+      "template": "order_spreadsheet"
+    },
+    {
+      "id": "heldout_035",
+      "name": "Order Spreadsheet / token preview",
+      "description": "Fictional heldout fixture; 2s exposure",
+      "path": "heldout/heldout_035.mp4",
+      "file": "heldout/heldout_035.mp4",
+      "url": "/samples/heldout/heldout_035.mp4",
+      "split": "heldout",
+      "template": "order_spreadsheet"
+    },
+    {
+      "id": "heldout_036",
+      "name": "Order Spreadsheet / private label",
+      "description": "Fictional heldout fixture; 0.5s exposure",
+      "path": "heldout/heldout_036.mp4",
+      "file": "heldout/heldout_036.mp4",
+      "url": "/samples/heldout/heldout_036.mp4",
+      "split": "heldout",
+      "template": "order_spreadsheet"
+    },
+    {
+      "id": "heldout_037",
+      "name": "Order Spreadsheet / mixed panel",
+      "description": "Fictional heldout fixture; 2s exposure",
+      "path": "heldout/heldout_037.mp4",
+      "file": "heldout/heldout_037.mp4",
+      "url": "/samples/heldout/heldout_037.mp4",
+      "split": "heldout",
+      "template": "order_spreadsheet"
+    },
+    {
+      "id": "heldout_038",
+      "name": "Order Spreadsheet / moving email",
+      "description": "Fictional heldout fixture; 0.2s exposure",
+      "path": "heldout/heldout_038.mp4",
+      "file": "heldout/heldout_038.mp4",
+      "url": "/samples/heldout/heldout_038.mp4",
+      "split": "heldout",
+      "template": "order_spreadsheet"
+    },
+    {
+      "id": "heldout_039",
+      "name": "Order Spreadsheet / clean summary",
+      "description": "Fictional heldout negative control",
+      "path": "heldout/heldout_039.mp4",
+      "file": "heldout/heldout_039.mp4",
+      "url": "/samples/heldout/heldout_039.mp4",
+      "split": "heldout",
+      "template": "order_spreadsheet"
+    },
+    {
+      "id": "heldout_040",
+      "name": "Order Spreadsheet / clean numbers",
+      "description": "Fictional heldout negative control",
+      "path": "heldout/heldout_040.mp4",
+      "file": "heldout/heldout_040.mp4",
+      "url": "/samples/heldout/heldout_040.mp4",
+      "split": "heldout",
+      "template": "order_spreadsheet"
+    },
+    {
+      "id": "heldout_041",
+      "name": "Workspace Settings / email flash",
+      "description": "Fictional heldout fixture; 0.2s exposure",
+      "path": "heldout/heldout_041.mp4",
+      "file": "heldout/heldout_041.mp4",
+      "url": "/samples/heldout/heldout_041.mp4",
+      "split": "heldout",
+      "template": "workspace_settings"
+    },
+    {
+      "id": "heldout_042",
+      "name": "Workspace Settings / phone notice",
+      "description": "Fictional heldout fixture; 0.5s exposure",
+      "path": "heldout/heldout_042.mp4",
+      "file": "heldout/heldout_042.mp4",
+      "url": "/samples/heldout/heldout_042.mp4",
+      "split": "heldout",
+      "template": "workspace_settings"
+    },
+    {
+      "id": "heldout_043",
+      "name": "Workspace Settings / token preview",
+      "description": "Fictional heldout fixture; 2s exposure",
+      "path": "heldout/heldout_043.mp4",
+      "file": "heldout/heldout_043.mp4",
+      "url": "/samples/heldout/heldout_043.mp4",
+      "split": "heldout",
+      "template": "workspace_settings"
+    },
+    {
+      "id": "heldout_044",
+      "name": "Workspace Settings / private label",
+      "description": "Fictional heldout fixture; 0.5s exposure",
+      "path": "heldout/heldout_044.mp4",
+      "file": "heldout/heldout_044.mp4",
+      "url": "/samples/heldout/heldout_044.mp4",
+      "split": "heldout",
+      "template": "workspace_settings"
+    },
+    {
+      "id": "heldout_045",
+      "name": "Workspace Settings / mixed panel",
+      "description": "Fictional heldout fixture; 2s exposure",
+      "path": "heldout/heldout_045.mp4",
+      "file": "heldout/heldout_045.mp4",
+      "url": "/samples/heldout/heldout_045.mp4",
+      "split": "heldout",
+      "template": "workspace_settings"
+    },
+    {
+      "id": "heldout_046",
+      "name": "Workspace Settings / moving email",
+      "description": "Fictional heldout fixture; 0.2s exposure",
+      "path": "heldout/heldout_046.mp4",
+      "file": "heldout/heldout_046.mp4",
+      "url": "/samples/heldout/heldout_046.mp4",
+      "split": "heldout",
+      "template": "workspace_settings"
+    },
+    {
+      "id": "heldout_047",
+      "name": "Workspace Settings / clean summary",
+      "description": "Fictional heldout negative control",
+      "path": "heldout/heldout_047.mp4",
+      "file": "heldout/heldout_047.mp4",
+      "url": "/samples/heldout/heldout_047.mp4",
+      "split": "heldout",
+      "template": "workspace_settings"
+    },
+    {
+      "id": "heldout_048",
+      "name": "Workspace Settings / clean numbers",
+      "description": "Fictional heldout negative control",
+      "path": "heldout/heldout_048.mp4",
+      "file": "heldout/heldout_048.mp4",
+      "url": "/samples/heldout/heldout_048.mp4",
+      "split": "heldout",
+      "template": "workspace_settings"
+    }
+  ]
+}

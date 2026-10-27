@@ -1,0 +1,27 @@
+{
+  "schema": 1,
+  "frozen_at": "2026-10-04T16:16:44.028902+00:00",
+  "authorization": "Root authorized one held-out run after completed hero workflow validation; no OCR/model/fixture tuning.",
+  "dev_core_and_evaluator_match": true,
+  "manifest_sha256": "8baac199eac64651b2525a50b3bd9bab9455f8a59ee6071b9d40848e867dfe93",
+  "source_sha256": {
+    "app/__init__.py": "32dcb40b4b8c5bc4164494d9b2aa480b1dce1a062ea35665ca2afdd40a05b12a",
+    "app/detectors.py": "e43bc2e630aff8656daf61094938da44a073f378d8eeccfe9fc8dd6d6d040a27",
+    "app/main.py": "67e25877dc50969c27c88bd4fa2c9c25fd6d3ebd3dad2d2101366d865f656a40",
+    "app/media.py": "7bd5cda21359d34fc27c71c61dd4d8004c6b7ffd66d4db1f766f3223fdfbf3be",
+    "app/ocr.py": "10f6c57f6167fa8f5eafe02ddfd13f4cd266b93c88e99458c27ee0f470f01554",
+    "app/paths.py": "870cb9a0bf87ac60a1f67700b18fd695bdf14a4524711139e38d7536ef9ce8df",
+    "app/pipeline.py": "6d475539566818fd6185167755bda5d528cde8c838b06650575dc13ab72b9221",
+    "app/session.py": "19011e1f39341a1dfc8a335e7f63eaa5241f9e728f2b86fb90cec9b6c94fe1d7",
+    "app/static/app.js": "3e3e9db730cf78cca2a4be416a91a400295b98283e97d8d5d738991e7e780ec5",
+    "app/static/index.html": "a213004a7b8f8bf77d9ee9fd3607796e0924ede0cab05beda51d892eb8509e76",
+    "app/static/style.css": "f7bb04224abd82a56949a3fc60a78a6b037e9c060a1497d3e161b193aa2e643d",
+    "reports/evaluation_v2_method.md": "6627734eb874e7a1e59175f2955e6c4a297b3c96243068765083b7a6fddfbaf1",
+    "scripts/benchmark.py": "2205e45502fad1de197fda346c70d5b063dad23da665186d2725960e0334a923",
+    "scripts/benchmark_robustness_v2.py": "092b0613846bfcf3c72b7367afa74520a252f5c5a30d1111d8c692c4b4ec9011",
+    "scripts/generate_robustness_v2.py": "e8dc6fa1418398da3766531ecf558c6f91cb4670155cd13e25156417b31f1230",
+    "scripts/summarize_robustness_v2.py": "07171aa04ab4f57b89047079a9ab9c16641c431318f38b37addcbffb0d06a41f",
+    "tests/test_robustness_v2.py": "a98ded5ee7ede67911994b703a6e01c162ee518a001c195f392b20c798461a18"
+  },
+  "timing_context": "Shared workstation with low-thread FFmpeg and PDF/media-production work; observed run times only, not standardized performance."
+}

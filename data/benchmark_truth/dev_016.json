@@ -1,0 +1,20 @@
+{
+  "schema": 1,
+  "id": "dev_016",
+  "split": "dev",
+  "template": "support_inbox",
+  "scenario": "clean_numbers",
+  "media": "dev/dev_016.mp4",
+  "width": 1280,
+  "height": 720,
+  "fps": 10,
+  "frame_count": 40,
+  "duration": 4,
+  "font_size": 25,
+  "exposure": 0.0,
+  "keywords": [
+    "ORCHID CONFIDENTIAL"
+  ],
+  "events": [],
+  "sha256": "e45715d6fa4ab79a8e7baf82fbe559ea5747ac2a1ad0250d9a38688ab8478af8"
+}

@@ -1,0 +1,120 @@
+{
+  "schema_version": 2,
+  "scope": "Real supported-browser operation of the fresh isolated installation with self-authored fictional media only",
+  "team": "DemoSafe",
+  "browser": "Codex In-app Browser; supported CUA UI and screenshot APIs",
+  "server": "loopback:8765",
+  "job_id": "6e6cb7e4752d4f23935a9b2d8fafa05b",
+  "environment": "build/clean-install/.venv (Python 3.12.14, no inherited system site packages)",
+  "operations": [
+    {
+      "operation": "Automatic local session",
+      "status": "passed",
+      "evidence": "Launcher bootstrap accepted and removed from browser address; no manual account registration."
+    },
+    {
+      "operation": "Cancellation",
+      "status": "passed",
+      "evidence": "CPU job cancelled at observed progress; controls remained constrained until worker completion."
+    },
+    {
+      "operation": "Deletion confirmation",
+      "status": "passed",
+      "evidence": "Confirmation and Keep review action observed; no permanent UI deletion performed. Worker-safe deletion and post-deletion 404 covered by automated/API tests."
+    },
+    {
+      "operation": "Keyword/sample/scan",
+      "status": "passed",
+      "evidence": "ORCHID CONFIDENTIAL; demo_workspace.mp4; 120 frames, four findings."
+    },
+    {
+      "operation": "Fractional event seek",
+      "status": "passed",
+      "evidence": "Email inspected at 2.00–2.30 s; UI exposure length 0.30 s."
+    },
+    {
+      "operation": "Selection toggle",
+      "status": "passed",
+      "evidence": "Email off/on updates selected and kept counts from 3/1 to 4/0."
+    },
+    {
+      "operation": "Manual rectangle",
+      "status": "passed",
+      "evidence": "Actual browser drag selects source box [18,10,171,53], time 0–12 s; separate manual count 1."
+    },
+    {
+      "operation": "Manual cancel/invalid time",
+      "status": "passed",
+      "evidence": "Cancelled draft adds nothing; end13 seconds rejected for a12second recording."
+    },
+    {
+      "operation": "Export and side-by-side playback",
+      "status": "passed",
+      "evidence": "Actual original/export players observed. Silent H264 output preserves original frame count."
+    },
+    {
+      "operation": "JSON and media download",
+      "status": "passed",
+      "evidence": "Actual UI download controls saved JSON and MP4; downloaded MP4 SHA256 matches validated export."
+    },
+    {
+      "operation": "Stale output after edit",
+      "status": "passed",
+      "evidence": "Changing selected findings displayed old-output warning."
+    },
+    {
+      "operation": "Reexport with kept email",
+      "status": "passed",
+      "evidence": "Intentionally kept email produced supported-pattern finding in output rescan."
+    },
+    {
+      "operation": "Restore and reexport",
+      "status": "passed",
+      "evidence": "Reselected email; reexport completed with zero supported patterns; media URL changed to refresh cached output."
+    },
+    {
+      "operation": "Browser console",
+      "status": "passed",
+      "evidence": "No warnings or errors returned by browser console inspection."
+    }
+  ],
+  "checks": {
+    "original_unchanged": true,
+    "selected": 4,
+    "manual": 1,
+    "kept": 0,
+    "manual_region_black_frames": "120/120",
+    "unauthenticated_api_and_media_status": 401,
+    "final_worker_active": false
+  },
+  "evidence": [
+    "reports/validation_ui_export_first_v2.json",
+    "reports/validation_ui_export_v2.json",
+    "reports/validation_clean_install_v2.json",
+    "artifacts/film-v2/proof-view.jpg",
+    "artifacts/film-v2/proof.jpg"
+  ],
+  "production_capture": {
+    "source": "actual UI screenshot frames at measured timestamps",
+    "source_directory": "artifacts/film-v2",
+    "valid_production_takes": [
+      "01-intake",
+      "02-scan-b",
+      "03-review-b",
+      "04-manual",
+      "05-export",
+      "06-compare"
+    ],
+    "qa_takes": [
+      "07-reexport-kept-qa",
+      "08-reexport-restored-qa"
+    ],
+    "editing": "cuts, labeled stills and crops; no generated UI or motion interpolation",
+    "capture_limit": "Screenshot capture pauses during awaited manual drag; that 5.4-second gap is cut. Temporary viewport overrides caused capture failures and were reset; failed takes excluded."
+  },
+  "limitations": [
+    "One fictional demonstration is functional evidence, not an accuracy estimate.",
+    "Rescan uses the same OCR/rules and is not a privacy guarantee.",
+    "The final narrated submission video is still dependent on the participant's new voice file."
+  ]
+}

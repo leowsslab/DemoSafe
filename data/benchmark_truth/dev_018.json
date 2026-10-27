@@ -1,0 +1,75 @@
+{
+  "schema": 1,
+  "id": "dev_018",
+  "split": "dev",
+  "template": "developer_terminal",
+  "scenario": "phone_notice",
+  "media": "dev/dev_018.mp4",
+  "width": 1280,
+  "height": 720,
+  "fps": 10,
+  "frame_count": 40,
+  "duration": 4,
+  "font_size": 25,
+  "exposure": 0.5,
+  "keywords": [
+    "ORCHID CONFIDENTIAL"
+  ],
+  "events": [
+    {
+      "id": "dev_018_0",
+      "type": "phone",
+      "text": "+1 (202) 555-0147",
+      "start": 1.0,
+      "end": 1.5,
+      "frames": [
+        {
+          "index": 10,
+          "box": [
+            493,
+            438,
+            731,
+            461
+          ]
+        },
+        {
+          "index": 11,
+          "box": [
+            493,
+            438,
+            731,
+            461
+          ]
+        },
+        {
+          "index": 12,
+          "box": [
+            493,
+            438,
+            731,
+            461
+          ]
+        },
+        {
+          "index": 13,
+          "box": [
+            493,
+            438,
+            731,
+            461
+          ]
+        },
+        {
+          "index": 14,
+          "box": [
+            493,
+            438,
+            731,
+            461
+          ]
+        }
+      ]
+    }
+  ],
+  "sha256": "5c684f6d2a7099752259a9cc2861ce5bc1189a7134850bbbbe5d60f215b1f0f5"
+}

@@ -1,0 +1,38 @@
+{
+  "schema": 2,
+  "id": "v2_heldout_spreadsheet_C_negative",
+  "split": "heldout",
+  "layout": "spreadsheet",
+  "condition": "C",
+  "positive": false,
+  "width": 1280,
+  "height": 720,
+  "fps": 15,
+  "frame_count": 120,
+  "media": "media/v2_heldout_spreadsheet_C_negative.mp4",
+  "media_sha256": "d1c458235fc841e0243ce10a862fbce9958b73ebaa692f20dc57044ec3a40c78",
+  "keywords": [
+    "CEDAR INTERNAL"
+  ],
+  "events": [],
+  "font_file": "calibri.ttf",
+  "font_sha256": "57e93ff143572bcc092c1f56202d43ddc07bb119aa104c6d7af163470fb551f6",
+  "condition_parameters": {
+    "font_px": 20,
+    "crf": 32,
+    "contrast": "approximately 4.5:1",
+    "moving_background": true
+  },
+  "text_foreground": [
+    119,
+    119,
+    119
+  ],
+  "text_background": [
+    255,
+    255,
+    255
+  ],
+  "uncompressed_full_pixel_contrast_ratio": 4.4781,
+  "contrast_note": "Nominal full-pixel foreground/background ratio before antialiasing and video compression; edge pixels differ."
+}

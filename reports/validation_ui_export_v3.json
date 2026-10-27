@@ -1,0 +1,157 @@
+{
+  "schema": 1,
+  "status": "passed",
+  "recorded_at_utc": "2026-10-05T05:19:32.578515+00:00",
+  "scope": "Filesystem and decoded-pixel verification of the coordinator-operated real-browser fictional hero export; no OCR, benchmark, network requests or browser automation.",
+  "source": {
+    "path": "data/samples/demo_workspace.mp4",
+    "sha256": "45fd8762ee8c59fd00b9345c0ed816e09cb300b37bee349341cbc2846c6353b5",
+    "matches_frozen_demo_truth": true,
+    "matches_imported_local_job_original": true,
+    "unchanged_before_after": true,
+    "local_job_id": "d0d92c746e954c45b521111862d1cda3"
+  },
+  "output": {
+    "path": "artifacts/film-v3/hero-redacted.mp4",
+    "sha256": "6e40814874a3c150c2884fb9d525900473c49460f4a213cb50a4c9ba6ba8f3c2",
+    "matches_latest_local_job_export_bytes": true,
+    "width": 1280,
+    "height": 720,
+    "fps": 10,
+    "duration_seconds": 12,
+    "decoded_frames": 120,
+    "codec": "h264",
+    "audio_tracks": 0,
+    "all_timestamps_match_source": true,
+    "all_timestamps_match_100ms_grid": true,
+    "first_timestamp_ms": 0.0,
+    "last_timestamp_ms": 11900.0
+  },
+  "manual_mask": {
+    "status": "passed_for_actual_mask_and_northstar",
+    "checks": {
+      "operator_approximation": {
+        "box": [
+          18,
+          10,
+          170,
+          53
+        ],
+        "minimum_black_fraction": 0.9932680538555692,
+        "mean_black_fraction": 0.9932680538555692,
+        "frames_at_or_above_99_5_percent_black": 0,
+        "expected_frames": 120
+      },
+      "decoded_actual_mask": {
+        "box": [
+          19,
+          10,
+          170,
+          53
+        ],
+        "minimum_black_fraction": 0.999845987987063,
+        "mean_black_fraction": 0.999845987987063,
+        "frames_at_or_above_99_5_percent_black": 120,
+        "expected_frames": 120
+      },
+      "northstar_text": {
+        "box": [
+          28,
+          21,
+          157,
+          37
+        ],
+        "minimum_black_fraction": 1.0,
+        "mean_black_fraction": 1.0,
+        "frames_at_or_above_99_5_percent_black": 120,
+        "expected_frames": 120
+      }
+    },
+    "all_120_decoded_black_component_bounds_identical": true,
+    "source_northstar_bright_pixels_present_every_frame": true,
+    "source_northstar_minimum_bright_pixels": 496,
+    "northstar_bbox_basis": "Original fixture generator places Segoe UI 23 px NORTHSTAR at (28,12); bounding box independently computed from that font without regenerating any fixture.",
+    "captured_ui_manual_size": [
+      151,
+      43
+    ],
+    "captured_ui_time_range_seconds": [
+      0,
+      12
+    ],
+    "captured_ui_evidence": "artifacts/film-v3/manual.png",
+    "approximation_note": "The coordinator supplied approximate x=18; decoded output and the 151 x 43 px UI mask show actual x=19. The wider approximate rectangle includes one unmasked left column and does not meet the 99.5% test. This is disclosed; only the actual 151 x 43 mask and independently located NORTHSTAR region pass 120/120.",
+    "pixel_rule": "At least 99.5% of cropped pixels have every channel <=16; exclusive right/bottom coordinates."
+  },
+  "application_report": {
+    "path": "artifacts/film-v3/hero-report.json",
+    "sha256": "5fd1a12de0e25f3c1fe93cf017bc60654c0bfdbf03e83399ba252c51ceb22a42",
+    "analysis": {
+      "frames_scanned": 120,
+      "unique_frames_ocr": 5,
+      "exact_cache_hits": 115,
+      "analysis_seconds": 10.513,
+      "ocr_seconds": 9.535,
+      "processing_fps": 11.41,
+      "findings_count": 4,
+      "audio_checked": false,
+      "all_frames_decoded": true
+    },
+    "manual_mask_count": 1,
+    "masked_frames": 120,
+    "decisions": [
+      {
+        "event_id": "e0001",
+        "type": "email",
+        "start": 2.0,
+        "end": 2.3,
+        "action": "redact"
+      },
+      {
+        "event_id": "e0002",
+        "type": "phone",
+        "start": 4.0,
+        "end": 5.0,
+        "action": "redact"
+      },
+      {
+        "event_id": "e0003",
+        "type": "token",
+        "start": 6.5,
+        "end": 9.0,
+        "action": "redact"
+      },
+      {
+        "event_id": "e0004",
+        "type": "custom",
+        "start": 9.6,
+        "end": 11.0,
+        "action": "redact"
+      }
+    ],
+    "audio_removed": true,
+    "rescan": {
+      "status": "passed",
+      "findings_count": 0,
+      "message": "No supported text patterns detected in output; not a guarantee of privacy."
+    }
+  },
+  "export_observations": {
+    "analysis_seconds": 10.513,
+    "first_downloaded_report_export_seconds": 14.385,
+    "later_reexport_report_export_seconds": 13.171,
+    "first_and_later_export_bytes_identical": true,
+    "report_differences": [
+      "export_seconds"
+    ],
+    "provenance": "Coordinator confirmed actual UI cancellation of a draft, deselect/reselect of email to verify dirty state, then re-export with the same final decisions and manual mask. The first downloaded report remains unchanged.",
+    "caveat": "Observed shared-workstation times for one fictional clip, not standardized throughput or speedup evidence."
+  },
+  "limitations": [
+    "One fictional demonstration; no automatic-recall or customer-footage claim.",
+    "Manual-mask pixel coverage is distinct from automatic detection accuracy.",
+    "Same-model rescan passed/0 findings is not independent privacy assurance.",
+    "Source integrity uses frozen demo and local imported-copy hashes; no new auth/API test is implied.",
+    "Responsive width checks are DOM measurements only at narrow sizes because coordinator screenshot capture failed after resize."
+  ]
+}

@@ -1,0 +1,187 @@
+{
+  "schema_version": 3,
+  "recorded_at_utc": "2026-10-05T05:21:20.107616+00:00",
+  "status": "passed",
+  "authorization": "User requested a substantially more professional/premium web app design. Scope restricted to frontend presentation, preserving all functional controls/flows.",
+  "source_freeze_interpretation": "The v2 benchmark remains evidence for unchanged inference/backend/evaluator. Three current frontend hashes intentionally differ from the historical freeze; their exact v2 bytes remain in build/interface-v2-snapshot. No old evaluation report or freeze record was rewritten.",
+  "unchanged_v2_non_frontend_source_files": {
+    "app/__init__.py": {
+      "expected": "32dcb40b4b8c5bc4164494d9b2aa480b1dce1a062ea35665ca2afdd40a05b12a",
+      "current": "32dcb40b4b8c5bc4164494d9b2aa480b1dce1a062ea35665ca2afdd40a05b12a",
+      "matches": true
+    },
+    "app/detectors.py": {
+      "expected": "e43bc2e630aff8656daf61094938da44a073f378d8eeccfe9fc8dd6d6d040a27",
+      "current": "e43bc2e630aff8656daf61094938da44a073f378d8eeccfe9fc8dd6d6d040a27",
+      "matches": true
+    },
+    "app/main.py": {
+      "expected": "67e25877dc50969c27c88bd4fa2c9c25fd6d3ebd3dad2d2101366d865f656a40",
+      "current": "67e25877dc50969c27c88bd4fa2c9c25fd6d3ebd3dad2d2101366d865f656a40",
+      "matches": true
+    },
+    "app/media.py": {
+      "expected": "7bd5cda21359d34fc27c71c61dd4d8004c6b7ffd66d4db1f766f3223fdfbf3be",
+      "current": "7bd5cda21359d34fc27c71c61dd4d8004c6b7ffd66d4db1f766f3223fdfbf3be",
+      "matches": true
+    },
+    "app/ocr.py": {
+      "expected": "10f6c57f6167fa8f5eafe02ddfd13f4cd266b93c88e99458c27ee0f470f01554",
+      "current": "10f6c57f6167fa8f5eafe02ddfd13f4cd266b93c88e99458c27ee0f470f01554",
+      "matches": true
+    },
+    "app/paths.py": {
+      "expected": "870cb9a0bf87ac60a1f67700b18fd695bdf14a4524711139e38d7536ef9ce8df",
+      "current": "870cb9a0bf87ac60a1f67700b18fd695bdf14a4524711139e38d7536ef9ce8df",
+      "matches": true
+    },
+    "app/pipeline.py": {
+      "expected": "6d475539566818fd6185167755bda5d528cde8c838b06650575dc13ab72b9221",
+      "current": "6d475539566818fd6185167755bda5d528cde8c838b06650575dc13ab72b9221",
+      "matches": true
+    },
+    "app/session.py": {
+      "expected": "19011e1f39341a1dfc8a335e7f63eaa5241f9e728f2b86fb90cec9b6c94fe1d7",
+      "current": "19011e1f39341a1dfc8a335e7f63eaa5241f9e728f2b86fb90cec9b6c94fe1d7",
+      "matches": true
+    },
+    "reports/evaluation_v2_method.md": {
+      "expected": "6627734eb874e7a1e59175f2955e6c4a297b3c96243068765083b7a6fddfbaf1",
+      "current": "6627734eb874e7a1e59175f2955e6c4a297b3c96243068765083b7a6fddfbaf1",
+      "matches": true
+    },
+    "scripts/benchmark.py": {
+      "expected": "2205e45502fad1de197fda346c70d5b063dad23da665186d2725960e0334a923",
+      "current": "2205e45502fad1de197fda346c70d5b063dad23da665186d2725960e0334a923",
+      "matches": true
+    },
+    "scripts/benchmark_robustness_v2.py": {
+      "expected": "092b0613846bfcf3c72b7367afa74520a252f5c5a30d1111d8c692c4b4ec9011",
+      "current": "092b0613846bfcf3c72b7367afa74520a252f5c5a30d1111d8c692c4b4ec9011",
+      "matches": true
+    },
+    "scripts/generate_robustness_v2.py": {
+      "expected": "e8dc6fa1418398da3766531ecf558c6f91cb4670155cd13e25156417b31f1230",
+      "current": "e8dc6fa1418398da3766531ecf558c6f91cb4670155cd13e25156417b31f1230",
+      "matches": true
+    },
+    "scripts/summarize_robustness_v2.py": {
+      "expected": "07171aa04ab4f57b89047079a9ab9c16641c431318f38b37addcbffb0d06a41f",
+      "current": "07171aa04ab4f57b89047079a9ab9c16641c431318f38b37addcbffb0d06a41f",
+      "matches": true
+    },
+    "tests/test_robustness_v2.py": {
+      "expected": "a98ded5ee7ede67911994b703a6e01c162ee518a001c195f392b20c798461a18",
+      "current": "a98ded5ee7ede67911994b703a6e01c162ee518a001c195f392b20c798461a18",
+      "matches": true
+    }
+  },
+  "frontend_changes": {
+    "app/static/index.html": {
+      "v2_frozen_sha256": "a213004a7b8f8bf77d9ee9fd3607796e0924ede0cab05beda51d892eb8509e76",
+      "current_v3_sha256": "901968bca12e139d626be4a98971b8cda3f7387e19cc95f7e434e35423e08a10",
+      "snapshot": "build/interface-v2-snapshot/index.html",
+      "snapshot_matches_v2_freeze": true,
+      "authorized_presentational_change": true
+    },
+    "app/static/style.css": {
+      "v2_frozen_sha256": "f7bb04224abd82a56949a3fc60a78a6b037e9c060a1497d3e161b193aa2e643d",
+      "current_v3_sha256": "b79ba3b4f13923338760c9a3807f91e74d6f2b16705a0476761fae12824cac96",
+      "snapshot": "build/interface-v2-snapshot/style.css",
+      "snapshot_matches_v2_freeze": true,
+      "authorized_presentational_change": true
+    },
+    "app/static/app.js": {
+      "v2_frozen_sha256": "3e3e9db730cf78cca2a4be416a91a400295b98283e97d8d5d738991e7e780ec5",
+      "current_v3_sha256": "8adfffb2803bb8e5cf075ab46aad1713b3460cd5601120f865c2b5d18616e4ba",
+      "snapshot": "build/interface-v2-snapshot/app.js",
+      "snapshot_matches_v2_freeze": true,
+      "authorized_presentational_change": true
+    }
+  },
+  "current_frontend_matches_static_validation_receipt": true,
+  "frontend_preservation": {
+    "ids_preserved": 91,
+    "protected_control_attributes_unchanged": true,
+    "javascript_changes": [
+      "Presentational processing and reset copy",
+      "Two CSS media-ratio variables using existing media dimensions"
+    ],
+    "callbacks_auth_state_requests_ocr_export_delete_logic_changed": false
+  },
+  "fonts": {
+    "provenance_path": "reports/design_fonts_v3.json",
+    "provenance_sha256": "753a3d8c10b4858a9c8efb351362fcd6acf970e38ec6970d8e14375bce0284d5",
+    "same_origin_only": true,
+    "all_seven_font_and_license_hashes_match": true,
+    "file_checks": {
+      "app/static/fonts/IBMPlexSans-Variable.ttf": true,
+      "app/static/fonts/IBMPlexMono-Regular.ttf": true,
+      "app/static/fonts/IBMPlexMono-Medium.ttf": true,
+      "app/static/fonts/NotoSansTC-Variable.ttf": true,
+      "app/static/fonts/ibmplexsans-OFL.txt": true,
+      "app/static/fonts/ibmplexmono-OFL.txt": true,
+      "app/static/fonts/notosanstc-OFL.txt": true
+    }
+  },
+  "tests": {
+    "path": "reports/test_summary_final_v3.json",
+    "sha256": "0488d76f8ce622b39ee25151153d716bb9b2ad030587b5b1ba1cf5a8e504ee66",
+    "passed": 96,
+    "failed": 0,
+    "warnings": 1,
+    "application_test_and_dependency_sources_unchanged": true,
+    "concurrent_production_source_changes": [
+      "scripts/prepare_narrated_audio_v3.py"
+    ]
+  },
+  "hero_export": {
+    "path": "reports/validation_ui_export_v3.json",
+    "sha256": "0ce6293604a694dc6e7084278a424b66e853af9586b6e009ffc8fb6333a3efd2",
+    "decoded_frames": 120,
+    "actual_manual_mask_box": [
+      19,
+      10,
+      170,
+      53
+    ],
+    "northstar_box": [
+      28,
+      21,
+      157,
+      37
+    ],
+    "northstar_covered_frames": 120,
+    "actual_mask_covered_frames": 120,
+    "source_unchanged": true,
+    "audio_tracks": 0,
+    "analysis_seconds": 10.513,
+    "first_export_seconds": 14.385,
+    "later_reexport_seconds": 13.171,
+    "first_and_later_export_bytes_identical": true
+  },
+  "browser_evidence_from_coordinator": {
+    "interaction_path": "artifacts/film-v3/interaction-qa.json",
+    "interaction_sha256": "92f360ba89f8070a68e91657b21cc0336eb8b3ca447973e2dea46b0165d2952c",
+    "downloaded_media_and_report": true,
+    "manual_draft_cancel_and_dirty_selection_evidence_saved": true,
+    "responsive_path": "artifacts/film-v3/responsive-qa.json",
+    "responsive_sha256": "0c470353c8b03cb9f05bceb66b3cdec0a45c48f87fe24e45d1ae74646cc4bd07",
+    "desktop_width_no_horizontal_overflow": true,
+    "mobile_width_no_horizontal_overflow": true,
+    "narrow_visual_screenshot_verified": false,
+    "responsive_limitation": "capture unavailable after resizing; layout width measured from actual DOM only"
+  },
+  "intake_capture_copy_note": "The first CSS-ready preview was followed by a minor intake-only density/copy refinement before the final static-validation receipt: shorter supported-pattern/keyword help, redundant pattern sub-descriptions removed, textarea rows 3 to 2 and min-height 83 to 76 px. Current source hashes still exactly match that final receipt. A previously open tab can retain earlier intake DOM text; review/manual/compare behavior and captures are unaffected. The coordinator was advised to refresh/recapture intake if using it in final media.",
+  "old_v2_reports": {
+    "files_checked": 23,
+    "changed": []
+  },
+  "limitations": [
+    "The pixel audit is independent of application mask-success metadata, but is one fictional sample and does not establish detector accuracy.",
+    "Same-model rescan success cannot certify complete privacy.",
+    "Responsive widths are actual DOM measurements; narrow screenshots were unavailable, so narrow visual QA is not claimed.",
+    "Observed analysis/export times are shared-workstation observations, not hardware or speedup measurements.",
+    "The same agent authored the frontend and performed filesystem QA; this is not an independent-person design review."
+  ]
+}

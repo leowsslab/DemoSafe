@@ -1,0 +1,20 @@
+{
+  "schema": 1,
+  "id": "heldout_040",
+  "split": "heldout",
+  "template": "order_spreadsheet",
+  "scenario": "clean_numbers",
+  "media": "heldout/heldout_040.mp4",
+  "width": 1280,
+  "height": 720,
+  "fps": 10,
+  "frame_count": 40,
+  "duration": 4,
+  "font_size": 25,
+  "exposure": 0.0,
+  "keywords": [
+    "ORCHID CONFIDENTIAL"
+  ],
+  "events": [],
+  "sha256": "19b480e711154e24d96c24ac9103b6794d4df8b3edc36dce6e3ae9d51d0cc192"
+}

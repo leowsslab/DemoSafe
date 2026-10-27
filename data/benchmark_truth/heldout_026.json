@@ -1,0 +1,75 @@
+{
+  "schema": 1,
+  "id": "heldout_026",
+  "split": "heldout",
+  "template": "project_board",
+  "scenario": "phone_notice",
+  "media": "heldout/heldout_026.mp4",
+  "width": 1280,
+  "height": 720,
+  "fps": 10,
+  "frame_count": 40,
+  "duration": 4,
+  "font_size": 25,
+  "exposure": 0.5,
+  "keywords": [
+    "ORCHID CONFIDENTIAL"
+  ],
+  "events": [
+    {
+      "id": "heldout_026_0",
+      "type": "phone",
+      "text": "+1 (202) 555-0147",
+      "start": 1.0,
+      "end": 1.5,
+      "frames": [
+        {
+          "index": 10,
+          "box": [
+            477,
+            446,
+            677,
+            468
+          ]
+        },
+        {
+          "index": 11,
+          "box": [
+            477,
+            446,
+            677,
+            468
+          ]
+        },
+        {
+          "index": 12,
+          "box": [
+            477,
+            446,
+            677,
+            468
+          ]
+        },
+        {
+          "index": 13,
+          "box": [
+            477,
+            446,
+            677,
+            468
+          ]
+        },
+        {
+          "index": 14,
+          "box": [
+            477,
+            446,
+            677,
+            468
+          ]
+        }
+      ]
+    }
+  ],
+  "sha256": "19729b2c0ae79c74f445faa6b5205c21b8bb867407a066a16a96accef191c3eb"
+}

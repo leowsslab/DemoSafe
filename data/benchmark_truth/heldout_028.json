@@ -1,0 +1,75 @@
+{
+  "schema": 1,
+  "id": "heldout_028",
+  "split": "heldout",
+  "template": "project_board",
+  "scenario": "private_label",
+  "media": "heldout/heldout_028.mp4",
+  "width": 1280,
+  "height": 720,
+  "fps": 10,
+  "frame_count": 40,
+  "duration": 4,
+  "font_size": 28,
+  "exposure": 0.5,
+  "keywords": [
+    "ORCHID CONFIDENTIAL"
+  ],
+  "events": [
+    {
+      "id": "heldout_028_0",
+      "type": "custom",
+      "text": "ORCHID CONFIDENTIAL",
+      "start": 1.0,
+      "end": 1.5,
+      "frames": [
+        {
+          "index": 10,
+          "box": [
+            495,
+            448,
+            793,
+            468
+          ]
+        },
+        {
+          "index": 11,
+          "box": [
+            495,
+            448,
+            793,
+            468
+          ]
+        },
+        {
+          "index": 12,
+          "box": [
+            495,
+            448,
+            793,
+            468
+          ]
+        },
+        {
+          "index": 13,
+          "box": [
+            495,
+            448,
+            793,
+            468
+          ]
+        },
+        {
+          "index": 14,
+          "box": [
+            495,
+            448,
+            793,
+            468
+          ]
+        }
+      ]
+    }
+  ],
+  "sha256": "1e393079297d3900451711d47a2c3dbc1839b1a3d30fe34f6348de8d7e10aac8"
+}

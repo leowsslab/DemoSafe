@@ -1,0 +1,4630 @@
+{
+  "schema": 1,
+  "status": "passed",
+  "reviewed_at_utc": "2026-10-05T01:02:33.493038+00:00",
+  "scope": "Independent frozen-evidence review. No OCR/inference rerun, tuning, source edits, TTS, publication, or submission. Final film/deck/package assembly validation belongs to coordinator.",
+  "method": "Independently sum raw samples; compare raw and published summaries; replay event assignment from saved observations using independent maximum-cardinality matching; decode input pixels for LRU eligible-call counts; decode exports for independent/selected black-region coverage; verify hashes and resume continuity; exercise gate rejection on in-memory copies only.",
+  "frozen_source_files": 17,
+  "frozen_fixture_files": 48,
+  "manifest_sha256": "8baac199eac64651b2525a50b3bd9bab9455f8a59ee6071b9d40848e867dfe93",
+  "first_ten_samples_unchanged": {
+    "v2_heldout_crm_A_positive": true,
+    "v2_heldout_crm_A_negative": true,
+    "v2_heldout_crm_B_positive": true,
+    "v2_heldout_crm_B_negative": true,
+    "v2_heldout_crm_C_positive": true,
+    "v2_heldout_crm_C_negative": true,
+    "v2_heldout_spreadsheet_A_positive": true,
+    "v2_heldout_spreadsheet_A_negative": true,
+    "v2_heldout_spreadsheet_B_positive": true,
+    "v2_heldout_spreadsheet_B_negative": true
+  },
+  "one_heldout_run_resumed": true,
+  "newly_completed_ids": [
+    "v2_heldout_spreadsheet_C_positive",
+    "v2_heldout_spreadsheet_C_negative"
+  ],
+  "resume_serialization_note": "Parsed sample objects and observation/export byte hashes are unchanged. Normal runner serialization may replace a Unicode escape with its identical Unicode character; whole benchmark JSON byte identity is not claimed. The original pre-resume snapshot is retained.",
+  "resume_provenance_path": "reports/evaluation_v2_resume_provenance.json",
+  "source_report_sha256": {
+    "reports/benchmark_robustness_v2_dev.json": "7c6586dc071ba3213e03337fa7a715caf0b5a804153e6bde84fe0d1f6b5a3574",
+    "reports/benchmark_robustness_v2_heldout.json": "8f50cd7cc75ce3d61e060d4a68dae726052450a6f05ef915c35c52162365e57a"
+  },
+  "published_summary_sha256": "86c78285a184b26c4384283180ea33dd1c7f4e058e3e4f78d64b0df012a4c2b5",
+  "audit_script_sha256": "78bb5769df512ace5ff84a552cb9041bb8efaa86b97e9f6a6a1bf11b51fe9c0d",
+  "recomputed_summaries": {
+    "dev": {
+      "completed_samples": 12,
+      "failed_samples": 0,
+      "expected_events": 24,
+      "detected_events": 20,
+      "event_recall": 0.8333333333333334,
+      "false_positive_events": 0,
+      "negative_samples": 6,
+      "negative_samples_with_false_positives": 0,
+      "sensitive_frame_recall": 0.7053571428571429,
+      "checked_sensitive_frame_occurrences": 336,
+      "fully_masked_frame_occurrences": 237,
+      "full_mask_frame_fraction": 0.7053571428571429,
+      "fully_masked_events": 18,
+      "mask_checked_events": 24,
+      "all_export_frame_counts_match": true,
+      "analysis_wall_seconds": 974.4021,
+      "export_wall_seconds": 932.3011,
+      "by_condition": {
+        "A": {
+          "completed_samples": 4,
+          "failed_samples": 0,
+          "expected_events": 8,
+          "detected_events": 6,
+          "event_recall": 0.75,
+          "false_positive_events": 0,
+          "negative_samples": 2,
+          "negative_samples_with_false_positives": 0,
+          "sensitive_frame_recall": 0.5089285714285714,
+          "checked_sensitive_frame_occurrences": 112,
+          "fully_masked_frame_occurrences": 57,
+          "full_mask_frame_fraction": 0.5089285714285714,
+          "fully_masked_events": 5,
+          "mask_checked_events": 8,
+          "all_export_frame_counts_match": true,
+          "analysis_wall_seconds": 205.4031,
+          "export_wall_seconds": 168.692
+        },
+        "B": {
+          "completed_samples": 4,
+          "failed_samples": 0,
+          "expected_events": 8,
+          "detected_events": 7,
+          "event_recall": 0.875,
+          "false_positive_events": 0,
+          "negative_samples": 2,
+          "negative_samples_with_false_positives": 0,
+          "sensitive_frame_recall": 0.8660714285714286,
+          "checked_sensitive_frame_occurrences": 112,
+          "fully_masked_frame_occurrences": 97,
+          "full_mask_frame_fraction": 0.8660714285714286,
+          "fully_masked_events": 7,
+          "mask_checked_events": 8,
+          "all_export_frame_counts_match": true,
+          "analysis_wall_seconds": 230.9501,
+          "export_wall_seconds": 212.3739
+        },
+        "C": {
+          "completed_samples": 4,
+          "failed_samples": 0,
+          "expected_events": 8,
+          "detected_events": 7,
+          "event_recall": 0.875,
+          "false_positive_events": 0,
+          "negative_samples": 2,
+          "negative_samples_with_false_positives": 0,
+          "sensitive_frame_recall": 0.7410714285714286,
+          "checked_sensitive_frame_occurrences": 112,
+          "fully_masked_frame_occurrences": 83,
+          "full_mask_frame_fraction": 0.7410714285714286,
+          "fully_masked_events": 6,
+          "mask_checked_events": 8,
+          "all_export_frame_counts_match": true,
+          "analysis_wall_seconds": 538.0489,
+          "export_wall_seconds": 551.2352000000001
+        }
+      },
+      "by_layout": {
+        "helpdesk": {
+          "completed_samples": 6,
+          "failed_samples": 0,
+          "expected_events": 12,
+          "detected_events": 11,
+          "event_recall": 0.9166666666666666,
+          "false_positive_events": 0,
+          "negative_samples": 3,
+          "negative_samples_with_false_positives": 0,
+          "sensitive_frame_recall": 0.6785714285714286,
+          "checked_sensitive_frame_occurrences": 168,
+          "fully_masked_frame_occurrences": 114,
+          "full_mask_frame_fraction": 0.6785714285714286,
+          "fully_masked_events": 9,
+          "mask_checked_events": 12,
+          "all_export_frame_counts_match": true,
+          "analysis_wall_seconds": 480.8923,
+          "export_wall_seconds": 455.5325
+        },
+        "terminal": {
+          "completed_samples": 6,
+          "failed_samples": 0,
+          "expected_events": 12,
+          "detected_events": 9,
+          "event_recall": 0.75,
+          "false_positive_events": 0,
+          "negative_samples": 3,
+          "negative_samples_with_false_positives": 0,
+          "sensitive_frame_recall": 0.7321428571428571,
+          "checked_sensitive_frame_occurrences": 168,
+          "fully_masked_frame_occurrences": 123,
+          "full_mask_frame_fraction": 0.7321428571428571,
+          "fully_masked_events": 9,
+          "mask_checked_events": 12,
+          "all_export_frame_counts_match": true,
+          "analysis_wall_seconds": 493.5098,
+          "export_wall_seconds": 476.7686
+        }
+      },
+      "all_original_hashes_unchanged": true,
+      "selected_mask_geometry": {
+        "checked_frame_regions": 237,
+        "fully_masked_frame_regions": 237
+      },
+      "ablation_1hz": {
+        "phases": [
+          {
+            "phase_frames": 0,
+            "expected_events": 24,
+            "detected_events": 13,
+            "event_recall": 0.5416666666666666,
+            "eligible_ocr_calls": 92
+          },
+          {
+            "phase_frames": 1,
+            "expected_events": 24,
+            "detected_events": 7,
+            "event_recall": 0.2916666666666667,
+            "eligible_ocr_calls": 92
+          },
+          {
+            "phase_frames": 2,
+            "expected_events": 24,
+            "detected_events": 7,
+            "event_recall": 0.2916666666666667,
+            "eligible_ocr_calls": 94
+          },
+          {
+            "phase_frames": 3,
+            "expected_events": 24,
+            "detected_events": 13,
+            "event_recall": 0.5416666666666666,
+            "eligible_ocr_calls": 95
+          },
+          {
+            "phase_frames": 4,
+            "expected_events": 24,
+            "detected_events": 13,
+            "event_recall": 0.5416666666666666,
+            "eligible_ocr_calls": 92
+          },
+          {
+            "phase_frames": 5,
+            "expected_events": 24,
+            "detected_events": 12,
+            "event_recall": 0.5,
+            "eligible_ocr_calls": 90
+          },
+          {
+            "phase_frames": 6,
+            "expected_events": 24,
+            "detected_events": 6,
+            "event_recall": 0.25,
+            "eligible_ocr_calls": 89
+          },
+          {
+            "phase_frames": 7,
+            "expected_events": 24,
+            "detected_events": 6,
+            "event_recall": 0.25,
+            "eligible_ocr_calls": 90
+          },
+          {
+            "phase_frames": 8,
+            "expected_events": 24,
+            "detected_events": 12,
+            "event_recall": 0.5,
+            "eligible_ocr_calls": 91
+          },
+          {
+            "phase_frames": 9,
+            "expected_events": 24,
+            "detected_events": 12,
+            "event_recall": 0.5,
+            "eligible_ocr_calls": 94
+          },
+          {
+            "phase_frames": 10,
+            "expected_events": 24,
+            "detected_events": 12,
+            "event_recall": 0.5,
+            "eligible_ocr_calls": 85
+          },
+          {
+            "phase_frames": 11,
+            "expected_events": 24,
+            "detected_events": 12,
+            "event_recall": 0.5,
+            "eligible_ocr_calls": 90
+          },
+          {
+            "phase_frames": 12,
+            "expected_events": 24,
+            "detected_events": 12,
+            "event_recall": 0.5,
+            "eligible_ocr_calls": 94
+          },
+          {
+            "phase_frames": 13,
+            "expected_events": 24,
+            "detected_events": 13,
+            "event_recall": 0.5416666666666666,
+            "eligible_ocr_calls": 95
+          },
+          {
+            "phase_frames": 14,
+            "expected_events": 24,
+            "detected_events": 12,
+            "event_recall": 0.5,
+            "eligible_ocr_calls": 91
+          }
+        ],
+        "phase_recall_mean": 0.45,
+        "phase_recall_min": 0.25,
+        "phase_recall_max": 0.5416666666666666,
+        "all_frame_eligible_ocr_calls": 841
+      }
+    },
+    "heldout": {
+      "completed_samples": 12,
+      "failed_samples": 0,
+      "expected_events": 24,
+      "detected_events": 18,
+      "event_recall": 0.75,
+      "false_positive_events": 0,
+      "negative_samples": 6,
+      "negative_samples_with_false_positives": 0,
+      "sensitive_frame_recall": 0.6875,
+      "checked_sensitive_frame_occurrences": 336,
+      "fully_masked_frame_occurrences": 231,
+      "full_mask_frame_fraction": 0.6875,
+      "fully_masked_events": 18,
+      "mask_checked_events": 24,
+      "all_export_frame_counts_match": true,
+      "analysis_wall_seconds": 1070.7347,
+      "export_wall_seconds": 1075.0892,
+      "by_condition": {
+        "A": {
+          "completed_samples": 4,
+          "failed_samples": 0,
+          "expected_events": 8,
+          "detected_events": 6,
+          "event_recall": 0.75,
+          "false_positive_events": 0,
+          "negative_samples": 2,
+          "negative_samples_with_false_positives": 0,
+          "sensitive_frame_recall": 0.7321428571428571,
+          "checked_sensitive_frame_occurrences": 112,
+          "fully_masked_frame_occurrences": 82,
+          "full_mask_frame_fraction": 0.7321428571428571,
+          "fully_masked_events": 6,
+          "mask_checked_events": 8,
+          "all_export_frame_counts_match": true,
+          "analysis_wall_seconds": 235.6365,
+          "export_wall_seconds": 200.3
+        },
+        "B": {
+          "completed_samples": 4,
+          "failed_samples": 0,
+          "expected_events": 8,
+          "detected_events": 7,
+          "event_recall": 0.875,
+          "false_positive_events": 0,
+          "negative_samples": 2,
+          "negative_samples_with_false_positives": 0,
+          "sensitive_frame_recall": 0.8660714285714286,
+          "checked_sensitive_frame_occurrences": 112,
+          "fully_masked_frame_occurrences": 97,
+          "full_mask_frame_fraction": 0.8660714285714286,
+          "fully_masked_events": 7,
+          "mask_checked_events": 8,
+          "all_export_frame_counts_match": true,
+          "analysis_wall_seconds": 301.0548,
+          "export_wall_seconds": 239.3689
+        },
+        "C": {
+          "completed_samples": 4,
+          "failed_samples": 0,
+          "expected_events": 8,
+          "detected_events": 5,
+          "event_recall": 0.625,
+          "false_positive_events": 0,
+          "negative_samples": 2,
+          "negative_samples_with_false_positives": 0,
+          "sensitive_frame_recall": 0.4642857142857143,
+          "checked_sensitive_frame_occurrences": 112,
+          "fully_masked_frame_occurrences": 52,
+          "full_mask_frame_fraction": 0.4642857142857143,
+          "fully_masked_events": 5,
+          "mask_checked_events": 8,
+          "all_export_frame_counts_match": true,
+          "analysis_wall_seconds": 534.0434,
+          "export_wall_seconds": 635.4203
+        }
+      },
+      "by_layout": {
+        "crm": {
+          "completed_samples": 6,
+          "failed_samples": 0,
+          "expected_events": 12,
+          "detected_events": 9,
+          "event_recall": 0.75,
+          "false_positive_events": 0,
+          "negative_samples": 3,
+          "negative_samples_with_false_positives": 0,
+          "sensitive_frame_recall": 0.7321428571428571,
+          "checked_sensitive_frame_occurrences": 168,
+          "fully_masked_frame_occurrences": 123,
+          "full_mask_frame_fraction": 0.7321428571428571,
+          "fully_masked_events": 9,
+          "mask_checked_events": 12,
+          "all_export_frame_counts_match": true,
+          "analysis_wall_seconds": 369.1922,
+          "export_wall_seconds": 384.2058
+        },
+        "spreadsheet": {
+          "completed_samples": 6,
+          "failed_samples": 0,
+          "expected_events": 12,
+          "detected_events": 9,
+          "event_recall": 0.75,
+          "false_positive_events": 0,
+          "negative_samples": 3,
+          "negative_samples_with_false_positives": 0,
+          "sensitive_frame_recall": 0.6428571428571429,
+          "checked_sensitive_frame_occurrences": 168,
+          "fully_masked_frame_occurrences": 108,
+          "full_mask_frame_fraction": 0.6428571428571429,
+          "fully_masked_events": 9,
+          "mask_checked_events": 12,
+          "all_export_frame_counts_match": true,
+          "analysis_wall_seconds": 701.5425,
+          "export_wall_seconds": 690.8833999999999
+        }
+      },
+      "all_original_hashes_unchanged": true,
+      "selected_mask_geometry": {
+        "checked_frame_regions": 231,
+        "fully_masked_frame_regions": 231
+      },
+      "ablation_1hz": {
+        "phases": [
+          {
+            "phase_frames": 0,
+            "expected_events": 24,
+            "detected_events": 12,
+            "event_recall": 0.5,
+            "eligible_ocr_calls": 92
+          },
+          {
+            "phase_frames": 1,
+            "expected_events": 24,
+            "detected_events": 6,
+            "event_recall": 0.25,
+            "eligible_ocr_calls": 92
+          },
+          {
+            "phase_frames": 2,
+            "expected_events": 24,
+            "detected_events": 6,
+            "event_recall": 0.25,
+            "eligible_ocr_calls": 94
+          },
+          {
+            "phase_frames": 3,
+            "expected_events": 24,
+            "detected_events": 12,
+            "event_recall": 0.5,
+            "eligible_ocr_calls": 93
+          },
+          {
+            "phase_frames": 4,
+            "expected_events": 24,
+            "detected_events": 12,
+            "event_recall": 0.5,
+            "eligible_ocr_calls": 92
+          },
+          {
+            "phase_frames": 5,
+            "expected_events": 24,
+            "detected_events": 12,
+            "event_recall": 0.5,
+            "eligible_ocr_calls": 92
+          },
+          {
+            "phase_frames": 6,
+            "expected_events": 24,
+            "detected_events": 6,
+            "event_recall": 0.25,
+            "eligible_ocr_calls": 94
+          },
+          {
+            "phase_frames": 7,
+            "expected_events": 24,
+            "detected_events": 6,
+            "event_recall": 0.25,
+            "eligible_ocr_calls": 95
+          },
+          {
+            "phase_frames": 8,
+            "expected_events": 24,
+            "detected_events": 12,
+            "event_recall": 0.5,
+            "eligible_ocr_calls": 94
+          },
+          {
+            "phase_frames": 9,
+            "expected_events": 24,
+            "detected_events": 12,
+            "event_recall": 0.5,
+            "eligible_ocr_calls": 94
+          },
+          {
+            "phase_frames": 10,
+            "expected_events": 24,
+            "detected_events": 12,
+            "event_recall": 0.5,
+            "eligible_ocr_calls": 90
+          },
+          {
+            "phase_frames": 11,
+            "expected_events": 24,
+            "detected_events": 12,
+            "event_recall": 0.5,
+            "eligible_ocr_calls": 91
+          },
+          {
+            "phase_frames": 12,
+            "expected_events": 24,
+            "detected_events": 12,
+            "event_recall": 0.5,
+            "eligible_ocr_calls": 94
+          },
+          {
+            "phase_frames": 13,
+            "expected_events": 24,
+            "detected_events": 12,
+            "event_recall": 0.5,
+            "eligible_ocr_calls": 94
+          },
+          {
+            "phase_frames": 14,
+            "expected_events": 24,
+            "detected_events": 12,
+            "event_recall": 0.5,
+            "eligible_ocr_calls": 90
+          }
+        ],
+        "phase_recall_mean": 0.43333333333333335,
+        "phase_recall_min": 0.25,
+        "phase_recall_max": 0.5,
+        "all_frame_eligible_ocr_calls": 909
+      }
+    }
+  },
+  "independent_decodes": {
+    "v2_dev_helpdesk_A_positive": {
+      "input_frames": 120,
+      "output_frames": 120,
+      "all_frame_eligible_ocr_calls": 47
+    },
+    "v2_dev_helpdesk_A_negative": {
+      "input_frames": 120,
+      "output_frames": 120,
+      "all_frame_eligible_ocr_calls": 47
+    },
+    "v2_dev_helpdesk_B_positive": {
+      "input_frames": 120,
+      "output_frames": 120,
+      "all_frame_eligible_ocr_calls": 53
+    },
+    "v2_dev_helpdesk_B_negative": {
+      "input_frames": 120,
+      "output_frames": 120,
+      "all_frame_eligible_ocr_calls": 50
+    },
+    "v2_dev_helpdesk_C_positive": {
+      "input_frames": 120,
+      "output_frames": 120,
+      "all_frame_eligible_ocr_calls": 120
+    },
+    "v2_dev_helpdesk_C_negative": {
+      "input_frames": 120,
+      "output_frames": 120,
+      "all_frame_eligible_ocr_calls": 120
+    },
+    "v2_dev_terminal_A_positive": {
+      "input_frames": 120,
+      "output_frames": 120,
+      "all_frame_eligible_ocr_calls": 41
+    },
+    "v2_dev_terminal_A_negative": {
+      "input_frames": 120,
+      "output_frames": 120,
+      "all_frame_eligible_ocr_calls": 30
+    },
+    "v2_dev_terminal_B_positive": {
+      "input_frames": 120,
+      "output_frames": 120,
+      "all_frame_eligible_ocr_calls": 43
+    },
+    "v2_dev_terminal_B_negative": {
+      "input_frames": 120,
+      "output_frames": 120,
+      "all_frame_eligible_ocr_calls": 50
+    },
+    "v2_dev_terminal_C_positive": {
+      "input_frames": 120,
+      "output_frames": 120,
+      "all_frame_eligible_ocr_calls": 120
+    },
+    "v2_dev_terminal_C_negative": {
+      "input_frames": 120,
+      "output_frames": 120,
+      "all_frame_eligible_ocr_calls": 120
+    },
+    "v2_heldout_crm_A_positive": {
+      "input_frames": 120,
+      "output_frames": 120,
+      "all_frame_eligible_ocr_calls": 43
+    },
+    "v2_heldout_crm_A_negative": {
+      "input_frames": 120,
+      "output_frames": 120,
+      "all_frame_eligible_ocr_calls": 38
+    },
+    "v2_heldout_crm_B_positive": {
+      "input_frames": 120,
+      "output_frames": 120,
+      "all_frame_eligible_ocr_calls": 51
+    },
+    "v2_heldout_crm_B_negative": {
+      "input_frames": 120,
+      "output_frames": 120,
+      "all_frame_eligible_ocr_calls": 40
+    },
+    "v2_heldout_crm_C_positive": {
+      "input_frames": 120,
+      "output_frames": 120,
+      "all_frame_eligible_ocr_calls": 120
+    },
+    "v2_heldout_crm_C_negative": {
+      "input_frames": 120,
+      "output_frames": 120,
+      "all_frame_eligible_ocr_calls": 120
+    },
+    "v2_heldout_spreadsheet_A_positive": {
+      "input_frames": 120,
+      "output_frames": 120,
+      "all_frame_eligible_ocr_calls": 58
+    },
+    "v2_heldout_spreadsheet_A_negative": {
+      "input_frames": 120,
+      "output_frames": 120,
+      "all_frame_eligible_ocr_calls": 46
+    },
+    "v2_heldout_spreadsheet_B_positive": {
+      "input_frames": 120,
+      "output_frames": 120,
+      "all_frame_eligible_ocr_calls": 80
+    },
+    "v2_heldout_spreadsheet_B_negative": {
+      "input_frames": 120,
+      "output_frames": 120,
+      "all_frame_eligible_ocr_calls": 73
+    },
+    "v2_heldout_spreadsheet_C_positive": {
+      "input_frames": 120,
+      "output_frames": 120,
+      "all_frame_eligible_ocr_calls": 120
+    },
+    "v2_heldout_spreadsheet_C_negative": {
+      "input_frames": 120,
+      "output_frames": 120,
+      "all_frame_eligible_ocr_calls": 120
+    }
+  },
+  "gate_controls": [
+    {
+      "case": "complete baseline",
+      "passed": true,
+      "headline_ready": true
+    },
+    {
+      "case": "explicit export error retained",
+      "passed": true,
+      "headline_ready": false
+    },
+    {
+      "case": "missing mask denominator",
+      "passed": true,
+      "headline_ready": false
+    },
+    {
+      "case": "selected mask geometry missing",
+      "passed": true,
+      "headline_ready": false
+    },
+    {
+      "case": "source unchanged unknown",
+      "passed": true,
+      "headline_ready": false
+    },
+    {
+      "case": "frame truncation",
+      "passed": true,
+      "headline_ready": false
+    },
+    {
+      "case": "selected mask failure",
+      "passed": true,
+      "headline_ready": false
+    },
+    {
+      "case": "duplicate replaces missing ID",
+      "passed": true,
+      "headline_ready": false
+    },
+    {
+      "case": "wrong split",
+      "passed": true,
+      "headline_ready": false
+    },
+    {
+      "case": "wrong per-clip denominator",
+      "passed": true,
+      "headline_ready": false
+    },
+    {
+      "case": "missing phase",
+      "passed": true,
+      "headline_ready": false
+    },
+    {
+      "case": "manifest mismatch",
+      "passed": true,
+      "headline_ready": false
+    },
+    {
+      "case": "source mismatch",
+      "passed": true,
+      "headline_ready": false
+    },
+    {
+      "case": "interrupted status",
+      "passed": true,
+      "headline_ready": false
+    }
+  ],
+  "checks_passed": 969,
+  "checks_total": 969,
+  "checks": [
+    {
+      "check": "all frozen source files unchanged",
+      "passed": true,
+      "details": {
+        "app/__init__.py": true,
+        "app/detectors.py": true,
+        "app/main.py": true,
+        "app/media.py": true,
+        "app/ocr.py": true,
+        "app/paths.py": true,
+        "app/pipeline.py": true,
+        "app/session.py": true,
+        "app/static/app.js": true,
+        "app/static/index.html": true,
+        "app/static/style.css": true,
+        "reports/evaluation_v2_method.md": true,
+        "scripts/benchmark.py": true,
+        "scripts/benchmark_robustness_v2.py": true,
+        "scripts/generate_robustness_v2.py": true,
+        "scripts/summarize_robustness_v2.py": true,
+        "tests/test_robustness_v2.py": true
+      }
+    },
+    {
+      "check": "manifest freeze and marker",
+      "passed": true
+    },
+    {
+      "check": "all frozen media and truth files unchanged",
+      "passed": true
+    },
+    {
+      "check": "pre-resume report snapshot SHA preserved",
+      "passed": true
+    },
+    {
+      "check": "pre-interrupt and pre-resume sample values identical",
+      "passed": true
+    },
+    {
+      "check": "pause checkpoint SHA preserved",
+      "passed": true
+    },
+    {
+      "check": "first ten completed sample objects unchanged",
+      "passed": true
+    },
+    {
+      "check": "resume completed exactly original two pending IDs",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_helpdesk_A_positive/observations unchanged",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_helpdesk_A_positive/output unchanged",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_helpdesk_A_positive/independent observation scoring",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_helpdesk_A_positive/phase 0 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_helpdesk_A_positive/phase 1 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_helpdesk_A_positive/phase 2 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_helpdesk_A_positive/phase 3 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_helpdesk_A_positive/phase 4 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_helpdesk_A_positive/phase 5 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_helpdesk_A_positive/phase 6 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_helpdesk_A_positive/phase 7 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_helpdesk_A_positive/phase 8 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_helpdesk_A_positive/phase 9 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_helpdesk_A_positive/phase 10 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_helpdesk_A_positive/phase 11 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_helpdesk_A_positive/phase 12 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_helpdesk_A_positive/phase 13 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_helpdesk_A_positive/phase 14 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_helpdesk_A_positive/input decoded count",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_helpdesk_A_positive/all frame OCR eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_helpdesk_A_positive/actual OCR runtime call count",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_helpdesk_A_positive/phase 0 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_helpdesk_A_positive/phase 1 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_helpdesk_A_positive/phase 2 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_helpdesk_A_positive/phase 3 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_helpdesk_A_positive/phase 4 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_helpdesk_A_positive/phase 5 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_helpdesk_A_positive/phase 6 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_helpdesk_A_positive/phase 7 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_helpdesk_A_positive/phase 8 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_helpdesk_A_positive/phase 9 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_helpdesk_A_positive/phase 10 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_helpdesk_A_positive/phase 11 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_helpdesk_A_positive/phase 12 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_helpdesk_A_positive/phase 13 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_helpdesk_A_positive/phase 14 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_helpdesk_A_positive/output decoded count",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_helpdesk_A_positive/independent decoded mask coverage",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_helpdesk_A_positive/selected decoded mask coverage",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_helpdesk_A_negative/observations unchanged",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_helpdesk_A_negative/output unchanged",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_helpdesk_A_negative/independent observation scoring",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_helpdesk_A_negative/phase 0 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_helpdesk_A_negative/phase 1 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_helpdesk_A_negative/phase 2 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_helpdesk_A_negative/phase 3 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_helpdesk_A_negative/phase 4 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_helpdesk_A_negative/phase 5 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_helpdesk_A_negative/phase 6 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_helpdesk_A_negative/phase 7 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_helpdesk_A_negative/phase 8 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_helpdesk_A_negative/phase 9 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_helpdesk_A_negative/phase 10 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_helpdesk_A_negative/phase 11 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_helpdesk_A_negative/phase 12 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_helpdesk_A_negative/phase 13 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_helpdesk_A_negative/phase 14 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_helpdesk_A_negative/input decoded count",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_helpdesk_A_negative/all frame OCR eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_helpdesk_A_negative/actual OCR runtime call count",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_helpdesk_A_negative/phase 0 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_helpdesk_A_negative/phase 1 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_helpdesk_A_negative/phase 2 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_helpdesk_A_negative/phase 3 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_helpdesk_A_negative/phase 4 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_helpdesk_A_negative/phase 5 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_helpdesk_A_negative/phase 6 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_helpdesk_A_negative/phase 7 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_helpdesk_A_negative/phase 8 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_helpdesk_A_negative/phase 9 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_helpdesk_A_negative/phase 10 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_helpdesk_A_negative/phase 11 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_helpdesk_A_negative/phase 12 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_helpdesk_A_negative/phase 13 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_helpdesk_A_negative/phase 14 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_helpdesk_A_negative/output decoded count",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_helpdesk_A_negative/independent decoded mask coverage",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_helpdesk_A_negative/selected decoded mask coverage",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_helpdesk_B_positive/observations unchanged",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_helpdesk_B_positive/output unchanged",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_helpdesk_B_positive/independent observation scoring",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_helpdesk_B_positive/phase 0 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_helpdesk_B_positive/phase 1 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_helpdesk_B_positive/phase 2 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_helpdesk_B_positive/phase 3 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_helpdesk_B_positive/phase 4 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_helpdesk_B_positive/phase 5 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_helpdesk_B_positive/phase 6 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_helpdesk_B_positive/phase 7 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_helpdesk_B_positive/phase 8 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_helpdesk_B_positive/phase 9 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_helpdesk_B_positive/phase 10 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_helpdesk_B_positive/phase 11 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_helpdesk_B_positive/phase 12 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_helpdesk_B_positive/phase 13 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_helpdesk_B_positive/phase 14 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_helpdesk_B_positive/input decoded count",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_helpdesk_B_positive/all frame OCR eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_helpdesk_B_positive/actual OCR runtime call count",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_helpdesk_B_positive/phase 0 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_helpdesk_B_positive/phase 1 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_helpdesk_B_positive/phase 2 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_helpdesk_B_positive/phase 3 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_helpdesk_B_positive/phase 4 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_helpdesk_B_positive/phase 5 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_helpdesk_B_positive/phase 6 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_helpdesk_B_positive/phase 7 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_helpdesk_B_positive/phase 8 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_helpdesk_B_positive/phase 9 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_helpdesk_B_positive/phase 10 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_helpdesk_B_positive/phase 11 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_helpdesk_B_positive/phase 12 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_helpdesk_B_positive/phase 13 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_helpdesk_B_positive/phase 14 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_helpdesk_B_positive/output decoded count",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_helpdesk_B_positive/independent decoded mask coverage",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_helpdesk_B_positive/selected decoded mask coverage",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_helpdesk_B_negative/observations unchanged",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_helpdesk_B_negative/output unchanged",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_helpdesk_B_negative/independent observation scoring",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_helpdesk_B_negative/phase 0 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_helpdesk_B_negative/phase 1 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_helpdesk_B_negative/phase 2 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_helpdesk_B_negative/phase 3 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_helpdesk_B_negative/phase 4 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_helpdesk_B_negative/phase 5 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_helpdesk_B_negative/phase 6 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_helpdesk_B_negative/phase 7 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_helpdesk_B_negative/phase 8 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_helpdesk_B_negative/phase 9 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_helpdesk_B_negative/phase 10 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_helpdesk_B_negative/phase 11 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_helpdesk_B_negative/phase 12 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_helpdesk_B_negative/phase 13 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_helpdesk_B_negative/phase 14 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_helpdesk_B_negative/input decoded count",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_helpdesk_B_negative/all frame OCR eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_helpdesk_B_negative/actual OCR runtime call count",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_helpdesk_B_negative/phase 0 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_helpdesk_B_negative/phase 1 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_helpdesk_B_negative/phase 2 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_helpdesk_B_negative/phase 3 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_helpdesk_B_negative/phase 4 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_helpdesk_B_negative/phase 5 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_helpdesk_B_negative/phase 6 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_helpdesk_B_negative/phase 7 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_helpdesk_B_negative/phase 8 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_helpdesk_B_negative/phase 9 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_helpdesk_B_negative/phase 10 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_helpdesk_B_negative/phase 11 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_helpdesk_B_negative/phase 12 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_helpdesk_B_negative/phase 13 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_helpdesk_B_negative/phase 14 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_helpdesk_B_negative/output decoded count",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_helpdesk_B_negative/independent decoded mask coverage",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_helpdesk_B_negative/selected decoded mask coverage",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_helpdesk_C_positive/observations unchanged",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_helpdesk_C_positive/output unchanged",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_helpdesk_C_positive/independent observation scoring",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_helpdesk_C_positive/phase 0 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_helpdesk_C_positive/phase 1 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_helpdesk_C_positive/phase 2 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_helpdesk_C_positive/phase 3 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_helpdesk_C_positive/phase 4 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_helpdesk_C_positive/phase 5 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_helpdesk_C_positive/phase 6 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_helpdesk_C_positive/phase 7 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_helpdesk_C_positive/phase 8 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_helpdesk_C_positive/phase 9 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_helpdesk_C_positive/phase 10 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_helpdesk_C_positive/phase 11 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_helpdesk_C_positive/phase 12 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_helpdesk_C_positive/phase 13 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_helpdesk_C_positive/phase 14 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_helpdesk_C_positive/input decoded count",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_helpdesk_C_positive/all frame OCR eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_helpdesk_C_positive/actual OCR runtime call count",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_helpdesk_C_positive/phase 0 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_helpdesk_C_positive/phase 1 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_helpdesk_C_positive/phase 2 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_helpdesk_C_positive/phase 3 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_helpdesk_C_positive/phase 4 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_helpdesk_C_positive/phase 5 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_helpdesk_C_positive/phase 6 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_helpdesk_C_positive/phase 7 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_helpdesk_C_positive/phase 8 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_helpdesk_C_positive/phase 9 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_helpdesk_C_positive/phase 10 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_helpdesk_C_positive/phase 11 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_helpdesk_C_positive/phase 12 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_helpdesk_C_positive/phase 13 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_helpdesk_C_positive/phase 14 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_helpdesk_C_positive/output decoded count",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_helpdesk_C_positive/independent decoded mask coverage",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_helpdesk_C_positive/selected decoded mask coverage",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_helpdesk_C_negative/observations unchanged",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_helpdesk_C_negative/output unchanged",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_helpdesk_C_negative/independent observation scoring",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_helpdesk_C_negative/phase 0 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_helpdesk_C_negative/phase 1 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_helpdesk_C_negative/phase 2 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_helpdesk_C_negative/phase 3 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_helpdesk_C_negative/phase 4 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_helpdesk_C_negative/phase 5 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_helpdesk_C_negative/phase 6 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_helpdesk_C_negative/phase 7 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_helpdesk_C_negative/phase 8 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_helpdesk_C_negative/phase 9 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_helpdesk_C_negative/phase 10 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_helpdesk_C_negative/phase 11 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_helpdesk_C_negative/phase 12 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_helpdesk_C_negative/phase 13 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_helpdesk_C_negative/phase 14 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_helpdesk_C_negative/input decoded count",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_helpdesk_C_negative/all frame OCR eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_helpdesk_C_negative/actual OCR runtime call count",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_helpdesk_C_negative/phase 0 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_helpdesk_C_negative/phase 1 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_helpdesk_C_negative/phase 2 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_helpdesk_C_negative/phase 3 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_helpdesk_C_negative/phase 4 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_helpdesk_C_negative/phase 5 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_helpdesk_C_negative/phase 6 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_helpdesk_C_negative/phase 7 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_helpdesk_C_negative/phase 8 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_helpdesk_C_negative/phase 9 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_helpdesk_C_negative/phase 10 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_helpdesk_C_negative/phase 11 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_helpdesk_C_negative/phase 12 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_helpdesk_C_negative/phase 13 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_helpdesk_C_negative/phase 14 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_helpdesk_C_negative/output decoded count",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_helpdesk_C_negative/independent decoded mask coverage",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_helpdesk_C_negative/selected decoded mask coverage",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_terminal_A_positive/observations unchanged",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_terminal_A_positive/output unchanged",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_terminal_A_positive/independent observation scoring",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_terminal_A_positive/phase 0 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_terminal_A_positive/phase 1 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_terminal_A_positive/phase 2 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_terminal_A_positive/phase 3 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_terminal_A_positive/phase 4 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_terminal_A_positive/phase 5 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_terminal_A_positive/phase 6 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_terminal_A_positive/phase 7 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_terminal_A_positive/phase 8 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_terminal_A_positive/phase 9 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_terminal_A_positive/phase 10 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_terminal_A_positive/phase 11 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_terminal_A_positive/phase 12 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_terminal_A_positive/phase 13 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_terminal_A_positive/phase 14 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_terminal_A_positive/input decoded count",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_terminal_A_positive/all frame OCR eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_terminal_A_positive/actual OCR runtime call count",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_terminal_A_positive/phase 0 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_terminal_A_positive/phase 1 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_terminal_A_positive/phase 2 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_terminal_A_positive/phase 3 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_terminal_A_positive/phase 4 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_terminal_A_positive/phase 5 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_terminal_A_positive/phase 6 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_terminal_A_positive/phase 7 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_terminal_A_positive/phase 8 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_terminal_A_positive/phase 9 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_terminal_A_positive/phase 10 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_terminal_A_positive/phase 11 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_terminal_A_positive/phase 12 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_terminal_A_positive/phase 13 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_terminal_A_positive/phase 14 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_terminal_A_positive/output decoded count",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_terminal_A_positive/independent decoded mask coverage",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_terminal_A_positive/selected decoded mask coverage",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_terminal_A_negative/observations unchanged",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_terminal_A_negative/output unchanged",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_terminal_A_negative/independent observation scoring",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_terminal_A_negative/phase 0 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_terminal_A_negative/phase 1 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_terminal_A_negative/phase 2 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_terminal_A_negative/phase 3 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_terminal_A_negative/phase 4 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_terminal_A_negative/phase 5 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_terminal_A_negative/phase 6 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_terminal_A_negative/phase 7 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_terminal_A_negative/phase 8 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_terminal_A_negative/phase 9 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_terminal_A_negative/phase 10 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_terminal_A_negative/phase 11 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_terminal_A_negative/phase 12 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_terminal_A_negative/phase 13 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_terminal_A_negative/phase 14 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_terminal_A_negative/input decoded count",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_terminal_A_negative/all frame OCR eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_terminal_A_negative/actual OCR runtime call count",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_terminal_A_negative/phase 0 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_terminal_A_negative/phase 1 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_terminal_A_negative/phase 2 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_terminal_A_negative/phase 3 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_terminal_A_negative/phase 4 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_terminal_A_negative/phase 5 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_terminal_A_negative/phase 6 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_terminal_A_negative/phase 7 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_terminal_A_negative/phase 8 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_terminal_A_negative/phase 9 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_terminal_A_negative/phase 10 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_terminal_A_negative/phase 11 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_terminal_A_negative/phase 12 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_terminal_A_negative/phase 13 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_terminal_A_negative/phase 14 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_terminal_A_negative/output decoded count",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_terminal_A_negative/independent decoded mask coverage",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_terminal_A_negative/selected decoded mask coverage",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_terminal_B_positive/observations unchanged",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_terminal_B_positive/output unchanged",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_terminal_B_positive/independent observation scoring",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_terminal_B_positive/phase 0 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_terminal_B_positive/phase 1 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_terminal_B_positive/phase 2 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_terminal_B_positive/phase 3 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_terminal_B_positive/phase 4 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_terminal_B_positive/phase 5 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_terminal_B_positive/phase 6 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_terminal_B_positive/phase 7 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_terminal_B_positive/phase 8 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_terminal_B_positive/phase 9 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_terminal_B_positive/phase 10 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_terminal_B_positive/phase 11 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_terminal_B_positive/phase 12 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_terminal_B_positive/phase 13 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_terminal_B_positive/phase 14 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_terminal_B_positive/input decoded count",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_terminal_B_positive/all frame OCR eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_terminal_B_positive/actual OCR runtime call count",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_terminal_B_positive/phase 0 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_terminal_B_positive/phase 1 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_terminal_B_positive/phase 2 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_terminal_B_positive/phase 3 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_terminal_B_positive/phase 4 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_terminal_B_positive/phase 5 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_terminal_B_positive/phase 6 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_terminal_B_positive/phase 7 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_terminal_B_positive/phase 8 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_terminal_B_positive/phase 9 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_terminal_B_positive/phase 10 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_terminal_B_positive/phase 11 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_terminal_B_positive/phase 12 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_terminal_B_positive/phase 13 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_terminal_B_positive/phase 14 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_terminal_B_positive/output decoded count",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_terminal_B_positive/independent decoded mask coverage",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_terminal_B_positive/selected decoded mask coverage",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_terminal_B_negative/observations unchanged",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_terminal_B_negative/output unchanged",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_terminal_B_negative/independent observation scoring",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_terminal_B_negative/phase 0 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_terminal_B_negative/phase 1 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_terminal_B_negative/phase 2 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_terminal_B_negative/phase 3 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_terminal_B_negative/phase 4 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_terminal_B_negative/phase 5 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_terminal_B_negative/phase 6 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_terminal_B_negative/phase 7 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_terminal_B_negative/phase 8 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_terminal_B_negative/phase 9 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_terminal_B_negative/phase 10 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_terminal_B_negative/phase 11 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_terminal_B_negative/phase 12 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_terminal_B_negative/phase 13 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_terminal_B_negative/phase 14 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_terminal_B_negative/input decoded count",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_terminal_B_negative/all frame OCR eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_terminal_B_negative/actual OCR runtime call count",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_terminal_B_negative/phase 0 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_terminal_B_negative/phase 1 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_terminal_B_negative/phase 2 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_terminal_B_negative/phase 3 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_terminal_B_negative/phase 4 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_terminal_B_negative/phase 5 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_terminal_B_negative/phase 6 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_terminal_B_negative/phase 7 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_terminal_B_negative/phase 8 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_terminal_B_negative/phase 9 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_terminal_B_negative/phase 10 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_terminal_B_negative/phase 11 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_terminal_B_negative/phase 12 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_terminal_B_negative/phase 13 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_terminal_B_negative/phase 14 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_terminal_B_negative/output decoded count",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_terminal_B_negative/independent decoded mask coverage",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_terminal_B_negative/selected decoded mask coverage",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_terminal_C_positive/observations unchanged",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_terminal_C_positive/output unchanged",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_terminal_C_positive/independent observation scoring",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_terminal_C_positive/phase 0 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_terminal_C_positive/phase 1 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_terminal_C_positive/phase 2 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_terminal_C_positive/phase 3 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_terminal_C_positive/phase 4 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_terminal_C_positive/phase 5 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_terminal_C_positive/phase 6 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_terminal_C_positive/phase 7 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_terminal_C_positive/phase 8 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_terminal_C_positive/phase 9 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_terminal_C_positive/phase 10 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_terminal_C_positive/phase 11 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_terminal_C_positive/phase 12 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_terminal_C_positive/phase 13 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_terminal_C_positive/phase 14 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_terminal_C_positive/input decoded count",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_terminal_C_positive/all frame OCR eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_terminal_C_positive/actual OCR runtime call count",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_terminal_C_positive/phase 0 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_terminal_C_positive/phase 1 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_terminal_C_positive/phase 2 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_terminal_C_positive/phase 3 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_terminal_C_positive/phase 4 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_terminal_C_positive/phase 5 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_terminal_C_positive/phase 6 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_terminal_C_positive/phase 7 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_terminal_C_positive/phase 8 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_terminal_C_positive/phase 9 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_terminal_C_positive/phase 10 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_terminal_C_positive/phase 11 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_terminal_C_positive/phase 12 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_terminal_C_positive/phase 13 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_terminal_C_positive/phase 14 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_terminal_C_positive/output decoded count",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_terminal_C_positive/independent decoded mask coverage",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_terminal_C_positive/selected decoded mask coverage",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_terminal_C_negative/observations unchanged",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_terminal_C_negative/output unchanged",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_terminal_C_negative/independent observation scoring",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_terminal_C_negative/phase 0 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_terminal_C_negative/phase 1 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_terminal_C_negative/phase 2 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_terminal_C_negative/phase 3 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_terminal_C_negative/phase 4 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_terminal_C_negative/phase 5 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_terminal_C_negative/phase 6 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_terminal_C_negative/phase 7 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_terminal_C_negative/phase 8 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_terminal_C_negative/phase 9 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_terminal_C_negative/phase 10 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_terminal_C_negative/phase 11 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_terminal_C_negative/phase 12 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_terminal_C_negative/phase 13 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_terminal_C_negative/phase 14 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_terminal_C_negative/input decoded count",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_terminal_C_negative/all frame OCR eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_terminal_C_negative/actual OCR runtime call count",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_terminal_C_negative/phase 0 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_terminal_C_negative/phase 1 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_terminal_C_negative/phase 2 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_terminal_C_negative/phase 3 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_terminal_C_negative/phase 4 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_terminal_C_negative/phase 5 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_terminal_C_negative/phase 6 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_terminal_C_negative/phase 7 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_terminal_C_negative/phase 8 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_terminal_C_negative/phase 9 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_terminal_C_negative/phase 10 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_terminal_C_negative/phase 11 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_terminal_C_negative/phase 12 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_terminal_C_negative/phase 13 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_terminal_C_negative/phase 14 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_terminal_C_negative/output decoded count",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_terminal_C_negative/independent decoded mask coverage",
+      "passed": true
+    },
+    {
+      "check": "v2_dev_terminal_C_negative/selected decoded mask coverage",
+      "passed": true
+    },
+    {
+      "check": "dev/fixed denominator",
+      "passed": true
+    },
+    {
+      "check": "dev/raw summary equals independently summed rows",
+      "passed": true
+    },
+    {
+      "check": "dev/published summary equals independently summed rows",
+      "passed": true
+    },
+    {
+      "check": "dev/complete evidence gate",
+      "passed": true
+    },
+    {
+      "check": "gate/complete baseline",
+      "passed": true
+    },
+    {
+      "check": "gate/explicit export error retained",
+      "passed": true
+    },
+    {
+      "check": "gate/missing mask denominator",
+      "passed": true
+    },
+    {
+      "check": "gate/selected mask geometry missing",
+      "passed": true
+    },
+    {
+      "check": "gate/source unchanged unknown",
+      "passed": true
+    },
+    {
+      "check": "gate/frame truncation",
+      "passed": true
+    },
+    {
+      "check": "gate/selected mask failure",
+      "passed": true
+    },
+    {
+      "check": "gate/duplicate replaces missing ID",
+      "passed": true
+    },
+    {
+      "check": "gate/wrong split",
+      "passed": true
+    },
+    {
+      "check": "gate/wrong per-clip denominator",
+      "passed": true
+    },
+    {
+      "check": "gate/missing phase",
+      "passed": true
+    },
+    {
+      "check": "gate/manifest mismatch",
+      "passed": true
+    },
+    {
+      "check": "gate/source mismatch",
+      "passed": true
+    },
+    {
+      "check": "gate/interrupted status",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_crm_A_positive/observations unchanged",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_crm_A_positive/output unchanged",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_crm_A_positive/independent observation scoring",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_crm_A_positive/phase 0 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_crm_A_positive/phase 1 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_crm_A_positive/phase 2 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_crm_A_positive/phase 3 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_crm_A_positive/phase 4 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_crm_A_positive/phase 5 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_crm_A_positive/phase 6 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_crm_A_positive/phase 7 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_crm_A_positive/phase 8 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_crm_A_positive/phase 9 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_crm_A_positive/phase 10 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_crm_A_positive/phase 11 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_crm_A_positive/phase 12 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_crm_A_positive/phase 13 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_crm_A_positive/phase 14 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_crm_A_positive/input decoded count",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_crm_A_positive/all frame OCR eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_crm_A_positive/actual OCR runtime call count",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_crm_A_positive/phase 0 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_crm_A_positive/phase 1 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_crm_A_positive/phase 2 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_crm_A_positive/phase 3 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_crm_A_positive/phase 4 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_crm_A_positive/phase 5 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_crm_A_positive/phase 6 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_crm_A_positive/phase 7 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_crm_A_positive/phase 8 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_crm_A_positive/phase 9 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_crm_A_positive/phase 10 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_crm_A_positive/phase 11 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_crm_A_positive/phase 12 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_crm_A_positive/phase 13 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_crm_A_positive/phase 14 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_crm_A_positive/output decoded count",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_crm_A_positive/independent decoded mask coverage",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_crm_A_positive/selected decoded mask coverage",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_crm_A_negative/observations unchanged",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_crm_A_negative/output unchanged",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_crm_A_negative/independent observation scoring",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_crm_A_negative/phase 0 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_crm_A_negative/phase 1 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_crm_A_negative/phase 2 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_crm_A_negative/phase 3 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_crm_A_negative/phase 4 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_crm_A_negative/phase 5 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_crm_A_negative/phase 6 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_crm_A_negative/phase 7 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_crm_A_negative/phase 8 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_crm_A_negative/phase 9 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_crm_A_negative/phase 10 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_crm_A_negative/phase 11 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_crm_A_negative/phase 12 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_crm_A_negative/phase 13 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_crm_A_negative/phase 14 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_crm_A_negative/input decoded count",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_crm_A_negative/all frame OCR eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_crm_A_negative/actual OCR runtime call count",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_crm_A_negative/phase 0 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_crm_A_negative/phase 1 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_crm_A_negative/phase 2 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_crm_A_negative/phase 3 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_crm_A_negative/phase 4 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_crm_A_negative/phase 5 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_crm_A_negative/phase 6 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_crm_A_negative/phase 7 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_crm_A_negative/phase 8 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_crm_A_negative/phase 9 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_crm_A_negative/phase 10 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_crm_A_negative/phase 11 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_crm_A_negative/phase 12 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_crm_A_negative/phase 13 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_crm_A_negative/phase 14 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_crm_A_negative/output decoded count",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_crm_A_negative/independent decoded mask coverage",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_crm_A_negative/selected decoded mask coverage",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_crm_B_positive/observations unchanged",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_crm_B_positive/output unchanged",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_crm_B_positive/independent observation scoring",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_crm_B_positive/phase 0 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_crm_B_positive/phase 1 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_crm_B_positive/phase 2 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_crm_B_positive/phase 3 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_crm_B_positive/phase 4 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_crm_B_positive/phase 5 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_crm_B_positive/phase 6 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_crm_B_positive/phase 7 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_crm_B_positive/phase 8 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_crm_B_positive/phase 9 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_crm_B_positive/phase 10 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_crm_B_positive/phase 11 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_crm_B_positive/phase 12 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_crm_B_positive/phase 13 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_crm_B_positive/phase 14 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_crm_B_positive/input decoded count",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_crm_B_positive/all frame OCR eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_crm_B_positive/actual OCR runtime call count",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_crm_B_positive/phase 0 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_crm_B_positive/phase 1 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_crm_B_positive/phase 2 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_crm_B_positive/phase 3 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_crm_B_positive/phase 4 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_crm_B_positive/phase 5 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_crm_B_positive/phase 6 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_crm_B_positive/phase 7 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_crm_B_positive/phase 8 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_crm_B_positive/phase 9 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_crm_B_positive/phase 10 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_crm_B_positive/phase 11 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_crm_B_positive/phase 12 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_crm_B_positive/phase 13 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_crm_B_positive/phase 14 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_crm_B_positive/output decoded count",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_crm_B_positive/independent decoded mask coverage",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_crm_B_positive/selected decoded mask coverage",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_crm_B_negative/observations unchanged",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_crm_B_negative/output unchanged",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_crm_B_negative/independent observation scoring",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_crm_B_negative/phase 0 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_crm_B_negative/phase 1 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_crm_B_negative/phase 2 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_crm_B_negative/phase 3 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_crm_B_negative/phase 4 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_crm_B_negative/phase 5 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_crm_B_negative/phase 6 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_crm_B_negative/phase 7 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_crm_B_negative/phase 8 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_crm_B_negative/phase 9 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_crm_B_negative/phase 10 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_crm_B_negative/phase 11 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_crm_B_negative/phase 12 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_crm_B_negative/phase 13 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_crm_B_negative/phase 14 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_crm_B_negative/input decoded count",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_crm_B_negative/all frame OCR eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_crm_B_negative/actual OCR runtime call count",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_crm_B_negative/phase 0 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_crm_B_negative/phase 1 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_crm_B_negative/phase 2 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_crm_B_negative/phase 3 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_crm_B_negative/phase 4 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_crm_B_negative/phase 5 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_crm_B_negative/phase 6 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_crm_B_negative/phase 7 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_crm_B_negative/phase 8 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_crm_B_negative/phase 9 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_crm_B_negative/phase 10 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_crm_B_negative/phase 11 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_crm_B_negative/phase 12 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_crm_B_negative/phase 13 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_crm_B_negative/phase 14 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_crm_B_negative/output decoded count",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_crm_B_negative/independent decoded mask coverage",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_crm_B_negative/selected decoded mask coverage",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_crm_C_positive/observations unchanged",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_crm_C_positive/output unchanged",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_crm_C_positive/independent observation scoring",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_crm_C_positive/phase 0 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_crm_C_positive/phase 1 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_crm_C_positive/phase 2 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_crm_C_positive/phase 3 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_crm_C_positive/phase 4 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_crm_C_positive/phase 5 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_crm_C_positive/phase 6 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_crm_C_positive/phase 7 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_crm_C_positive/phase 8 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_crm_C_positive/phase 9 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_crm_C_positive/phase 10 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_crm_C_positive/phase 11 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_crm_C_positive/phase 12 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_crm_C_positive/phase 13 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_crm_C_positive/phase 14 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_crm_C_positive/input decoded count",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_crm_C_positive/all frame OCR eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_crm_C_positive/actual OCR runtime call count",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_crm_C_positive/phase 0 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_crm_C_positive/phase 1 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_crm_C_positive/phase 2 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_crm_C_positive/phase 3 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_crm_C_positive/phase 4 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_crm_C_positive/phase 5 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_crm_C_positive/phase 6 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_crm_C_positive/phase 7 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_crm_C_positive/phase 8 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_crm_C_positive/phase 9 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_crm_C_positive/phase 10 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_crm_C_positive/phase 11 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_crm_C_positive/phase 12 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_crm_C_positive/phase 13 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_crm_C_positive/phase 14 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_crm_C_positive/output decoded count",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_crm_C_positive/independent decoded mask coverage",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_crm_C_positive/selected decoded mask coverage",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_crm_C_negative/observations unchanged",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_crm_C_negative/output unchanged",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_crm_C_negative/independent observation scoring",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_crm_C_negative/phase 0 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_crm_C_negative/phase 1 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_crm_C_negative/phase 2 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_crm_C_negative/phase 3 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_crm_C_negative/phase 4 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_crm_C_negative/phase 5 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_crm_C_negative/phase 6 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_crm_C_negative/phase 7 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_crm_C_negative/phase 8 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_crm_C_negative/phase 9 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_crm_C_negative/phase 10 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_crm_C_negative/phase 11 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_crm_C_negative/phase 12 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_crm_C_negative/phase 13 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_crm_C_negative/phase 14 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_crm_C_negative/input decoded count",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_crm_C_negative/all frame OCR eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_crm_C_negative/actual OCR runtime call count",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_crm_C_negative/phase 0 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_crm_C_negative/phase 1 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_crm_C_negative/phase 2 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_crm_C_negative/phase 3 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_crm_C_negative/phase 4 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_crm_C_negative/phase 5 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_crm_C_negative/phase 6 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_crm_C_negative/phase 7 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_crm_C_negative/phase 8 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_crm_C_negative/phase 9 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_crm_C_negative/phase 10 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_crm_C_negative/phase 11 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_crm_C_negative/phase 12 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_crm_C_negative/phase 13 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_crm_C_negative/phase 14 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_crm_C_negative/output decoded count",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_crm_C_negative/independent decoded mask coverage",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_crm_C_negative/selected decoded mask coverage",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_spreadsheet_A_positive/observations unchanged",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_spreadsheet_A_positive/output unchanged",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_spreadsheet_A_positive/independent observation scoring",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_spreadsheet_A_positive/phase 0 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_spreadsheet_A_positive/phase 1 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_spreadsheet_A_positive/phase 2 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_spreadsheet_A_positive/phase 3 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_spreadsheet_A_positive/phase 4 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_spreadsheet_A_positive/phase 5 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_spreadsheet_A_positive/phase 6 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_spreadsheet_A_positive/phase 7 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_spreadsheet_A_positive/phase 8 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_spreadsheet_A_positive/phase 9 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_spreadsheet_A_positive/phase 10 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_spreadsheet_A_positive/phase 11 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_spreadsheet_A_positive/phase 12 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_spreadsheet_A_positive/phase 13 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_spreadsheet_A_positive/phase 14 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_spreadsheet_A_positive/input decoded count",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_spreadsheet_A_positive/all frame OCR eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_spreadsheet_A_positive/actual OCR runtime call count",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_spreadsheet_A_positive/phase 0 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_spreadsheet_A_positive/phase 1 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_spreadsheet_A_positive/phase 2 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_spreadsheet_A_positive/phase 3 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_spreadsheet_A_positive/phase 4 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_spreadsheet_A_positive/phase 5 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_spreadsheet_A_positive/phase 6 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_spreadsheet_A_positive/phase 7 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_spreadsheet_A_positive/phase 8 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_spreadsheet_A_positive/phase 9 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_spreadsheet_A_positive/phase 10 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_spreadsheet_A_positive/phase 11 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_spreadsheet_A_positive/phase 12 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_spreadsheet_A_positive/phase 13 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_spreadsheet_A_positive/phase 14 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_spreadsheet_A_positive/output decoded count",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_spreadsheet_A_positive/independent decoded mask coverage",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_spreadsheet_A_positive/selected decoded mask coverage",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_spreadsheet_A_negative/observations unchanged",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_spreadsheet_A_negative/output unchanged",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_spreadsheet_A_negative/independent observation scoring",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_spreadsheet_A_negative/phase 0 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_spreadsheet_A_negative/phase 1 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_spreadsheet_A_negative/phase 2 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_spreadsheet_A_negative/phase 3 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_spreadsheet_A_negative/phase 4 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_spreadsheet_A_negative/phase 5 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_spreadsheet_A_negative/phase 6 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_spreadsheet_A_negative/phase 7 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_spreadsheet_A_negative/phase 8 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_spreadsheet_A_negative/phase 9 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_spreadsheet_A_negative/phase 10 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_spreadsheet_A_negative/phase 11 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_spreadsheet_A_negative/phase 12 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_spreadsheet_A_negative/phase 13 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_spreadsheet_A_negative/phase 14 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_spreadsheet_A_negative/input decoded count",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_spreadsheet_A_negative/all frame OCR eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_spreadsheet_A_negative/actual OCR runtime call count",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_spreadsheet_A_negative/phase 0 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_spreadsheet_A_negative/phase 1 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_spreadsheet_A_negative/phase 2 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_spreadsheet_A_negative/phase 3 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_spreadsheet_A_negative/phase 4 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_spreadsheet_A_negative/phase 5 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_spreadsheet_A_negative/phase 6 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_spreadsheet_A_negative/phase 7 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_spreadsheet_A_negative/phase 8 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_spreadsheet_A_negative/phase 9 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_spreadsheet_A_negative/phase 10 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_spreadsheet_A_negative/phase 11 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_spreadsheet_A_negative/phase 12 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_spreadsheet_A_negative/phase 13 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_spreadsheet_A_negative/phase 14 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_spreadsheet_A_negative/output decoded count",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_spreadsheet_A_negative/independent decoded mask coverage",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_spreadsheet_A_negative/selected decoded mask coverage",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_spreadsheet_B_positive/observations unchanged",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_spreadsheet_B_positive/output unchanged",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_spreadsheet_B_positive/independent observation scoring",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_spreadsheet_B_positive/phase 0 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_spreadsheet_B_positive/phase 1 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_spreadsheet_B_positive/phase 2 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_spreadsheet_B_positive/phase 3 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_spreadsheet_B_positive/phase 4 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_spreadsheet_B_positive/phase 5 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_spreadsheet_B_positive/phase 6 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_spreadsheet_B_positive/phase 7 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_spreadsheet_B_positive/phase 8 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_spreadsheet_B_positive/phase 9 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_spreadsheet_B_positive/phase 10 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_spreadsheet_B_positive/phase 11 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_spreadsheet_B_positive/phase 12 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_spreadsheet_B_positive/phase 13 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_spreadsheet_B_positive/phase 14 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_spreadsheet_B_positive/input decoded count",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_spreadsheet_B_positive/all frame OCR eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_spreadsheet_B_positive/actual OCR runtime call count",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_spreadsheet_B_positive/phase 0 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_spreadsheet_B_positive/phase 1 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_spreadsheet_B_positive/phase 2 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_spreadsheet_B_positive/phase 3 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_spreadsheet_B_positive/phase 4 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_spreadsheet_B_positive/phase 5 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_spreadsheet_B_positive/phase 6 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_spreadsheet_B_positive/phase 7 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_spreadsheet_B_positive/phase 8 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_spreadsheet_B_positive/phase 9 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_spreadsheet_B_positive/phase 10 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_spreadsheet_B_positive/phase 11 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_spreadsheet_B_positive/phase 12 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_spreadsheet_B_positive/phase 13 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_spreadsheet_B_positive/phase 14 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_spreadsheet_B_positive/output decoded count",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_spreadsheet_B_positive/independent decoded mask coverage",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_spreadsheet_B_positive/selected decoded mask coverage",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_spreadsheet_B_negative/observations unchanged",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_spreadsheet_B_negative/output unchanged",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_spreadsheet_B_negative/independent observation scoring",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_spreadsheet_B_negative/phase 0 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_spreadsheet_B_negative/phase 1 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_spreadsheet_B_negative/phase 2 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_spreadsheet_B_negative/phase 3 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_spreadsheet_B_negative/phase 4 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_spreadsheet_B_negative/phase 5 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_spreadsheet_B_negative/phase 6 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_spreadsheet_B_negative/phase 7 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_spreadsheet_B_negative/phase 8 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_spreadsheet_B_negative/phase 9 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_spreadsheet_B_negative/phase 10 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_spreadsheet_B_negative/phase 11 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_spreadsheet_B_negative/phase 12 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_spreadsheet_B_negative/phase 13 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_spreadsheet_B_negative/phase 14 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_spreadsheet_B_negative/input decoded count",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_spreadsheet_B_negative/all frame OCR eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_spreadsheet_B_negative/actual OCR runtime call count",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_spreadsheet_B_negative/phase 0 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_spreadsheet_B_negative/phase 1 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_spreadsheet_B_negative/phase 2 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_spreadsheet_B_negative/phase 3 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_spreadsheet_B_negative/phase 4 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_spreadsheet_B_negative/phase 5 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_spreadsheet_B_negative/phase 6 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_spreadsheet_B_negative/phase 7 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_spreadsheet_B_negative/phase 8 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_spreadsheet_B_negative/phase 9 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_spreadsheet_B_negative/phase 10 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_spreadsheet_B_negative/phase 11 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_spreadsheet_B_negative/phase 12 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_spreadsheet_B_negative/phase 13 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_spreadsheet_B_negative/phase 14 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_spreadsheet_B_negative/output decoded count",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_spreadsheet_B_negative/independent decoded mask coverage",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_spreadsheet_B_negative/selected decoded mask coverage",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_spreadsheet_C_positive/observations unchanged",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_spreadsheet_C_positive/output unchanged",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_spreadsheet_C_positive/independent observation scoring",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_spreadsheet_C_positive/phase 0 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_spreadsheet_C_positive/phase 1 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_spreadsheet_C_positive/phase 2 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_spreadsheet_C_positive/phase 3 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_spreadsheet_C_positive/phase 4 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_spreadsheet_C_positive/phase 5 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_spreadsheet_C_positive/phase 6 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_spreadsheet_C_positive/phase 7 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_spreadsheet_C_positive/phase 8 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_spreadsheet_C_positive/phase 9 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_spreadsheet_C_positive/phase 10 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_spreadsheet_C_positive/phase 11 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_spreadsheet_C_positive/phase 12 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_spreadsheet_C_positive/phase 13 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_spreadsheet_C_positive/phase 14 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_spreadsheet_C_positive/input decoded count",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_spreadsheet_C_positive/all frame OCR eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_spreadsheet_C_positive/actual OCR runtime call count",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_spreadsheet_C_positive/phase 0 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_spreadsheet_C_positive/phase 1 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_spreadsheet_C_positive/phase 2 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_spreadsheet_C_positive/phase 3 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_spreadsheet_C_positive/phase 4 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_spreadsheet_C_positive/phase 5 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_spreadsheet_C_positive/phase 6 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_spreadsheet_C_positive/phase 7 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_spreadsheet_C_positive/phase 8 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_spreadsheet_C_positive/phase 9 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_spreadsheet_C_positive/phase 10 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_spreadsheet_C_positive/phase 11 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_spreadsheet_C_positive/phase 12 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_spreadsheet_C_positive/phase 13 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_spreadsheet_C_positive/phase 14 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_spreadsheet_C_positive/output decoded count",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_spreadsheet_C_positive/independent decoded mask coverage",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_spreadsheet_C_positive/selected decoded mask coverage",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_spreadsheet_C_negative/observations unchanged",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_spreadsheet_C_negative/output unchanged",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_spreadsheet_C_negative/independent observation scoring",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_spreadsheet_C_negative/phase 0 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_spreadsheet_C_negative/phase 1 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_spreadsheet_C_negative/phase 2 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_spreadsheet_C_negative/phase 3 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_spreadsheet_C_negative/phase 4 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_spreadsheet_C_negative/phase 5 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_spreadsheet_C_negative/phase 6 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_spreadsheet_C_negative/phase 7 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_spreadsheet_C_negative/phase 8 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_spreadsheet_C_negative/phase 9 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_spreadsheet_C_negative/phase 10 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_spreadsheet_C_negative/phase 11 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_spreadsheet_C_negative/phase 12 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_spreadsheet_C_negative/phase 13 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_spreadsheet_C_negative/phase 14 independent event replay",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_spreadsheet_C_negative/input decoded count",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_spreadsheet_C_negative/all frame OCR eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_spreadsheet_C_negative/actual OCR runtime call count",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_spreadsheet_C_negative/phase 0 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_spreadsheet_C_negative/phase 1 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_spreadsheet_C_negative/phase 2 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_spreadsheet_C_negative/phase 3 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_spreadsheet_C_negative/phase 4 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_spreadsheet_C_negative/phase 5 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_spreadsheet_C_negative/phase 6 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_spreadsheet_C_negative/phase 7 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_spreadsheet_C_negative/phase 8 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_spreadsheet_C_negative/phase 9 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_spreadsheet_C_negative/phase 10 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_spreadsheet_C_negative/phase 11 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_spreadsheet_C_negative/phase 12 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_spreadsheet_C_negative/phase 13 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_spreadsheet_C_negative/phase 14 eligible calls",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_spreadsheet_C_negative/output decoded count",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_spreadsheet_C_negative/independent decoded mask coverage",
+      "passed": true
+    },
+    {
+      "check": "v2_heldout_spreadsheet_C_negative/selected decoded mask coverage",
+      "passed": true
+    },
+    {
+      "check": "heldout/fixed denominator",
+      "passed": true
+    },
+    {
+      "check": "heldout/raw summary equals independently summed rows",
+      "passed": true
+    },
+    {
+      "check": "heldout/published summary equals independently summed rows",
+      "passed": true
+    },
+    {
+      "check": "heldout/complete evidence gate",
+      "passed": true
+    },
+    {
+      "check": "prior clean-environment 96 tests remain applicable",
+      "passed": true
+    },
+    {
+      "check": "package positive allowlist excludes private and derived media",
+      "passed": true
+    },
+    {
+      "check": "package includes all 24 frozen inputs and 24 truth files",
+      "passed": true
+    }
+  ],
+  "package_scope_review": {
+    "allowlisted_files_at_review": 259,
+    "private_or_derived_files_in_allowlist": false,
+    "final_zip_verified_here": false
+  },
+  "automated_tests": {
+    "existing_passed": 96,
+    "rerun": false,
+    "app_tests_requirements_packager_hashes_match": true
+  },
+  "interpretation_limits": [
+    "24 fictional raster-rendered English UI clips; correlated paired conditions; no customer/human/real-browser generalization.",
+    "Event recall and independent annotated-region mask coverage are different measures. Correct selected geometry does not imply all sensitive material was detected.",
+    "All 15 sampling phases are retained. OCR-call counts are eligible work, not measured speedup. Shared-workstation observed wall times are not controlled performance.",
+    "One original heldout run resumed after user-authorized shutdown pause; no tuning or second blind test claim.",
+    "Original dev_019 miss remains known. Same-model rescanning is not independent truth or privacy assurance.",
+    "No UGen300 integration, narration audio, publication, or submission receipt is claimed."
+  ],
+  "resume_provenance_sha256": "f89c80c2beac274045e28050a936b4f4a99143cfce19b92e079b4905bc50485f",
+  "post_annotation_validation": {
+    "verified_at_utc": "2026-10-05T01:04:46.881223+00:00",
+    "previous_summary_sha256": "817137769519755da7631842d23532123f09fbb6a3a5ae3dbfae8f4b0d339557",
+    "final_summary_sha256": "86c78285a184b26c4384283180ea33dd1c7f4e058e3e4f78d64b0df012a4c2b5",
+    "raw_measurement_hashes_unchanged": true,
+    "all_final_summary_metrics_equal_independent_recomputation": true,
+    "resume_provenance_status": "completed",
+    "note": "Only derived interruption/rescan annotations changed after initial audit read; final metadata hashes refreshed after confirming identical measurements. No pixel or OCR re-execution."
+  }
+}

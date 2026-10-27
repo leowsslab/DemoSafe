@@ -1,0 +1,102 @@
+{
+  "schema": 1,
+  "status": "passed",
+  "recorded_at_utc": "2026-10-05T05:25:32.523921+00:00",
+  "scope": "Supplementary filesystem and decoded-pixel audit of the actual new-tab high-resolution UI capture job. No OCR or benchmark rerun. HD names identify the UI-recording take; exported media remains 1280 x 720.",
+  "job_id": "27b1dd4d239342338746d08a4202a6d7",
+  "source": {
+    "original_job_path": "data/jobs/27b1dd4d239342338746d08a4202a6d7/original.mp4",
+    "sample_path": "data/samples/demo_workspace.mp4",
+    "sha256": "45fd8762ee8c59fd00b9345c0ed816e09cb300b37bee349341cbc2846c6353b5",
+    "matches_frozen_fixture_and_imported_copy": true,
+    "unchanged_before_after": true
+  },
+  "saved_artifacts": {
+    "report": {
+      "path": "artifacts/film-v3/hero-hd-report.json",
+      "sha256": "28bebd2cbf876e14359b3af7ee3a6a3ed116961186cc064316be1c05f78be3d0",
+      "byte_identical_to_job_report": true
+    },
+    "redacted_media": {
+      "path": "artifacts/film-v3/hero-hd-redacted.mp4",
+      "sha256": "1ad30913e53a1959e5e044bd831fa76a11903b6e82b3c844b025ed18da18ff05",
+      "byte_identical_to_job_export": true
+    }
+  },
+  "output": {
+    "width": 1280,
+    "height": 720,
+    "fps": 10,
+    "duration_seconds": 12,
+    "decoded_frames": 120,
+    "codec": "h264",
+    "audio_tracks": 0,
+    "all_timestamps_match_original": true,
+    "all_timestamps_match_100ms_grid": true,
+    "first_frame_ms": 0.0,
+    "last_frame_ms": 11900.0
+  },
+  "manual_mask": {
+    "decoded_actual_box_source_pixels": [
+      18,
+      9,
+      170,
+      53
+    ],
+    "width_pixels": 152,
+    "height_pixels": 44,
+    "box_origin": "Largest decoded black connected component within the original header area; identical bounds across all 120 frames.",
+    "ui_capture": "artifacts/film-v3/manual-current.png",
+    "visually_verified_ui_size": [
+      152,
+      44
+    ],
+    "visually_verified_ui_time_range_seconds": [
+      0,
+      12
+    ],
+    "covered_frames": 120,
+    "expected_frames": 120,
+    "minimum_black_fraction": 1.0,
+    "northstar_text_box": [
+      28,
+      21,
+      157,
+      37
+    ],
+    "northstar_region_fully_covered_frames": 120,
+    "northstar_minimum_black_fraction": 1.0,
+    "northstar_present_in_every_source_frame": true,
+    "minimum_bright_source_text_pixels": 496,
+    "criterion": "At least 99.5% of region pixels have every channel <=16; source-pixel boxes have exclusive right/bottom bounds."
+  },
+  "actual_new_job_metrics": {
+    "analysis_seconds": 10.72,
+    "ocr_seconds": 9.739,
+    "export_seconds": 13.266,
+    "frames_scanned": 120,
+    "unique_frames_ocr": 5,
+    "exact_cache_hits": 115,
+    "findings_count": 4,
+    "manual_mask_count": 1,
+    "rescan": {
+      "status": "passed",
+      "findings_count": 0,
+      "message": "No supported text patterns detected in output; not a guarantee of privacy."
+    }
+  },
+  "film_edit_provenance": "Coordinator plans to retain the earlier actual scan capture (10.513 s) and use this separate take for current-copy review/manual/export/compare. This new job actually analyzed in 10.720 s and exported in 13.266 s. These takes must be labeled in edit provenance and must not be presented as one uncut continuous run or as an OCR speed comparison.",
+  "earlier_evidence_preserved_sha256": {
+    "artifacts/film-v3/hero-redacted.mp4": "6e40814874a3c150c2884fb9d525900473c49460f4a213cb50a4c9ba6ba8f3c2",
+    "artifacts/film-v3/hero-report.json": "5fd1a12de0e25f3c1fe93cf017bc60654c0bfdbf03e83399ba252c51ceb22a42",
+    "reports/validation_ui_export_v3.json": "0ce6293604a694dc6e7084278a424b66e853af9586b6e009ffc8fb6333a3efd2",
+    "reports/test_summary_final_v3.json": "0488d76f8ce622b39ee25151153d716bb9b2ad030587b5b1ba1cf5a8e504ee66",
+    "reports/interface_release_provenance_v3.json": "7d860ec72b0e4cef269341a24123301a6bf1637dfcc0a4f2d0c23e345da71095"
+  },
+  "limitations": [
+    "One fictional demonstration, not accuracy/generalization/customer evidence.",
+    "Manual NORTHSTAR masking is verified independently of detector success metadata; this does not establish full privacy.",
+    "Same-model rescan passed/0 findings is not independent privacy assurance.",
+    "Timings are observations on a shared workstation and include different real takes; no throughput or speedup inference is justified."
+  ]
+}
