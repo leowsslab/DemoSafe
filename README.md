@@ -19,7 +19,8 @@ The current competition film is v4: 156 seconds, English synthetic narration and
 52 bilingual caption pairs. Real browser captures are approximately 1-4 frames
 per second, held in the 30 fps export. UGen300 inference is still planned.
 Source: [github.com/leowsslab/DemoSafe](https://github.com/leowsslab/DemoSafe).
-The participant will upload the demonstration video; its verified URL is pending.
+Demonstration: [Watch the 2:36 English demo with bilingual captions](https://youtu.be/KIt-b89dyUM).
+The YouTube watch page and Unlisted setting were checked on 2026-10-27.
 Creating a repository does not mean the competition entry has been submitted.
 
 See [AI collaboration and media disclosure](docs/AI_COLLABORATION.md),
